@@ -1,0 +1,7 @@
+.bundle
+*.rbc
+vendor/
+web/.sass-cache/
+web/crash.log
+web/output/
+web/tmp/

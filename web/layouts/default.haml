@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+%html{:lang => 'en'}
+  %head
+    %meta{:charset => 'utf-8'}/
+    %title A Brand New nanoc Site - #{@item[:title]}
+    %link{:rel => 'stylesheet', :href => '/styles.css'}
+    %meta{:name => 'generator', :content => "nanoc #{Nanoc::VERSION}"}/
+  %body
+    %div#main=yield
+    %div#sidebar
+      %h2 Documentation
+      %ul
+        %li
+          %a{:href => 'http://nanoc.ws/docs/'} Documentation
+        %li
+          %a{:href => 'http://nanoc.ws/docs/tutorial/'} Getting Started
+      %h2 Community
+      %ul
+        %li
+          %a{:href => 'http://groups.google.com/group/nanoc/'} Discussion Group
+        %li
+          %a{:href => 'irc://chat.freenode.net/#nanoc'} IRC Channel
+        %li
+          %a{:href => 'http://github.com/nanoc/nanoc/wiki/'} Wiki
