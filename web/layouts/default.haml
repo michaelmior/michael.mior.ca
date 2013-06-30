@@ -2,23 +2,38 @@
 %html{:lang => 'en'}
   %head
     %meta{:charset => 'utf-8'}/
-    %title A Brand New nanoc Site - #{@item[:title]}
+    %title #{@item[:title]} - Michael Mior
     %link{:rel => 'stylesheet', :href => '/styles.css'}
     %meta{:name => 'generator', :content => "nanoc #{Nanoc::VERSION}"}/
-  %body
-    %div#main=yield
-    %div#sidebar
-      %h2 Documentation
-      %ul
-        %li
-          %a{:href => 'http://nanoc.ws/docs/'} Documentation
-        %li
-          %a{:href => 'http://nanoc.ws/docs/tutorial/'} Getting Started
-      %h2 Community
-      %ul
-        %li
-          %a{:href => 'http://groups.google.com/group/nanoc/'} Discussion Group
-        %li
-          %a{:href => 'irc://chat.freenode.net/#nanoc'} IRC Channel
-        %li
-          %a{:href => 'http://github.com/nanoc/nanoc/wiki/'} Wiki
+  %body.home.page
+    %div#wrapper.hfeed
+
+      %div#header
+        %div#blog-title
+          %h1
+            %a{:href => '/', :title => 'Michael Mior', :rel => 'home'}
+              %span.word-1 Michael
+              %span.word-2 Mior
+
+        %div#access
+          %div.skip-link
+            %a{:href => '#content', :title => 'Skip navigation to the content'}
+          %div.menu
+            %ul.sf-menu
+              %li
+                = link_to 'Home', '/'
+              %li
+                = link_to 'About', '/about/'
+              %li
+                = link_to 'Contact', '/contact/'
+
+    %div#main
+      %div#container
+        %div#content
+          %div.page.hentry
+            %h1.entry-title= @item[:headline] or @item[:title]
+            %div.entry-content= yield
+
+    %div#footer
+      %div#siteinfo
+        &copy; 2013 Michael Mior

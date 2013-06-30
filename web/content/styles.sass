@@ -1,57 +1,1093 @@
-*
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td
   margin: 0
   padding: 0
-  font-family: Georgia, Palatino, Times, 'Times New Roman', sans-serif
+  border: 0
+  outline: 0
+  font-size: 100%
+  vertical-align: baseline
+  background: transparent
 
 body
   background: #fff
+  line-height: 1
 
-a
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+\:focus
+  outline: 0
+
+ins
   text-decoration: none
-  &:link, &:visited
-    color: #f30
-  &:hover
-    color: #f90
+
+del
+  text-decoration: line-through
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+a img
+  border: none
+
+body, input, textarea
+  color: #000
+  font: 12px Arial, sans-serif
+  line-height: 18px
+
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
+  clear: both
+
+p
+  margin-bottom: 18px
+
+ul, ol
+  margin: 0 0 18px 2.5em
+
+ul
+  list-style: disc
+
+ol
+  list-style-type: decimal
+  ol
+    list-style: upper-alpha
+    ol
+      list-style: lower-roman
+      ol
+        list-style: lower-alpha
+
+ul ul, ol ol, ul ol, ol ul
+  margin-bottom: 0
+
+dl
+  margin: 0 1.5em
+
+dt
+  font-weight: bold
+
+dd
+  margin-bottom: 18px
+
+strong
+  font-weight: bold
+
+cite, em, i
+  font-style: italic
+
+blockquote
+  margin: 0 3em
+  em, i, cite
+    font-style: normal
+
+pre
+  font: 11px Monaco,  monospace
+  line-height: 18px
+  margin-bottom: 18px
+
+code
+  font: 11px Monaco,  monospace
+
+abbr, acronym
+  border-bottom: 1px dotted #333
+  cursor: help
+
+ins
+  text-decoration: none
+
+sup, sub
+  height: 0
+  line-height: 1
+  vertical-align: baseline
+  position: relative
+
+sup
+  bottom: 1ex
+
+sub
+  top: .5ex
+
+blockquote
+  &.left
+    float: left
+    margin-left: 0
+    margin-right: 20px
+    text-align: right
+    width: 33%
+  &.right
+    float: right
+    margin-left: 20px
+    margin-right: 0
+    text-align: left
+    width: 33%
+
+body
+  min-width: 960px
+
+#header
+  position: relative
+
+#branding
+  width: 940px
+  margin: 0 auto
+
+#access
+  position: relative
+  overflow: hidden
+
+.menu
+  width: 940px
+  margin: 0 auto
 
 #main
-  position: absolute
-  top: 40px
-  left: 280px
-  width: 500px
-  h1
-    font-size: 40px
-    font-weight: normal
-    line-height: 40px
-    letter-spacing: -1px
-  p
-    margin: 20px 0
-    font-size: 15px
-    line-height: 20px
-  ul, ol
-    margin: 20px
-  li
-    font-size: 15px
-    line-height: 20px
-  ul li
-    list-style-type: square
+  width: 960px
+  margin: 0 auto
+  overflow: hidden
+  position: relative
 
-#sidebar
-  position: absolute
-  top: 40px
-  left: 20px
-  width: 200px
-  padding: 20px 20px 0 0
-  border-right: 1px solid #ccc
-  text-align: right
-  h2
-    text-transform: uppercase
-    font-size: 13px
-    color: #333
-    letter-spacing: 1px
-    line-height: 20px
+#container
+  width: 620px
+  float: left
+
+#content
+  margin: 0 0 0 10px
+  width: 540px
+  overflow: hidden
+
+.main-aside
+  width: 300px
+  float: right
+  position: relative
+  right: 10px
+
+#secondary
+  clear: right
+
+#footer
+  clear: both
+
+#subsidiary
+  width: 940px
+  margin: 0 auto
+  overflow: hidden
+  .aside
+    width: 300px
+    float: left
+    margin: 0 20px 0 0
+  #third
+    margin: 0
+
+#siteinfo
+  clear: both
+  width: 940px
+  margin: 0 auto
+
+.page-template-template-page-fullwidth-php
+  #container
+    margin: 0
+    width: 940px
+  #content
+    margin: 0 0 0 10px
+    width: 940px
+  #comments
+    width: 540px
+
+.entry-content
+  .wp-post-image
+    border: 1px solid #ccc
+    float: right
+    margin: 0 0 20px 18px
+    padding: 5px
+  img
+    height: auto
+    margin: 0 0 18px 0
+    max-width: 100%
+
+.alignleft, img.alignleft
+  float: left
+  margin-right: 20px
+
+.alignright, img.alignright
+  display: block
+  float: right
+  margin-left: 20px
+
+.aligncenter, img.aligncenter
+  margin-left: auto
+  margin-right: auto
+  display: block
+  clear: both
+
+.wp-caption
+  border: 1px solid #ccc
+  text-align: center
+  margin-bottom: 18px
+  max-width: 96%
+  padding: 9px 5px 0
+  img
+    border: 1px solid #ccc
+    margin: 0
+    padding: 0
+  p.wp-caption-text
+    margin: 0
+    padding: 18px 5px
+
+.gallery
+  display: block
+  clear: both
+  overflow: hidden
+  margin: 0 auto
+  padding: 0 0 22px 0
+
+.gallery-row
+  display: block
+  clear: both
+  overflow: hidden
+  margin: 0
+
+.gallery-item
+  overflow: hidden
+  float: left
+  margin: 0
+  text-align: center
+  list-style: none
+
+.gallery-icon
+  margin: 0 5px
+
+#content .gallery img
+  border: 1px solid #ccc
+  margin: 0
+  padding: 6px
+
+.gallery-item img
+  margin: 0 auto
+  &.thumbnail
+    margin: 0 auto
+
+.gallery-caption
+  padding: 6px 6px 0
+
+.wp-caption-text, .gallery-caption
+  color: #666
+  font-size: 13px
+  line-height: 18px
+
+.wp-smiley
+  max-height: 12px
+  margin: 0 !important
+
+.edit-comment
+  margin-bottom: 18px
+
+.wp-pagenavi
+  padding: 0.5em 0
+  a
+    border: 1px solid #ccc
+    color: #666
+    font-style: normal
+    margin: 0 .375em
+    padding: 0.5em 0.5em
+    &:link
+      border: 1px solid #ccc
+      color: #666
+      font-style: normal
+      margin: 0 .375em
+      padding: 0.5em 0.5em
+  span
+    border: 1px solid #ccc
+    color: #666
+    font-style: normal
+    margin: 0 .375em
+    padding: 0.5em 0.5em
+  a
+    &:visited
+      border: 1px solid #ccc
+      color: #666
+    &:hover, &:active
+      border: 1px solid #ccc
+      color: #FF4B33
+  span
+    &.pages
+      border: none
+      color: #666
+      margin: 0
+      padding: 0
+    &.current, &.extend
+      color: #000
+
+img#wpstats
+  width: 0px
+  height: 0px
+  overflow: hidden
+
+#header
+  width: 940px
+  margin: 0 auto
+
+#blog-title
+  background: url('img/logo.png') no-repeat right 30px
+  text-indent: -9999px
+  a
+    text-transform: lowercase
+    border-bottom: 0
+  .word-1
+    color: #CCC
+  .word-2
+    color: #777
+  a
+    &:hover
+      .word-1, .word-2
+        color: #4080C0
+    &:active .word-1
+      color: #4080C0
+
+body
+  &.page #content
+    width: 775px
+    margin: 0 75px
+  &.home #content
+    font-size: 1.5em
+    line-height: 1.25em
+
+ul
+  line-height: 1.375em
+  list-style-type: square
   ul
-    list-style-type: none
-    margin: 20px 0
+    margin-left: 1em
+
+#blog-title, .sf-menu a, .entry-title
+  font-family: Arial, sans-serif
+
+.slug-contact .vcard
+  font-size: 1.75em
+  line-height: 1.25em
+
+.slug-resume h3
+  color: #4080C0
+  font-style: normal !important
+  font-weight: bold
+  border-left: 5px solid #4080C0
+  height: 1em
+  margin: 1em 0
+  padding: 0 0 0.5em 0.5em !important
+
+.vcalendar
+  list-style: none
+  padding: 0
+
+.org
+  font-style: italic
+
+.degree, .title
+  font-weight: bold
+
+.period
+  float: left !important
+  width: 7em
+  clear: left
+  font-size: 0.75em
+  padding-right: 1em
+
+.vcalendar .vcard
+  margin-bottom: 2em
+
+.description
+  padding-left: 6.25em
+
+.period abbr
+  border-bottom: none
+
+.meta-sep-entry-date
+  display: none
+
+.tag-links
+  display: block
+
+body, input, textarea
+  font: 15px Arial,  sans-serif
+  line-height: 25px
+
+p, ul, ol, dd
+  margin-bottom: 22px
+
+pre
+  margin-bottom: 22px
+  font: 14px Monaco,  monospace
+  line-height: 22px
+
+code
+  font: 14px Monaco,  monospace
+  line-height: 22px
+
+blockquote
+  color: #666
+  font-style: italic
+
+table
+  border: 1px solid #ccc
+  border-width: 1px 1px 0 1px
+  font-size: 13px
+  line-height: 18px
+  margin: 0 0 22px 0
+  text-align: left
+
+caption
+  text-align: left
+
+tr
+  border-bottom: 1px solid #ccc
+
+th, td
+  padding: .7em 1.25em
+
+hr
+  background-color: #ccc
+  border: 0
+  color: #ccc
+  height: 1px
+  margin-bottom: 22px
+
+a
+  &:link
+    color: #004B91
+    text-decoration: none
+    border-bottom: 1px dotted
+  &:visited
+    color: #779
+  &:active, &:hover
+    color: #FF4B33
+
+#blog-title
+  font-size: 72px
+  line-height: 80px
+  padding: 25px 0 10px 0
+  a
+    color: #666
+    text-decoration: none
+    &:active, &:hover
+      color: #4080C0
+
+#blog-description
+  color: #666
+  font-size: 13px
+  font-style: italic
+
+.skip-link
+  display: none
+
+.sf-menu
+  margin: 0
+  padding: 0
+  list-style: none
+  line-height: 1.0
+  ul
+    position: absolute
+    top: -999em
+    width: 10em
+    li
+      width: 100%
   li
-    font-size: 14px
-    line-height: 20px
+    &:hover
+      visibility: inherit
+    float: left
+    position: relative
+  a
+    display: block
+    position: relative
+    border-bottom: none
+  li
+    &:hover ul, &.sfHover ul
+      left: 0
+      top: 2.5em
+      z-index: 99
+
+ul.sf-menu li
+  &:hover li ul, &.sfHover li ul
+    top: -999em
+  li
+    &:hover ul, &.sfHover ul
+      left: 10em
+      top: 0
+    &:hover li ul, &.sfHover li ul
+      top: -999em
+    li
+      &:hover ul, &.sfHover ul
+        left: 10em
+        top: 0
+
+.sf-menu
+  float: left
+  font-size: 1.5em
+  border-bottom: 3px solid #ccc
+  border-top: 3px solid #ccc
+  width: 100%
+  a
+    padding: 9px 13px
+    text-decoration: none
+    text-transform: lowercase
+    color: #999
+    &:visited
+      color: #999
+  li
+    background: #fff
+    border-bottom: 3px solid #fff
+    li
+      background: #fff
+      li
+        background: #9AAEDB
+    &:hover, &.sfHover
+      border-bottom-color: #4080C0 !important
+  a
+    &:focus, &:hover, &:active
+      border-bottom-color: #4080C0 !important
+  li
+    &.current_page_item a:hover
+      border-bottom-color: #4080C0 !important
+    &.current_page_parent, &.current_page_item
+      border-bottom-color: #FF4B33
+    &:hover ul, &.sfHover ul
+      top: 32px
+  ul
+    ul
+      margin-top: 0
+    a
+      background: #fafafa
+      &:hover
+        color: #FF4B33
+
+#main
+  clear: both
+  padding: 25px 0 10px 25px
+
+.page-title
+  font-size: 13px
+  line-height: 18px
+  padding: 0 0 44px 0
+
+.attachment .page-title
+  font-style: italic
+
+.page-title
+  a
+    color: #666
+    text-decoration: none
+    &:active, &:hover
+      color: #FF4B33
+  span
+    font-style: italic
+  .meta-nav
+    font-style: normal
+
+.hentry
+  padding: 0 0 22px 0
+
+.single .hentry
+  padding: 0
+
+.home #content .sticky
+  border: 1px solid #ccc
+  margin: 0 0 66px 0
+  padding: 22px 20px 0 20px
+
+.entry-title
+  font-size: 26px
+  font-weight: bold
+  line-height: 26px
+  padding: 0 0 7px 0
+  code
+    font-size: 26px
+    font-weight: bold
+    line-height: 26px
+    padding: 0 0 7px 0
+  a
+    color: #000
+    text-decoration: none
+    &:active, &:hover
+      color: #FF4B33
+
+.entry-meta
+  color: #666
+  font-size: 13px
+  font-style: italic
+  line-height: 18px
+  .author!
+  .n
+    font-size: 11px
+    font-style: normal
+    letter-spacing: 0.05em
+    text-transform: uppercase
+  a
+    color: #666
+    text-decoration: none
+    &:active, &:hover
+      color: #FF4B33
+  abbr
+    border: none
+    cursor: text
+    font-size: 11px
+    font-style: normal
+    letter-spacing: 0.05em
+    text-transform: uppercase
+
+.entry-content
+  padding: 22px 0 0 0
+  h1, h2
+    font-family: Arial, sans-serif
+    font-size: 19px
+    font-weight: bold
+    padding: 28px 0 14px 0
+  h3
+    font-size: 17px
+    font-style: italic
+    padding: 28px 0 14px 0
+  h4
+    font-size: 11px
+    font-family: Arial, sans-serif
+    font-weight: bold
+    text-transform: uppercase
+    letter-spacing: 0.05em
+  table
+    margin-left: 1px
+  embed
+    margin: 0 0 22px 0
+
+.entry-utility
+  color: #666
+  font-size: 13px
+  line-height: 18px
+  margin: 0 0 44px 0
+  a
+    color: #666
+    font-style: italic
+    text-decoration: none
+    &:active, &:hover
+      color: #FF4B33
+
+.page-link
+  font-size: 13px
+  font-weight: bold
+  line-height: 18px
+  margin: 0 0 22px 0
+  padding: 22px 0 0 0
+  word-spacing: 0.5em
+  a
+    border: 1px solid #ccc
+    color: #666
+    font-weight: normal
+    padding: 0.5em 0.75em
+    text-decoration: none
+    &:active, &:hover
+      color: #FF4B33
+
+ul
+  &#links-page, &#archives-page
+    list-style: none
+    margin-left: 0
+    overflow: hidden
+
+li.content-column
+  float: left
+  margin-right: 20px
+  width: 45%
+
+.gallery
+  padding: 0 0 22px 0
+
+.wp-caption-text, .gallery-caption
+  color: #666
+  font-size: 13px
+  line-height: 18px
+
+#author-info
+  margin: 0 0 44px 0
+  overflow: hidden
+  .avatar
+    float: left
+    margin: .3em 1em 0 0
+
+.attachment-jpeg #container, .attachment-png #container
+  width: 100%
+
+.attachment-jpeg #content, .attachment-png #content
+  width: 930px
+
+.attachment-jpeg #comments, .attachment-png #comments
+  width: 540px
+  overflow: hidden
+
+.attachment-jpeg .main-aside, .attachment-png .main-aside
+  display: none
+
+.navigation
+  color: #666
+  font-size: 13px
+  line-height: 18px
+  margin: 0px 0 22px 0
+  overflow: hidden
+  a
+    color: #666
+    font-style: italic
+    text-decoration: none
+    &:active, &:hover
+      color: #FF4B33
+  .meta-nav
+    font-style: normal
+
+.nav-previous
+  float: left
+  width: 50%
+
+.nav-next
+  float: right
+  width: 50%
+  text-align: right
+
+#nav-above, #nav-below
+  width: 100%
+
+#nav-above
+  display: none
+
+.paged #nav-above
+  display: block
+  padding: 0 0 44px 0
+
+#comments
+  padding: 22px 0 0 0
+  font-size: 13px
+  line-height: 18px
+  input, textarea
+    font-size: 13px
+    line-height: 18px
+  code
+    font-size: 12px
+    line-height: 18px
+  h3
+    font-family: Arial, sans-serif
+    font-size: 15px
+    font-weight: bold
+    line-height: 22px
+    padding: 0 0 18px 0
+
+#comments-list
+  padding: 0 0 18px 0
+  ol, ul
+    list-style: none
+    margin: 0
+  ol
+    border: 1px solid #ccc
+    border-bottom: none
+    margin: 0 0 18px 0
+  li
+    background: #fafafa
+    border-bottom: 1px solid #ccc
+    padding: 18px 1.5em 0 1.5em
+    position: relative
+    &.alt
+      background: #fff
+    &.bypostauthor
+      background: #FFFFCC
+  ul li
+    border: 1px solid #ccc
+    margin: 0 0 18px 0
+  li .avatar
+    position: absolute
+    top: 22px
+    left: 1.5em
+    width: 36px
+    height: 36px
+  .comment-author
+    font-weight: bold
+    padding: 9px 0 0 46px
+  .comment-meta
+    color: #666
+    font-size: 11px
+    padding: 0 0 9px 46px
+    a
+      color: #666
+      font-style: italic
+      text-decoration: none
+      &:active, &:hover
+        color: #FF4B33
+
+.comment-reply-link
+  font-size: 11px
+  padding: 0 0 18px 0
+  text-align: right
+  a
+    color: #666
+    font-style: italic
+    text-decoration: none
+    &:active, &:hover
+      color: #FF4B33
+
+.comment-navigation
+  font-weight: bold
+  padding: 0 0 18px 0
+  margin-right: 0.5em
+  a
+    border: 1px solid #ccc
+    color: #666
+    font-weight: normal
+    padding: 0.5em 0.75em
+    text-decoration: none
+    &:active, &:hover
+      color: #FF4B33
+    margin-right: 0.5em
+  span
+    margin-right: 0.5em
+
+#trackbacks-list .comment-content
+  position: absolute
+  left: -9000px
+
+#respond
+  background: #fff
+  margin-bottom: 22px
+  overflow: hidden
+  padding: 18px 0 0 0
+  position: relative
+
+#comments-list
+  #respond
+    border-bottom: 1px solid #ccc
+    margin: 0 0 18px 0
+    padding: 18px 1.5em
+  ul #respond
+    border: 1px solid #ccc
+    margin: 0
+
+#cancel-comment-reply
+  font-size: 11px
+  position: absolute
+  top: 18px
+  right: 1.5em
+  a
+    color: #666
+
+#respond .required
+  color: #FF4B33
+  font-weight: bold
+
+.form-section
+  label
+    font-size: 11px
+  input
+    margin: 0 0 18px 0
+    width: 98%
+  textarea
+    width: 99%
+
+#form-allowed-tags
+  p
+    color: #666
+    font-size: 11px
+    margin: 0
+  span
+    font-style: italic
+  code
+    font-size: 11px
+    line-height: normal
+
+.form-submit
+  padding: 18px 0 0 0
+  text-align: right
+
+.subscribe-to-comments
+  color: #666
+  float: left
+  font-size: 11px
+  margin: 0
+  padding: 18px 0 0 0
+
+.solo-subscribe-to-comments
+  color: #666
+  font-size: 11px
+  padding: 18px 0 0 0
+
+.comment_license
+  color: #666
+  clear: both
+  font-size: 11px
+  margin: 0
+  padding: 18px 0 0 0
+
+.aside
+  font-size: 13px
+  line-height: 18px
+  margin-bottom: 6px
+  input
+    font-size: 13px
+    line-height: 18px
+    margin-bottom: 6px
+  p, ul, ol, dd
+    margin-bottom: 18px
+  pre
+    margin-bottom: 18px
+    font-size: 12px
+    line-height: 18px
+  code
+    font-size: 12px
+    line-height: 18px
+  .current_page_item
+    a
+      color: #FF4B33
+    .page_item a
+      color: #666
+      &:hover, &:active
+        color: #FF4B33
+  color: #666
+  a
+    color: #666
+    &:active, &:hover
+      color: #FF4B33
+  h3
+    font-size: 15px
+    line-height: 22px
+    a
+      text-decoration: none
+  caption
+    font-size: 11px
+    font-family: Arial, sans-serif
+    font-weight: bold
+    text-transform: uppercase
+    letter-spacing: 0.05em
+  ul
+    list-style: none
+    margin-left: 0
+    ul
+      list-style: disc
+      margin: 0 0 22px 20px
+      li
+        padding: 1px 0
+      ul
+        margin-bottom: 0
+  form
+    margin-bottom: 22px
+  table
+    margin-bottom: 22px
+    border: none
+  thead, tbody
+    border: 1px solid #ccc
+  th, td
+    border-right: 1px solid #ccc
+    padding: .25em .8em
+  tfoot
+    tr
+      border: none
+    td
+      border-color: transparent
+
+.widget_tag_cloud
+  margin: 0 0 22px 0
+
+.aside #searchsubmit
+  display: none
+
+.main-aside
+  ul
+    padding: 0 20px
+  h3!
+  ul ul
+    padding: 0
+
+#primary
+  border: 1px solid #ccc
+  padding: 18px 0 0 0
+  margin-bottom: 22px
+
+#content .aside
+  border: 1px solid #ccc
+  margin: 0 0 22px 0
+  padding: 18px 0 0 0
+  ul
+    padding: 0 20px
+  h3
+    font-family: Arial, sans-serif
+    font-weight: normal
+    font-size: 17px
+    font-style: italic
+    padding: 0 0 7px 0
+    text-transform: none
+  ul ul
+    padding: 0
+
+#subsidiary
+  padding: 33px 0 0 0
+
+#footer
+  margin: 0 auto
+  width: 940px
+  border-top: 3px solid #ccc
+  margin-top: 22px
+
+#siteinfo
+  color: #666
+  font-size: 11px
+  line-height: 18px
+  padding: 22px 0 44px 0
+  a
+    color: #666
+    &:active, &:hover
+      color: #FF4B33
+
+.wp-pagenavi
+  margin: 0 0 0 -0.5em
+  padding: 0.5em 0
+  a
+    border: 1px solid #ccc !important
+    color: #666!important
+    font-style: normal
+    margin: 0 .375em !important
+    padding: 0.5em 0.25em !important
+    &:link
+      border: 1px solid #ccc !important
+      color: #666!important
+      font-style: normal
+      margin: 0 .375em !important
+      padding: 0.5em 0.25em !important
+  span
+    border: 1px solid #ccc !important
+    color: #666!important
+    font-style: normal
+    margin: 0 .375em !important
+    padding: 0.5em 0.25em !important
+  a
+    &:visited
+      border: 1px solid #ccc !important
+      color: #666 !important
+    &:hover, &:active
+      border: 1px solid #ccc !important
+      color: #FF4B33 !important
+  span
+    &.pages
+      border: none !important
+      color: #666 !important
+      margin: 0 !important
+      padding: 0 !important
+    &.current
+      border: none !important
+      color: #666 !important
+      font-weight: normal !important
+      margin: 0 !important
+      padding: 0 !important
+    &.extend
+      background-color: #FFFFFF
+      border: 1px solid #000000
+      color: #000000
+      margin: 2px
+      padding: 2px 4px

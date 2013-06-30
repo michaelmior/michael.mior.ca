@@ -15,6 +15,7 @@
 
 compile '/styles/' do
   filter :sass
+  filter :yui_compressor, :type => :css
 end
 
 compile '*' do
@@ -22,6 +23,7 @@ compile '*' do
     # don’t filter binary items
   else
     filter :haml
+    filter :typogruby
     layout 'default'
   end
 end

@@ -1,0 +1,24 @@
+---
+title: Contact
+---
+%img{:src => '../img/Michael-Mior.jpg',
+     :alt => 'Michael Mior',
+     :title => 'Michael-Mior',
+     :width => '200',
+     :height => '250',
+     :style => 'float:left;margin-right:1em;border:1px solid #000'}
+
+%div.vcard
+  %div.fn Michael Mior
+  %div= link_to '&#109;&#105;&#099;&#104;&#097;&#101;&#108;&#064;&#109;&#105;&#111;&#114;&#046;&#099;&#097;', 'mailto:&#109;&#105;&#099;&#104;&#097;&#101;&#108;&#064;&#109;&#105;&#111;&#114;&#046;&#099;&#097;', :class => 'email'
+  %br/
+  %div.adr
+    %div.street-address 70 Spadina Road, Apt. 603
+    %div
+      %span.locality Toronto
+      ,
+      %span.region{:title => 'Ontario'} ON
+      %span.postal-code M5R 2T6
+    %div.country-name Canada
+    %br/
+    %div.tel 416.273.6292
