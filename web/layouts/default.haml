@@ -5,7 +5,7 @@
     %title #{@item[:title]} - Michael Mior
     %link{:rel => 'stylesheet', :href => '/styles.css'}
     %meta{:name => 'generator', :content => "nanoc #{Nanoc::VERSION}"}/
-  %body.home.page
+  %body{:class => @item[:kind] == 'article' ? 'single-post' : 'home page'}
     %div#wrapper.hfeed
 
       %div#header
@@ -30,7 +30,7 @@
     %div#main
       %div#container
         %div#content
-          %div.page.hentry
+          %div{:class => @item[:kind] == 'article' ? 'post hentry' : 'page hentry'}
             %h1.entry-title= @item[:headline] or @item[:title]
             %div.entry-content= yield
 

@@ -13,6 +13,13 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+compile '/blog/*' do
+    filter :haml
+    filter :typogruby
+
+    layout 'default'
+end
+
 compile '/styles/' do
   filter :sass
   filter :yui_compressor, :type => :css
@@ -26,6 +33,10 @@ compile '*' do
     filter :typogruby
     layout 'default'
   end
+end
+
+route '/blog/*' do
+    item.identifier.chop + '.html'
 end
 
 route '/styles/' do
