@@ -3,6 +3,7 @@ GEM
   specs:
     adsf (1.1.1)
       rack (>= 1.0.0)
+    builder (3.2.2)
     coderay (1.0.9)
     colored (1.2)
     cri (2.3.0)
@@ -57,6 +58,7 @@ PLATFORMS
 
 DEPENDENCIES
   adsf
+  builder
   coderay
   guard-nanoc
   haml
