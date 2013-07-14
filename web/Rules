@@ -46,7 +46,8 @@ compile '*' do
 end
 
 route '/blog/*' do
-    item.identifier.chop + '.html'
+    Date.parse(item[:created_at]).strftime('/%Y/%m/%d') +
+        item.identifier.chop + '.html'
 end
 
 route '/(sitemap|atom)/' do
