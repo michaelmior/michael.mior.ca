@@ -1,0 +1,8 @@
+---
+title: Home
+headline: Welcome
+---
+You've reached the website of computer science Master Michael Mior. I'm currently a Senior Web Developer at [Bunch](http://www.joinbunch.com/).
+
+The rest of the site has more [about me](/about/).
+To get in touch, send me an [email](mailto:&#109;&#105;&#099;&#104;&#097;&#101;&#108;&#064;&#109;&#105;&#111;&#114;&#046;&#099;&#097;) and we'll talk.

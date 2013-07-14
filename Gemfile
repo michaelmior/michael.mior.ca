@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'adsf'
+gem 'coderay'
 gem 'guard-nanoc'
 gem 'haml'
+gem 'kramdown'
 gem 'nanoc'
+gem 'nokogiri'
 gem 'sass'
 gem 'typogruby'
 gem 'yuicompressor'

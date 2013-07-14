@@ -14,7 +14,8 @@
 #   because “*” matches zero or more characters.
 
 compile '/blog/*' do
-    filter :haml
+    filter :kramdown
+    filter :colorize_syntax
     filter :typogruby
 
     layout 'default'
@@ -29,7 +30,12 @@ compile '*' do
   if item.binary?
     # don’t filter binary items
   else
-    filter :haml
+    if item[:extension] == 'md'
+      filter :kramdown
+    else
+      filter :haml
+    end
+
     filter :typogruby
     layout 'default'
   end
