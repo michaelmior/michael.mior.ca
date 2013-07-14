@@ -13,8 +13,38 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+preprocess do
+    def paginate_articles
+        articles_to_paginate = sorted_articles
+        article_groups = []
+        until articles_to_paginate.empty?
+            article_groups << articles_to_paginate.slice!(0..@config[:page_size] - 1)
+        end
+
+        article_groups.each_with_index do |subarticles, i|
+            first = i * config[:page_size] + 1
+            last  = (i + 1) * config[:page_size]
+
+            @items << Nanoc::Item.new(
+                "= render 'pagination_page', :item_id => #{i}",
+                { :title => "Archive (articles #{first} to #{last})" },
+                "/blog/archive/#{i+1}/"
+            )
+        end
+    end
+
+    paginate_articles
+end
+
 compile '/(sitemap|atom)/' do
     filter :haml
+end
+
+compile '/blog/archive/*' do
+    filter :haml
+    filter :typogruby
+
+    layout 'default'
 end
 
 compile '/blog/*' do
@@ -46,8 +76,12 @@ compile '*' do
 end
 
 route '/blog/*' do
-    Date.parse(item[:created_at]).strftime('/%Y/%m/%d') +
+    if item[:created_at]
+        Date.parse(item[:created_at]).strftime('/%Y/%m/%d') +
+            item.identifier.chop + '.html'
+    else
         item.identifier.chop + '.html'
+    end
 end
 
 route '/(sitemap|atom)/' do
