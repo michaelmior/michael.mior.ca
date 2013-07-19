@@ -21,6 +21,7 @@ GEM
       nanoc (>= 3.6.3)
     haml (4.0.3)
       tilt
+    json (1.8.0)
     kramdown (1.1.0)
     listen (1.2.2)
       rb-fsevent (>= 0.9.3)
@@ -51,6 +52,9 @@ GEM
     tilt (1.4.1)
     typogruby (1.0.15)
       rubypants
+    w3c_validators (1.2)
+      json
+      nokogiri
     yuicompressor (1.2.1)
 
 PLATFORMS
@@ -68,4 +72,5 @@ DEPENDENCIES
   rake
   sass
   typogruby
+  w3c_validators
   yuicompressor

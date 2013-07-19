@@ -4,7 +4,16 @@ task :compile do
     require 'nanoc/cli'
 
     Dir.chdir('web')
-    Nanoc::CLI.run({})
+    Nanoc::CLI.run([])
 end
 
-task :default => :compile
+desc 'Run checks'
+task :test => :compile do
+    require 'nanoc'
+    require 'nanoc/cli'
+
+    Dir.chdir('web')
+    Nanoc::CLI.run(['check', '--deploy'])
+end
+
+task :default => :test
