@@ -4,6 +4,7 @@
     %meta{:charset => 'utf-8'}/
     %title #{@item[:title]} - Michael Mior
     %link{:rel => 'stylesheet', :href => '/styles.css'}
+    %link{:rel => 'icon', :href => '/img/favicon.ico'}
     %meta{:name => 'generator', :content => "nanoc #{Nanoc::VERSION}"}/
   %body{:class => @item[:kind] == 'article' ? 'single-post' : 'home page'}
     %div#wrapper.hfeed
