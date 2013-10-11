@@ -21,7 +21,7 @@ end
 desc 'Publish gh-pages branch'
 task :publish => :compile do
     Dir.mktmpdir do |dir|
-        hash = `git show-ref --hash HEAD`
+        hash = `git show-ref --hash HEAD`.strip
         `git clone --branch gh-pages --single-branch . #{dir}`
 
         # Copy all output files to a temporary directory
@@ -30,11 +30,24 @@ task :publish => :compile do
             `git rm -rf #{dir}/*`
             `cp -r ./web/output/* #{dir}`
             `git add #{dir}`
-            `git config user.name '#{ENV['GIT_NAME']}'` if ENV['GIT_NAME']
-            `git config user.email '#{ENV['GIT_EMAIL']}'` if ENV['GIT_EMAIL']
+            `git config user.name '#{ENV['GIT_NAME']}'` if !ENV['GIT_NAME'].nil?
+            `git config user.email '#{ENV['GIT_EMAIL']}'` if !ENV['GIT_EMAIL'].nil?
             `git commit -m 'Publish of revision #{hash}'`
             `git push origin gh-pages`
         end
+    end
+end
+
+desc 'Push gh-pages branch to GitHub'
+task :deploy => :publish do
+    `git config remote.origin.url #{ENV['GIT_TOKEN']}@github.com/michaelmior/michael.mior.ca.git` if !ENV['GIT_TOKEN'].nil?
+    `git push origin gh-pages`
+end
+
+desc 'Run tests and optionally deploy when run via Travis'
+task :travis => :test do
+    if ENV['TRAVIS_SECURE_ENV_VARS'] == 'true' and `git name-rev --name-only HEAD`.strip == 'master'
+        Rake::Task['deploy'].execute
     end
 end
 
