@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - 1.9.3
+before_install:
+  - gem update --system 1.8.25
+  - gem --version
+  - gem install -v 1.3.5 bundler
+branches:
+  except:
+    - gh-pages
