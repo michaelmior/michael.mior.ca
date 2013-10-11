@@ -14,7 +14,7 @@ task :test => :compile do
     require 'nanoc/cli'
 
     Dir.chdir('web') do
-        Nanoc::CLI.run(['check', '--deploy'])
+        Nanoc::CLI.run(['check', '--deploy', '--verbose'])
     end
 end
 
