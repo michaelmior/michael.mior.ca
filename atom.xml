@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://michael.mior.ca/</id>
+  <title>Michael Mior</title>
+  <updated>2012-09-15T04:00:00Z</updated>
+  <link rel="alternate" href="http://michael.mior.ca/"/>
+  <link rel="self" href="http://michael.mior.ca/atom.xml"/>
+  <author>
+    <name>Michael Mior</name>
+    <uri>http://michael.mior.ca</uri>
+  </author>
+  <entry>
+    <id>tag:michael.mior.ca,2012-09-15:/2012/09/15/blog/node-js-skeleton-project.html</id>
+    <title type="html">Node.js skeleton project</title>
+    <published>2012-09-15T04:00:00Z</published>
+    <updated>2012-09-15T04:00:00Z</updated>
+    <link rel="alternate" href="http://michael.mior.ca/2012/09/15/blog/node-js-skeleton-project.html"/>
+    <content type="html">&lt;p&gt;Unfortunately, it’s obviously been a long time since this blog has been&amp;nbsp;updated.
+Since the last post, I’ve been hard at work rewriting our Web app in Django (finally got rid of our old &lt;span class="caps"&gt;PHP&lt;/span&gt;) and picking up iPhone app&amp;nbsp;development.
+Keep an eye out for some cool stuff coming up in the near&amp;nbsp;future.&lt;/p&gt;
+
+&lt;p&gt;In my spare time, I’ve been playing around with Node.js&amp;nbsp;development.
+I decided to release the sample project I’ve been working&amp;nbsp;on.
+You may find it useful if you’re looking to get up and running&amp;nbsp;quickly.
+It’s still a work in progress, but it’s coming along&amp;nbsp;nicely.&lt;/p&gt;
+
+&lt;p&gt;Check out &lt;a href="https://github.com/michaelmior/node-loco-skeleton"&gt;node-loco-skeleton&lt;/a&gt; on&amp;nbsp;GitHub.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:michael.mior.ca,2012-01-14:/2012/01/14/blog/unit-testing-django-model-mixins.html</id>
+    <title type="html">Unit testing Django model mixins</title>
+    <published>2012-01-14T05:00:00Z</published>
+    <updated>2012-01-14T05:00:00Z</updated>
+    <link rel="alternate" href="http://michael.mior.ca/2012/01/14/blog/unit-testing-django-model-mixins.html"/>
+    <content type="html">&lt;p&gt;I recently found myself having to unit test some model mixins and I thought I would share the technique I used in case anyone else finds it&amp;nbsp;useful.
+You could just pick a model which uses the mixin and run the test on instances of that&amp;nbsp;model.
+But the goal of a mixin is to provide reusable functionality independent of any&amp;nbsp;model.
+Instead, we create a dummy model we can use for&amp;nbsp;testing.&lt;/p&gt;
+
+&lt;p&gt;The model shouldn’t reside in &lt;code&gt;models.py&lt;/code&gt; since we don’t want it in our&amp;nbsp;database.
+Instead, we create the model&amp;nbsp;dynamically.
+However, I wanted to test some functionality which requires saving the model to the&amp;nbsp;database.
+Fortunately, Django can construct the necessary &lt;span class="caps"&gt;SQL&lt;/span&gt; to create and destroy the database&amp;nbsp;table.
+we simply override setUp and tearDown to do the heavy&amp;nbsp;lifting.&lt;/p&gt;
+
+&lt;div&gt;
+&lt;div class="CodeRay"&gt;
+  &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="line-numbers"&gt; &lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;span style="color:#080;font-weight:bold"&gt;from&lt;/span&gt; &lt;span style="color:#B44;font-weight:bold"&gt;django.test&lt;/span&gt; &lt;span style="color:#080;font-weight:bold"&gt;import&lt;/span&gt; &lt;span style="color:#B44;font-weight:bold"&gt;TestCase&lt;/span&gt;
+&lt;span class="line-numbers"&gt; &lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;span style="color:#080;font-weight:bold"&gt;from&lt;/span&gt; &lt;span style="color:#B44;font-weight:bold"&gt;django.db&lt;/span&gt; &lt;span style="color:#080;font-weight:bold"&gt;import&lt;/span&gt; &lt;span style="color:#B44;font-weight:bold"&gt;connection&lt;/span&gt;
+&lt;span class="line-numbers"&gt; &lt;a href="#n3" name="n3"&gt;3&lt;/a&gt;&lt;/span&gt;&lt;span style="color:#080;font-weight:bold"&gt;from&lt;/span&gt; &lt;span style="color:#B44;font-weight:bold"&gt;django.core.management.color&lt;/span&gt; &lt;span style="color:#080;font-weight:bold"&gt;import&lt;/span&gt; &lt;span style="color:#B44;font-weight:bold"&gt;no_style&lt;/span&gt;
+&lt;span class="line-numbers"&gt; &lt;a href="#n4" name="n4"&gt;4&lt;/a&gt;&lt;/span&gt;&lt;span style="color:#080;font-weight:bold"&gt;from&lt;/span&gt; &lt;span style="color:#B44;font-weight:bold"&gt;django.db.models.base&lt;/span&gt; &lt;span style="color:#080;font-weight:bold"&gt;import&lt;/span&gt; &lt;span style="color:#B44;font-weight:bold"&gt;ModelBase&lt;/span&gt;
+&lt;span class="line-numbers"&gt; &lt;a href="#n5" name="n5"&gt;5&lt;/a&gt;&lt;/span&gt;
+&lt;span class="line-numbers"&gt; &lt;a href="#n6" name="n6"&gt;6&lt;/a&gt;&lt;/span&gt;&lt;span style="color:#080;font-weight:bold"&gt;class&lt;/span&gt; &lt;span style="color:#B06;font-weight:bold"&gt;ModelMixinTestCase&lt;/span&gt;(TestCase):
+&lt;span class="line-numbers"&gt; &lt;a href="#n7" name="n7"&gt;7&lt;/a&gt;&lt;/span&gt;    &lt;span style="color:#777"&gt;&lt;span style="color:#444"&gt;"""&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="line-numbers"&gt; &lt;a href="#n8" name="n8"&gt;8&lt;/a&gt;&lt;/span&gt;&lt;span style="color:#777"&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;    Base class for tests of model mixins. To use, subclass and specify&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="line-numbers"&gt; &lt;a href="#n9" name="n9"&gt;9&lt;/a&gt;&lt;/span&gt;&lt;span style="color:#777"&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;    the mixin class variable. A model using the mixin will be made&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="line-numbers"&gt;&lt;strong&gt;&lt;a href="#n10" name="n10"&gt;10&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span style="color:#777"&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;    available in self.model.&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="line-numbers"&gt;&lt;a href="#n11" name="n11"&gt;11&lt;/a&gt;&lt;/span&gt;&lt;span style="color:#777"&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style="color:#444"&gt;"""&lt;/span&gt;&lt;/span&gt;
+&lt;span class="line-numbers"&gt;&lt;a href="#n12" name="n12"&gt;12&lt;/a&gt;&lt;/span&gt;
+&lt;span class="line-numbers"&gt;&lt;a href="#n13" name="n13"&gt;13&lt;/a&gt;&lt;/span&gt;    &lt;span style="color:#080;font-weight:bold"&gt;def&lt;/span&gt; &lt;span style="color:#06B;font-weight:bold"&gt;setUp&lt;/span&gt;(&lt;span style="color:#069"&gt;self&lt;/span&gt;):
+&lt;span class="line-numbers"&gt;&lt;a href="#n14" name="n14"&gt;14&lt;/a&gt;&lt;/span&gt;        &lt;span style="color:#777"&gt;# Create a dummy model which extends the mixin&lt;/span&gt;
+&lt;span class="line-numbers"&gt;&lt;a href="#n15" name="n15"&gt;15&lt;/a&gt;&lt;/span&gt;        &lt;span style="color:#069"&gt;self&lt;/span&gt;.model = ModelBase(&lt;span style="background-color:hsla(0,100%,50%,0.05)"&gt;&lt;span style="color:#710"&gt;'&lt;/span&gt;&lt;span style="color:#D20"&gt;__TestModel__&lt;/span&gt;&lt;span style="color:#710"&gt;'&lt;/span&gt;&lt;/span&gt;+&lt;span style="color:#069"&gt;self&lt;/span&gt;.mixin.__name__, (&lt;span style="color:#069"&gt;self&lt;/span&gt;.mixin,),
+&lt;span class="line-numbers"&gt;&lt;a href="#n16" name="n16"&gt;16&lt;/a&gt;&lt;/span&gt;            { &lt;span style="background-color:hsla(0,100%,50%,0.05)"&gt;&lt;span style="color:#710"&gt;'&lt;/span&gt;&lt;span style="color:#D20"&gt;__module__&lt;/span&gt;&lt;span style="color:#710"&gt;'&lt;/span&gt;&lt;/span&gt;: &lt;span style="color:#069"&gt;self&lt;/span&gt;.mixin.__module__ })
+&lt;span class="line-numbers"&gt;&lt;a href="#n17" name="n17"&gt;17&lt;/a&gt;&lt;/span&gt;
+&lt;span class="line-numbers"&gt;&lt;a href="#n18" name="n18"&gt;18&lt;/a&gt;&lt;/span&gt;        &lt;span style="color:#777"&gt;# Create the schema for our test model&lt;/span&gt;
+&lt;span class="line-numbers"&gt;&lt;a href="#n19" name="n19"&gt;19&lt;/a&gt;&lt;/span&gt;        &lt;span style="color:#069"&gt;self&lt;/span&gt;._style = no_style()
+&lt;span class="line-numbers"&gt;&lt;strong&gt;&lt;a href="#n20" name="n20"&gt;20&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;        sql, _ = connection.creation.sql_create_model(&lt;span style="color:#069"&gt;self&lt;/span&gt;.model, &lt;span style="color:#069"&gt;self&lt;/span&gt;._style)
+&lt;span class="line-numbers"&gt;&lt;a href="#n21" name="n21"&gt;21&lt;/a&gt;&lt;/span&gt;
+&lt;span class="line-numbers"&gt;&lt;a href="#n22" name="n22"&gt;22&lt;/a&gt;&lt;/span&gt;        &lt;span style="color:#069"&gt;self&lt;/span&gt;._cursor = connection.cursor()
+&lt;span class="line-numbers"&gt;&lt;a href="#n23" name="n23"&gt;23&lt;/a&gt;&lt;/span&gt;        &lt;span style="color:#080;font-weight:bold"&gt;for&lt;/span&gt; statement &lt;span style="color:#080;font-weight:bold"&gt;in&lt;/span&gt; sql:
+&lt;span class="line-numbers"&gt;&lt;a href="#n24" name="n24"&gt;24&lt;/a&gt;&lt;/span&gt;            &lt;span style="color:#069"&gt;self&lt;/span&gt;._cursor.execute(statement)
+&lt;span class="line-numbers"&gt;&lt;a href="#n25" name="n25"&gt;25&lt;/a&gt;&lt;/span&gt;
+&lt;span class="line-numbers"&gt;&lt;a href="#n26" name="n26"&gt;26&lt;/a&gt;&lt;/span&gt;    &lt;span style="color:#080;font-weight:bold"&gt;def&lt;/span&gt; &lt;span style="color:#06B;font-weight:bold"&gt;tearDown&lt;/span&gt;(&lt;span style="color:#069"&gt;self&lt;/span&gt;):
+&lt;span class="line-numbers"&gt;&lt;a href="#n27" name="n27"&gt;27&lt;/a&gt;&lt;/span&gt;        &lt;span style="color:#777"&gt;# Delete the schema for the test model&lt;/span&gt;
+&lt;span class="line-numbers"&gt;&lt;a href="#n28" name="n28"&gt;28&lt;/a&gt;&lt;/span&gt;        sql = connection.creation.sql_destroy_model(&lt;span style="color:#069"&gt;self&lt;/span&gt;.model, (), &lt;span style="color:#069"&gt;self&lt;/span&gt;._style)
+&lt;span class="line-numbers"&gt;&lt;a href="#n29" name="n29"&gt;29&lt;/a&gt;&lt;/span&gt;        &lt;span style="color:#080;font-weight:bold"&gt;for&lt;/span&gt; statement &lt;span style="color:#080;font-weight:bold"&gt;in&lt;/span&gt; sql:
+&lt;span class="line-numbers"&gt;&lt;strong&gt;&lt;a href="#n30" name="n30"&gt;30&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;            &lt;span style="color:#069"&gt;self&lt;/span&gt;._cursor.execute(statement)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To make use of this code, just subclass from &lt;code&gt;ModelMixinTestCase&lt;/code&gt; and set the mixin class variable to the model mixin class you wish to&amp;nbsp;test.
+You’ll then have access to a fully functioning model which uses this mixin via&amp;nbsp;&lt;code&gt;self.model&lt;/code&gt;.
+Happy&amp;nbsp;testing!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:michael.mior.ca,2012-01-06:/2012/01/06/blog/mysql-client-configuration.html</id>
+    <title type="html">MySQL Client Configuration</title>
+    <published>2012-01-06T05:00:00Z</published>
+    <updated>2012-01-06T05:00:00Z</updated>
+    <link rel="alternate" href="http://michael.mior.ca/2012/01/06/blog/mysql-client-configuration.html"/>
+    <content type="html">&lt;p&gt;Perhaps I’m the only one who didn’t know this, but a while back, I discovered a handy trick for configuring the My&lt;span class="caps"&gt;SQL&lt;/span&gt;&amp;nbsp;client.
+You can create a configuration file in your home directory, &lt;code&gt;~/.my.cnf&lt;/code&gt; and set options for the My&lt;span class="caps"&gt;SQL&lt;/span&gt; client to&amp;nbsp;use.
+Really handy if you’re constantly connecting to the same server and tired of entering hostname and port&amp;nbsp;parameters.&lt;/p&gt;
+
+&lt;p&gt;Here’s an&amp;nbsp;example:&lt;/p&gt;
+
+&lt;div&gt;
+&lt;div class="CodeRay"&gt;
+  &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="line-numbers"&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;&lt;/span&gt;[client]
+&lt;span class="line-numbers"&gt;&lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;&lt;/span&gt;host     = 127.0.0.1
+&lt;span class="line-numbers"&gt;&lt;a href="#n3" name="n3"&gt;3&lt;/a&gt;&lt;/span&gt;user     = root
+&lt;span class="line-numbers"&gt;&lt;a href="#n4" name="n4"&gt;4&lt;/a&gt;&lt;/span&gt;password = root
+&lt;span class="line-numbers"&gt;&lt;a href="#n5" name="n5"&gt;5&lt;/a&gt;&lt;/span&gt;port     = 4040
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;That’s it for this&amp;nbsp;post.
+If you know any other time-saving tips for My&lt;span class="caps"&gt;SQL&lt;/span&gt;, please share in the&amp;nbsp;comments!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:michael.mior.ca,2011-03-06:/2011/03/06/blog/coloured-ssh-terminals.html</id>
+    <title type="html">Coloured SSH terminals</title>
+    <published>2011-03-06T05:00:00Z</published>
+    <updated>2011-03-06T05:00:00Z</updated>
+    <link rel="alternate" href="http://michael.mior.ca/2011/03/06/blog/coloured-ssh-terminals.html"/>
+    <content type="html">&lt;p&gt;With the looming prospect of deploying software to production systems and horror stories of accidental commands executed on production systems instead of development machines, I wanted to try to find a way to ensure this never happened to&amp;nbsp;me.
+My first thought was to change the background colour of the terminal as that would be a clear indicator of the system I’m connected&amp;nbsp;to.
+Unfortunately, gnome-terminal doesn’t allow changing the background colour of a running terminal and I don’t always want to launch a new terminal to&amp;nbsp;&lt;span class="caps"&gt;SSH.&lt;/span&gt;
+Fortunately, I found a&amp;nbsp;solution.&lt;/p&gt;
+
+&lt;p&gt;While doing some research on the possibility of changing the &lt;code&gt;gnome-terminal&lt;/code&gt; background, I came across &lt;a href="http://roxterm.sourceforge.net/"&gt;ROXTerm&lt;/a&gt;.
+ROXTerm has a &lt;span class="caps"&gt;DBUS&lt;/span&gt; interface which can be used to control profiles and colour scheme of an open&amp;nbsp;terminal.
+Unfortunately, the documentation on this interface is a little&amp;nbsp;light.
+Thanks to &lt;a href="http://news.ycombinator.com/user?id=shimon"&gt;shimon&lt;/a&gt; for his comment on &lt;a href="http://news.ycombinator.com/item?id=2089159"&gt;this post&lt;/a&gt; on Hacker&amp;nbsp;News.&lt;/p&gt;
+
+&lt;p&gt;I created a new colour scheme titled “Warning” including a red background with the intent of using this in any terminals where I know I need to be extra&amp;nbsp;careful.&lt;/p&gt;
+
+&lt;div&gt;
+&lt;div class="CodeRay"&gt;
+  &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="line-numbers"&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;&lt;/span&gt;dbus-send --session /net/sf/roxterm/Options net.sf.roxterm.Options.SetColourScheme string:$ROXTERM_ID "string:Warning"
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The next step was to get this command executed every time I connect to one of these&amp;nbsp;servers.
+I first created a simple script to save some typing, &lt;code&gt;roxterm-colour&lt;/code&gt;. I placed this in &lt;code&gt;~/bin&lt;/code&gt; (make sure to add this to your&amp;nbsp;&lt;code&gt;PATH&lt;/code&gt;).&lt;/p&gt;
+
+&lt;div&gt;
+&lt;div class="CodeRay"&gt;
+  &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="line-numbers"&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;&lt;/span&gt;#!/bin/sh
+&lt;span class="line-numbers"&gt;&lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;&lt;/span&gt;if [ -n $ROXTERM_ID ]; then
+&lt;span class="line-numbers"&gt;&lt;a href="#n3" name="n3"&gt;3&lt;/a&gt;&lt;/span&gt;dbus-send --session /net/sf/roxterm/Options net.sf.roxterm.Options.SetColourScheme string:$ROXTERM_ID "string:$1"
+&lt;span class="line-numbers"&gt;&lt;a href="#n4" name="n4"&gt;4&lt;/a&gt;&lt;/span&gt;fi
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Using a local ssh config file in &lt;code&gt;~/.ssh/config&lt;/code&gt; allows you to set connection-specific&amp;nbsp;options.
+The configuration settings below show how the colour scheme can be changed whenever the production system is connected&amp;nbsp;to.&lt;/p&gt;
+
+&lt;div&gt;
+&lt;div class="CodeRay"&gt;
+  &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="line-numbers"&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;&lt;/span&gt;Host prod
+&lt;span class="line-numbers"&gt;&lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;&lt;/span&gt;Hostname production.example.com
+&lt;span class="line-numbers"&gt;&lt;a href="#n3" name="n3"&gt;3&lt;/a&gt;&lt;/span&gt;LocalCommand roxterm-colour Warning
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now I can connect via ssh prod and the colour changes as&amp;nbsp;expected.
+The remaining problem is resetting the colour scheme as soon as the connection is&amp;nbsp;broken.
+Unfortunately, &lt;span class="caps"&gt;SSH&lt;/span&gt; doesn’t have any option to allow the execution of a command when a connection is&amp;nbsp;broken.
+For this, I created a simple script to alias &lt;span class="caps"&gt;SSH&lt;/span&gt; and reset the colour scheme after the connection&amp;nbsp;dies.
+This sits in &lt;code&gt;~/bin/ssh&lt;/code&gt;. In this case, you must ensure that &lt;code&gt;~/bin&lt;/code&gt; comes before &lt;code&gt;/usr/bin&lt;/code&gt; in your&amp;nbsp;&lt;code&gt;PATH&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div&gt;
+&lt;div class="CodeRay"&gt;
+  &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="line-numbers"&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;&lt;/span&gt;#!/bin/sh
+&lt;span class="line-numbers"&gt;&lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;&lt;/span&gt;trap "roxterm-colour Tango" EXIT
+&lt;span class="line-numbers"&gt;&lt;a href="#n3" name="n3"&gt;3&lt;/a&gt;&lt;/span&gt;/usr/bin/ssh $*
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The &lt;code&gt;trap&lt;/code&gt; command ensures that the colour scheme will be reset whenever the script exits (my default colour scheme is&amp;nbsp;Tango).
+Finally, I also found that if I open a new tab while SSHed into a coloured terminal, this tab will also take on the same&amp;nbsp;colour.
+Therefore, I also added roxterm-colour Tango to my .bashrc so the colour would be reset with every new&amp;nbsp;terminal.&lt;/p&gt;
+
+&lt;p&gt;I’m pretty happy with this setup and hoping it will help keep me from making any disastrous&amp;nbsp;mistakes.
+I’ve now replaced gnome-terminal with roxterm as my&amp;nbsp;default.
+Know any other tips on avoiding mistakes for production&amp;nbsp;systems?
+Let me know in the&amp;nbsp;comments!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:michael.mior.ca,2011-01-05:/2011/01/05/blog/rubbos.html</id>
+    <title type="html">RUBBoS</title>
+    <published>2011-01-05T05:00:00Z</published>
+    <updated>2011-01-05T05:00:00Z</updated>
+    <link rel="alternate" href="http://michael.mior.ca/2011/01/05/blog/rubbos.html"/>
+    <content type="html">&lt;p&gt;While working on my Masters thesis, I needed a solid database&amp;nbsp;benchmark.
+RUBBoS is a fairly common benchmark in the field, but unfortunately is a few years out of&amp;nbsp;date.
+While it was fantastically simple to set up, I did run into a few issues associated with newer versions of &lt;span class="caps"&gt;PHP&lt;/span&gt; and Java as well as a few minor&amp;nbsp;bugs.&lt;/p&gt;
+
+&lt;p&gt;Since the benchmark is fully open-source, I decided to release my&amp;nbsp;modifications.
+You can download these changes to RUBBoS via &lt;a href="https://github.com/michaelmior/RUBBoS"&gt;GitHub&lt;/a&gt;.
+Installation instructions and some additional notes can also be found&amp;nbsp;there.
+The most important thing to note is that I have only tested the &lt;span class="caps"&gt;LAMP&lt;/span&gt; version of the&amp;nbsp;application.&lt;/p&gt;
+
+&lt;p&gt;Hope someone finds this&amp;nbsp;useful!&lt;/p&gt;</content>
+  </entry>
+</feed>
