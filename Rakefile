@@ -40,15 +40,8 @@ end
 
 desc 'Push gh-pages branch to GitHub'
 task :deploy => :publish do
-    `git config remote.origin.url #{ENV['GIT_TOKEN']}@github.com/michaelmior/michael.mior.ca.git` if !ENV['GIT_TOKEN'].nil?
+    `git config remote.origin.url https://#{ENV['GIT_TOKEN']}:@github.com/michaelmior/michael.mior.ca.git` if !ENV['GIT_TOKEN'].nil?
     `git push origin gh-pages`
-end
-
-desc 'Run tests and optionally deploy when run via Travis'
-task :travis => :test do
-    if ENV['TRAVIS_SECURE_ENV_VARS'] == 'true' and `git name-rev --name-only HEAD`.strip == 'master'
-        Rake::Task['deploy'].execute
-    end
 end
 
 task :default => :test
