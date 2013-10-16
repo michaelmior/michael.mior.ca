@@ -27,7 +27,6 @@ task :publish => :compile do
 
         # Copy all output files to a temporary directory
         with_environment 'GIT_DIR' => "#{dir}/.git", 'GIT_WORK_TREE' => dir do
-            `git checkout gh-pages`
             `git rm -rf #{dir}/*`
             `cp -r ./web/output/* #{dir}`
             `git add #{dir}`
