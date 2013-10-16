@@ -22,6 +22,7 @@ desc 'Publish gh-pages branch'
 task :publish => :compile do
     Dir.mktmpdir do |dir|
         hash = `git show-ref --hash HEAD`.strip
+        puts "Publishing revision #{hash}"
         `git clone --branch gh-pages --single-branch . #{dir}`
 
         # Copy all output files to a temporary directory
@@ -33,7 +34,7 @@ task :publish => :compile do
             `git config user.name '#{ENV['GIT_NAME']}'` if !ENV['GIT_NAME'].nil?
             `git config user.email '#{ENV['GIT_EMAIL']}'` if !ENV['GIT_EMAIL'].nil?
             `git commit -m 'Publish of revision #{hash}'`
-            `git push origin gh-pages`
+            puts `git log -1`
         end
     end
 end
