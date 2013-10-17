@@ -32,13 +32,20 @@ task :publish => :compile do
 
         # Copy all output files to a temporary directory
         with_environment 'GIT_DIR' => "#{dir}/.git", 'GIT_WORK_TREE' => dir do
+            # Reset the branch with the latest build output
             `git rm -rf #{dir}/*`
             `cp -r ./web/output/* #{dir}`
+
+            # Add CNAME for subdomain alias
+            File.open("#{dir}/CNAME", 'w') {|f| f.write('michael.mior.ca') }
+
             `git add #{dir}`
             `git config user.name '#{ENV['GIT_NAME']}'` if !ENV['GIT_NAME'].nil?
             `git config user.email '#{ENV['GIT_EMAIL']}'` if !ENV['GIT_EMAIL'].nil?
             `git commit -m 'Publish of revision #{hash}'`
             puts `git log -1`
+
+            # Push back to the local repo (not GitHub)
             `git push origin gh-pages`
         end
     end
