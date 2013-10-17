@@ -39,14 +39,18 @@ task :publish => :compile do
             `git config user.email '#{ENV['GIT_EMAIL']}'` if !ENV['GIT_EMAIL'].nil?
             `git commit -m 'Publish of revision #{hash}'`
             puts `git log -1`
+            `git push origin gh-pages`
         end
     end
 end
 
 desc 'Push gh-pages branch to GitHub'
 task :deploy => :publish do
-    `git config remote.origin.url https://#{ENV['GIT_TOKEN']}:@github.com/michaelmior/michael.mior.ca.git` if !ENV['GIT_TOKEN'].nil?
-    `git push origin gh-pages`
+    if ENV['GH_TOKEN'].nil?
+      `git push origin gh-pages`
+    else
+      `git push https://#{ENV['GH_TOKEN']}:@github.com/michaelmior/michael.mior.ca.git gh-pages`
+    end
 end
 
 task :default => :test
