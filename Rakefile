@@ -23,6 +23,11 @@ task :publish => :compile do
     Dir.mktmpdir do |dir|
         hash = `git show-ref --hash HEAD`.strip
         puts "Publishing revision #{hash}"
+
+        puts 'Fetching current state from origin'
+        `git fetch origin gh-pages`
+        `git update-ref refs/heads/gh-pages FETCH_HEAD`
+
         `git clone --branch gh-pages --single-branch . #{dir}`
 
         # Copy all output files to a temporary directory
