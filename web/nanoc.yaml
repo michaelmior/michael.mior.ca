@@ -29,7 +29,7 @@ index_filenames: [ 'index.html' ]
 enable_output_diff: false
 
 # Number of posts to show per page in blog archves
-page_size: 5
+page_size: 10
 
 prune:
   # Whether to automatically remove files not managed by nanoc from the output
