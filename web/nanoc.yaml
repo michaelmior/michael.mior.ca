@@ -31,6 +31,9 @@ enable_output_diff: false
 # Number of posts to show per page in blog archves
 page_size: 10
 
+# The shortname for Disqus comments
+disqus_shortname: michaelmior
+
 prune:
   # Whether to automatically remove files not managed by nanoc from the output
   # directory. For safety reasons, this is turned off by default.
