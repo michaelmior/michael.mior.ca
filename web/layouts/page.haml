@@ -1,0 +1,5 @@
+%div.page.hentry
+  %h1.entry-title= @item[:headline] or @item[:title]
+  = preserve do
+    %div.entry-content= yield
+
