@@ -1,0 +1,12 @@
+%div.page.hentry
+  %h1.entry-title= @item[:title]
+  = preserve do
+    %div.entry-content= yield
+
+- article_years = grouped_articles.map { |year, articles| year }
+%div#nav-below
+  - if article_years.include?(@item[:year] - 1)
+    %div.nav-previous= link_to "&laquo; #{@item[:year] - 1}", "/blog/archive/#{@item[:year] - 1}.html", {:rel => 'prev'}
+
+  - if article_years.include?(@item[:year] + 1)
+    %div.nav-next= link_to "#{@item[:year] + 1} &raquo;", "/blog/archive/#{@item[:year] + 1}.html", {:rel => 'next'}

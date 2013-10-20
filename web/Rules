@@ -18,8 +18,9 @@ preprocess do
         grouped_articles.each do |year, subarticles|
             @items << Nanoc::Item.new(
                 "= render 'archive_page', :item_id => #{year}",
-                { :title => "Archive (#{year})" },
-                "/blog/archive/#{year}/"
+                { :title => "Archive (#{year})", :kind => 'archive', :year => year },
+                "/blog/archive/#{year}/",
+                { :mtime => (subarticles.max_by { |article| article[:mtime] })[:mtime] }
             )
         end
     end
