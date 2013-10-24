@@ -34,6 +34,10 @@ page_size: 10
 # The shortname for Disqus comments
 disqus_shortname: michaelmior
 
+# Google Analytics tracking ID (note that this is for universal analytics)
+ga_tracking_id: UA-45085128-1
+ga_tracking_domain: mior.ca
+
 prune:
   # Whether to automatically remove files not managed by nanoc from the output
   # directory. For safety reasons, this is turned off by default.
