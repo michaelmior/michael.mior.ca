@@ -56,7 +56,7 @@ task :deploy => :publish do
     if ENV['GH_TOKEN'].nil?
       `git push origin gh-pages`
     else
-      `git push https://#{ENV['GH_TOKEN']}:@github.com/michaelmior/michael.mior.ca.git gh-pages`
+      `git push https://#{ENV['GH_TOKEN']}:@github.com/michaelmior/michael.mior.ca.git gh-pages 2>&1 | grep -v https`
     end
 end
 

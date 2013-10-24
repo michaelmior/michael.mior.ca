@@ -3,7 +3,7 @@ rvm:
   - 1.9.3
 env:
   global:
-    - secure: "YLsz6YhlbxXiaYzWv3Nfzonv6GW6rflhnZwxPmvqLCai2j2sqjtsQsEu+Sws/aPY4nS7Epyi9LXm4YHzpomvRixLMJpXWk1+6uqbMCR6gTqCdDWnzv2grDJb+8GntduDmuTJZkH1F3M3cE8GSYx9bLRlp0w0BDs08qqX6NXU0dw="
+    - secure: "AP0zRZ/qDWcXB761Wof7cSpZeWow8wdviIePRCXckuZb3/69/9/I+uf1sTlhnLW3BrHTSNXwOcLiapL8wvrsmt8mSL61twTmO2G8EDRHe4U2qdAfNmPQJ00EyO8m/RT4WgRlteQx+Akf7N3tY1HAIscQu06Go0fPJQI31M/p2ig="
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 before_install:
   - gem update --system 1.8.25
