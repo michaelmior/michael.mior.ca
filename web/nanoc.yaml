@@ -38,6 +38,9 @@ disqus_shortname: michaelmior
 ga_tracking_id: UA-45085128-1
 ga_tracking_domain: mior.ca
 
+# Heap analytics ID
+heap_analytics_id: 1282501007
+
 prune:
   # Whether to automatically remove files not managed by nanoc from the output
   # directory. For safety reasons, this is turned off by default.
