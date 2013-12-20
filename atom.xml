@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://michael.mior.ca/</id>
   <title>Michael Mior</title>
-  <updated>2012-09-15T00:00:00Z</updated>
+  <updated>2012-09-15T04:00:00Z</updated>
   <link rel="alternate" href="http://michael.mior.ca/"/>
   <link rel="self" href="http://michael.mior.ca/atom.xml"/>
   <author>
@@ -12,8 +12,8 @@
   <entry>
     <id>tag:michael.mior.ca,2012-09-15:/2012/09/15/blog/node-js-skeleton-project.html</id>
     <title type="html">Node.js skeleton project</title>
-    <published>2012-09-15T00:00:00Z</published>
-    <updated>2012-09-15T00:00:00Z</updated>
+    <published>2012-09-15T04:00:00Z</published>
+    <updated>2012-09-15T04:00:00Z</updated>
     <link rel="alternate" href="http://michael.mior.ca/2012/09/15/blog/node-js-skeleton-project.html"/>
     <content type="html">&lt;p&gt;Unfortunately, it’s obviously been a long time since this blog has been&amp;nbsp;updated.
 Since the last post, I’ve been hard at work rewriting our Web app in Django (finally got rid of our old &lt;span class="caps"&gt;PHP&lt;/span&gt;) and picking up iPhone app&amp;nbsp;development.
@@ -29,8 +29,8 @@ It’s still a work in progress, but it’s coming along&amp;nbsp;nicely.&lt;/p&
   <entry>
     <id>tag:michael.mior.ca,2012-01-14:/2012/01/14/blog/unit-testing-django-model-mixins.html</id>
     <title type="html">Unit testing Django model mixins</title>
-    <published>2012-01-14T00:00:00Z</published>
-    <updated>2012-01-14T00:00:00Z</updated>
+    <published>2012-01-14T05:00:00Z</published>
+    <updated>2012-01-14T05:00:00Z</updated>
     <link rel="alternate" href="http://michael.mior.ca/2012/01/14/blog/unit-testing-django-model-mixins.html"/>
     <content type="html">&lt;p&gt;I recently found myself having to unit test some model mixins and I thought I would share the technique I used in case anyone else finds it&amp;nbsp;useful.
 You could just pick a model which uses the mixin and run the test on instances of that&amp;nbsp;model.
@@ -86,8 +86,8 @@ Happy&amp;nbsp;testing!&lt;/p&gt;</content>
   <entry>
     <id>tag:michael.mior.ca,2012-01-06:/2012/01/06/blog/mysql-client-configuration.html</id>
     <title type="html">MySQL Client Configuration</title>
-    <published>2012-01-06T00:00:00Z</published>
-    <updated>2012-01-06T00:00:00Z</updated>
+    <published>2012-01-06T05:00:00Z</published>
+    <updated>2012-01-06T05:00:00Z</updated>
     <link rel="alternate" href="http://michael.mior.ca/2012/01/06/blog/mysql-client-configuration.html"/>
     <content type="html">&lt;p&gt;Perhaps I’m the only one who didn’t know this, but a while back, I discovered a handy trick for configuring the My&lt;span class="caps"&gt;SQL&lt;/span&gt;&amp;nbsp;client.
 You can create a configuration file in your home directory, &lt;code&gt;~/.my.cnf&lt;/code&gt; and set options for the My&lt;span class="caps"&gt;SQL&lt;/span&gt; client to&amp;nbsp;use.
@@ -112,8 +112,8 @@ If you know any other time-saving tips for My&lt;span class="caps"&gt;SQL&lt;/sp
   <entry>
     <id>tag:michael.mior.ca,2011-03-06:/2011/03/06/blog/coloured-ssh-terminals.html</id>
     <title type="html">Coloured SSH terminals</title>
-    <published>2011-03-06T00:00:00Z</published>
-    <updated>2011-03-06T00:00:00Z</updated>
+    <published>2011-03-06T05:00:00Z</published>
+    <updated>2011-03-06T05:00:00Z</updated>
     <link rel="alternate" href="http://michael.mior.ca/2011/03/06/blog/coloured-ssh-terminals.html"/>
     <content type="html">&lt;p&gt;With the looming prospect of deploying software to production systems and horror stories of accidental commands executed on production systems instead of development machines, I wanted to try to find a way to ensure this never happened to&amp;nbsp;me.
 My first thought was to change the background colour of the terminal as that would be a clear indicator of the system I’m connected&amp;nbsp;to.
@@ -186,8 +186,8 @@ Let me know in the&amp;nbsp;comments!&lt;/p&gt;</content>
   <entry>
     <id>tag:michael.mior.ca,2011-01-05:/2011/01/05/blog/rubbos.html</id>
     <title type="html">RUBBoS</title>
-    <published>2011-01-05T00:00:00Z</published>
-    <updated>2011-01-05T00:00:00Z</updated>
+    <published>2011-01-05T05:00:00Z</published>
+    <updated>2011-01-05T05:00:00Z</updated>
     <link rel="alternate" href="http://michael.mior.ca/2011/01/05/blog/rubbos.html"/>
     <content type="html">&lt;p&gt;While working on my Masters thesis, I needed a solid database&amp;nbsp;benchmark.
 RUBBoS is a fairly common benchmark in the field, but unfortunately is a few years out of&amp;nbsp;date.
