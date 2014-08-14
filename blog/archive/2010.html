@@ -71,6 +71,7 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       
       ga('create', 'UA-45085128-1', 'mior.ca');
+      ga('require', 'linkid', 'linkid.js');
       ga('send', 'pageview');
       
       var heap=heap||[];heap.load=function(a){window._heapid=a;var b=document.createElement('script');b.async=!0,b.src='//cdn.heapanalytics.com/js/heap.js';var c=document.getElementsByTagName('script')[0];c.parentNode.insertBefore(b,c);var d=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}},e=['identify','track'];for(var f=0;f<e.length;f++)heap[e[f]]=d(e[f])};
