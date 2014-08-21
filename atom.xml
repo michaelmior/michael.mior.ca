@@ -2,13 +2,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://michael.mior.ca/</id>
   <title>Michael Mior</title>
-  <updated>2012-09-15T00:00:00Z</updated>
+  <updated>2014-08-21T00:00:00Z</updated>
   <link rel="alternate" href="http://michael.mior.ca/"/>
   <link rel="self" href="http://michael.mior.ca/atom.xml"/>
   <author>
     <name>Michael Mior</name>
     <uri>http://michael.mior.ca</uri>
   </author>
+  <entry>
+    <id>tag:michael.mior.ca,2014-08-21:/2014/08/21/blog/cassandra-benchmarking.html</id>
+    <title type="html">Cassandra benchmarking</title>
+    <published>2014-08-21T00:00:00Z</published>
+    <updated>2014-08-21T00:00:00Z</updated>
+    <link rel="alternate" href="http://michael.mior.ca/2014/08/21/blog/cassandra-benchmarking.html"/>
+    <content type="html">&lt;p&gt;I was recently trying to run some benchmarks against &lt;a href="http://cassandra.apache.org/"&gt;Cassandra&lt;/a&gt; on &lt;a href="http://aws.amazon.com/ec2/"&gt;&lt;span class="caps"&gt;EC2&lt;/span&gt;&lt;/a&gt; since unfortunately the servers I had in our machine room were destroyed in a&amp;nbsp;fire.
+For all my local testing, I used a single instance running on my desktop machine, but I wanted to ramp things up for the real benchmarks and use three&amp;nbsp;nodes.
+Since my workload is read-only and the dataset is fairly small, I also wanted a replication factor of three so each node would have a copy of all the&amp;nbsp;data.&lt;/p&gt;
+
+&lt;p&gt;My first attempt to load all this data was to follow &lt;a href="http://www.datastax.com/documentation/cql/3.0/cql/cql_using/update_ks_rf_t.html"&gt;some documentation&lt;/a&gt; provided by&amp;nbsp;DataStax.
+Their suggestion was to use &lt;code&gt;ALTER KEYSPACE&lt;/code&gt; in &lt;span class="caps"&gt;CQL&lt;/span&gt; to change the replication factor, and then simply run &lt;code&gt;nodetool repair&lt;/code&gt; on each&amp;nbsp;node.
+However, I found that running repair on just one node took several hours for a modest-sized amount of data&amp;nbsp;(~&lt;span class="caps"&gt;2GB&lt;/span&gt;).
+This was a pretty big time sink as I wanted to able to quickly spin up and down a cluster for&amp;nbsp;testing.&lt;/p&gt;
+
+&lt;p&gt;Next I tried changing the configured replication factor locally before exporting the&amp;nbsp;data.
+I then simply copied the data to all nodes in the cluster and tried to start them as&amp;nbsp;normal.
+This created some weird conflicts as nodes seemed to be confused about who owned what portion of&amp;nbsp;data.&lt;/p&gt;
+
+&lt;p&gt;Finally, I simply loaded up the data set on a single node and configured a replication factor of&amp;nbsp;three.
+I then started each node in sequence and the auto bootstrapping process took care of copying the entire dataset to each node in the&amp;nbsp;cluster.
+This whole process was complete in less than half an&amp;nbsp;hour.
+This approach wouldn’t really work in a production setting since it assumes the node has no existing data (although if you can afford to bring a node offline for a while, I suppose that it might&amp;nbsp;work).
+In any case, this solution worked great for me and hopefully someone else finds this&amp;nbsp;useful.&lt;/p&gt;</content>
+  </entry>
   <entry>
     <id>tag:michael.mior.ca,2012-09-15:/2012/09/15/blog/node-js-skeleton-project.html</id>
     <title type="html">Node.js skeleton project</title>
@@ -182,22 +207,5 @@ Therefore, I also added roxterm-colour Tango to my .bashrc so the colour would b
 I’ve now replaced gnome-terminal with roxterm as my&amp;nbsp;default.
 Know any other tips on avoiding mistakes for production&amp;nbsp;systems?
 Let me know in the&amp;nbsp;comments!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:michael.mior.ca,2011-01-05:/2011/01/05/blog/rubbos.html</id>
-    <title type="html">RUBBoS</title>
-    <published>2011-01-05T00:00:00Z</published>
-    <updated>2011-01-05T00:00:00Z</updated>
-    <link rel="alternate" href="http://michael.mior.ca/2011/01/05/blog/rubbos.html"/>
-    <content type="html">&lt;p&gt;While working on my Masters thesis, I needed a solid database&amp;nbsp;benchmark.
-RUBBoS is a fairly common benchmark in the field, but unfortunately is a few years out of&amp;nbsp;date.
-While it was fantastically simple to set up, I did run into a few issues associated with newer versions of &lt;span class="caps"&gt;PHP&lt;/span&gt; and Java as well as a few minor&amp;nbsp;bugs.&lt;/p&gt;
-
-&lt;p&gt;Since the benchmark is fully open-source, I decided to release my&amp;nbsp;modifications.
-You can download these changes to RUBBoS via &lt;a href="https://github.com/michaelmior/RUBBoS"&gt;GitHub&lt;/a&gt;.
-Installation instructions and some additional notes can also be found&amp;nbsp;there.
-The most important thing to note is that I have only tested the &lt;span class="caps"&gt;LAMP&lt;/span&gt; version of the&amp;nbsp;application.&lt;/p&gt;
-
-&lt;p&gt;Hope someone finds this&amp;nbsp;useful!&lt;/p&gt;</content>
   </entry>
 </feed>
