@@ -1,2 +1,1 @@
-deploy_check :css
 deploy_check :internal_links
