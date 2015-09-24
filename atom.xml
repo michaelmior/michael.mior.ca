@@ -2,13 +2,33 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://michael.mior.ca/</id>
   <title>Michael Mior</title>
-  <updated>2014-08-21T00:00:00Z</updated>
+  <updated>2015-09-24T00:00:00Z</updated>
   <link rel="alternate" href="http://michael.mior.ca/"/>
   <link rel="self" href="http://michael.mior.ca/atom.xml"/>
   <author>
     <name>Michael Mior</name>
     <uri>http://michael.mior.ca</uri>
   </author>
+  <entry>
+    <id>tag:michael.mior.ca,2015-09-24:/2015/09/24/blog/automated-testing-of-dotfiles.html</id>
+    <title type="html">Automated Testing of Dotfiles</title>
+    <published>2015-09-24T00:00:00Z</published>
+    <updated>2015-09-24T00:00:00Z</updated>
+    <link rel="alternate" href="http://michael.mior.ca/2015/09/24/blog/automated-testing-of-dotfiles.html"/>
+    <content type="html">&lt;p&gt;Several years ago I started managing my dotfiles based on Zach Holman’s &lt;a href="https://github.com/holman/dotfiles"&gt;dotfiles repo&lt;/a&gt;.
+His setup is quite nice and I found it relatively easy to adapt to my own&amp;nbsp;purposes.
+My workflow generally consisted of making a bunch of local changes until I was happy and then pushing to my own &lt;a href="https://github.com/michaelmior/dotfiles"&gt;GitHub fork&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The big problem I eventually found is that I wasn’t fully capturing the correct steps to reproduce my&amp;nbsp;environment.
+Every time that I tried to install my dotfiles on a new machine, I would be met with several errors that I would eventually&amp;nbsp;resolve.
+The fix would not always result in something which was reproducible on another&amp;nbsp;machine.
+I wanted a solution that would let me automatically test that my dotfiles would cleanly install every time I pushed to GitHub, so I turned to &lt;a href="https://www.docker.com/"&gt;Docker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Traditional &lt;span class="caps"&gt;CI&lt;/span&gt; services would have been a bit of a pain to use with all the packages that needed to be&amp;nbsp;installed.
+&lt;a href="https://hub.docker.com/r/michaelmior/dotfiles/"&gt;Docker Hub&lt;/a&gt; made things nice and&amp;nbsp;easy.
+My &lt;a href="https://github.com/michaelmior/dotfiles/blob/a9eae90d466958948a53b3b583d69eba844ed8f7/Dockerfile"&gt;Dockerfile&lt;/a&gt; simply installs the necessary &lt;span class="caps"&gt;OS&lt;/span&gt; packages, adds a new user and then tries to run my install&amp;nbsp;script.
+I currently don’t have any other testing other than to ensure that the script exits without error, but this has already saved me a lot of&amp;nbsp;trouble.&lt;/p&gt;</content>
+  </entry>
   <entry>
     <id>tag:michael.mior.ca,2014-08-21:/2014/08/21/blog/cassandra-benchmarking.html</id>
     <title type="html">Cassandra benchmarking</title>
@@ -133,79 +153,5 @@ Really handy if you’re constantly connecting to the same server and tired of e
 
 &lt;p&gt;That’s it for this&amp;nbsp;post.
 If you know any other time-saving tips for My&lt;span class="caps"&gt;SQL&lt;/span&gt;, please share in the&amp;nbsp;comments!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:michael.mior.ca,2011-03-06:/2011/03/06/blog/coloured-ssh-terminals.html</id>
-    <title type="html">Coloured SSH terminals</title>
-    <published>2011-03-06T00:00:00Z</published>
-    <updated>2011-03-06T00:00:00Z</updated>
-    <link rel="alternate" href="http://michael.mior.ca/2011/03/06/blog/coloured-ssh-terminals.html"/>
-    <content type="html">&lt;p&gt;With the looming prospect of deploying software to production systems and horror stories of accidental commands executed on production systems instead of development machines, I wanted to try to find a way to ensure this never happened to&amp;nbsp;me.
-My first thought was to change the background colour of the terminal as that would be a clear indicator of the system I’m connected&amp;nbsp;to.
-Unfortunately, gnome-terminal doesn’t allow changing the background colour of a running terminal and I don’t always want to launch a new terminal to&amp;nbsp;&lt;span class="caps"&gt;SSH.&lt;/span&gt;
-Fortunately, I found a&amp;nbsp;solution.&lt;/p&gt;
-
-&lt;p&gt;While doing some research on the possibility of changing the &lt;code&gt;gnome-terminal&lt;/code&gt; background, I came across &lt;a href="http://roxterm.sourceforge.net/"&gt;ROXTerm&lt;/a&gt;.
-ROXTerm has a &lt;span class="caps"&gt;DBUS&lt;/span&gt; interface which can be used to control profiles and colour scheme of an open&amp;nbsp;terminal.
-Unfortunately, the documentation on this interface is a little&amp;nbsp;light.
-Thanks to &lt;a href="http://news.ycombinator.com/user?id=shimon"&gt;shimon&lt;/a&gt; for his comment on &lt;a href="http://news.ycombinator.com/item?id=2089159"&gt;this post&lt;/a&gt; on Hacker&amp;nbsp;News.&lt;/p&gt;
-
-&lt;p&gt;I created a new colour scheme titled “Warning” including a red background with the intent of using this in any terminals where I know I need to be extra&amp;nbsp;careful.&lt;/p&gt;
-
-&lt;div&gt;
-&lt;div class="CodeRay"&gt;
-  &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="line-numbers"&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;&lt;/span&gt;dbus-send --session /net/sf/roxterm/Options net.sf.roxterm.Options.SetColourScheme string:$ROXTERM_ID "string:Warning"
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The next step was to get this command executed every time I connect to one of these&amp;nbsp;servers.
-I first created a simple script to save some typing, &lt;code&gt;roxterm-colour&lt;/code&gt;. I placed this in &lt;code&gt;~/bin&lt;/code&gt; (make sure to add this to your&amp;nbsp;&lt;code&gt;PATH&lt;/code&gt;).&lt;/p&gt;
-
-&lt;div&gt;
-&lt;div class="CodeRay"&gt;
-  &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="line-numbers"&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;&lt;/span&gt;#!/bin/sh
-&lt;span class="line-numbers"&gt;&lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;&lt;/span&gt;if [ -n $ROXTERM_ID ]; then
-&lt;span class="line-numbers"&gt;&lt;a href="#n3" name="n3"&gt;3&lt;/a&gt;&lt;/span&gt;dbus-send --session /net/sf/roxterm/Options net.sf.roxterm.Options.SetColourScheme string:$ROXTERM_ID "string:$1"
-&lt;span class="line-numbers"&gt;&lt;a href="#n4" name="n4"&gt;4&lt;/a&gt;&lt;/span&gt;fi
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Using a local ssh config file in &lt;code&gt;~/.ssh/config&lt;/code&gt; allows you to set connection-specific&amp;nbsp;options.
-The configuration settings below show how the colour scheme can be changed whenever the production system is connected&amp;nbsp;to.&lt;/p&gt;
-
-&lt;div&gt;
-&lt;div class="CodeRay"&gt;
-  &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="line-numbers"&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;&lt;/span&gt;Host prod
-&lt;span class="line-numbers"&gt;&lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;&lt;/span&gt;Hostname production.example.com
-&lt;span class="line-numbers"&gt;&lt;a href="#n3" name="n3"&gt;3&lt;/a&gt;&lt;/span&gt;LocalCommand roxterm-colour Warning
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Now I can connect via ssh prod and the colour changes as&amp;nbsp;expected.
-The remaining problem is resetting the colour scheme as soon as the connection is&amp;nbsp;broken.
-Unfortunately, &lt;span class="caps"&gt;SSH&lt;/span&gt; doesn’t have any option to allow the execution of a command when a connection is&amp;nbsp;broken.
-For this, I created a simple script to alias &lt;span class="caps"&gt;SSH&lt;/span&gt; and reset the colour scheme after the connection&amp;nbsp;dies.
-This sits in &lt;code&gt;~/bin/ssh&lt;/code&gt;. In this case, you must ensure that &lt;code&gt;~/bin&lt;/code&gt; comes before &lt;code&gt;/usr/bin&lt;/code&gt; in your&amp;nbsp;&lt;code&gt;PATH&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div&gt;
-&lt;div class="CodeRay"&gt;
-  &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="line-numbers"&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;&lt;/span&gt;#!/bin/sh
-&lt;span class="line-numbers"&gt;&lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;&lt;/span&gt;trap "roxterm-colour Tango" EXIT
-&lt;span class="line-numbers"&gt;&lt;a href="#n3" name="n3"&gt;3&lt;/a&gt;&lt;/span&gt;/usr/bin/ssh $*
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The &lt;code&gt;trap&lt;/code&gt; command ensures that the colour scheme will be reset whenever the script exits (my default colour scheme is&amp;nbsp;Tango).
-Finally, I also found that if I open a new tab while SSHed into a coloured terminal, this tab will also take on the same&amp;nbsp;colour.
-Therefore, I also added roxterm-colour Tango to my .bashrc so the colour would be reset with every new&amp;nbsp;terminal.&lt;/p&gt;
-
-&lt;p&gt;I’m pretty happy with this setup and hoping it will help keep me from making any disastrous&amp;nbsp;mistakes.
-I’ve now replaced gnome-terminal with roxterm as my&amp;nbsp;default.
-Know any other tips on avoiding mistakes for production&amp;nbsp;systems?
-Let me know in the&amp;nbsp;comments!&lt;/p&gt;</content>
   </entry>
 </feed>
