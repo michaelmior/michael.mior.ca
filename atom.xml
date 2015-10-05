@@ -88,7 +88,7 @@ However, I wanted to test some functionality which requires saving the model to 
 Fortunately, Django can construct the necessary &lt;span class="caps"&gt;SQL&lt;/span&gt; to create and destroy the database&amp;nbsp;table.
 we simply override setUp and tearDown to do the heavy&amp;nbsp;lifting.&lt;/p&gt;
 
-&lt;div&gt;
+&lt;div class="highlighter-coderay"&gt;
 &lt;div class="CodeRay"&gt;
   &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="line-numbers"&gt; &lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;span style="color:#080;font-weight:bold"&gt;from&lt;/span&gt; &lt;span style="color:#B44;font-weight:bold"&gt;django.test&lt;/span&gt; &lt;span style="color:#080;font-weight:bold"&gt;import&lt;/span&gt; &lt;span style="color:#B44;font-weight:bold"&gt;TestCase&lt;/span&gt;
 &lt;span class="line-numbers"&gt; &lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;span style="color:#080;font-weight:bold"&gt;from&lt;/span&gt; &lt;span style="color:#B44;font-weight:bold"&gt;django.db&lt;/span&gt; &lt;span style="color:#080;font-weight:bold"&gt;import&lt;/span&gt; &lt;span style="color:#B44;font-weight:bold"&gt;connection&lt;/span&gt;
@@ -140,7 +140,7 @@ Really handy if you’re constantly connecting to the same server and tired of e
 
 &lt;p&gt;Here’s an&amp;nbsp;example:&lt;/p&gt;
 
-&lt;div&gt;
+&lt;div class="highlighter-coderay"&gt;
 &lt;div class="CodeRay"&gt;
   &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="line-numbers"&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;&lt;/span&gt;[client]
 &lt;span class="line-numbers"&gt;&lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;&lt;/span&gt;host     = 127.0.0.1
