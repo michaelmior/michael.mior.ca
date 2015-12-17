@@ -16,3 +16,5 @@ Traditional CI services would have been a bit of a pain to use with all the pack
 [Docker Hub](https://hub.docker.com/r/michaelmior/dotfiles/) made things nice and easy.
 My [Dockerfile](https://github.com/michaelmior/dotfiles/blob/a9eae90d466958948a53b3b583d69eba844ed8f7/Dockerfile) simply installs the necessary OS packages, adds a new user and then tries to run my install script.
 I currently don't have any other testing other than to ensure that the script exits without error, but this has already saved me a lot of trouble.
+
+**Update**: I have since switched to using [Travis CI](https://travis-ci.org/michaelmior/dotfiles) as I do with my other projects. It turns out this is easier than I expected. I still haven't explicitly added any tests but even being able to confirm that the installation steps succeed is useful to ensure nothing breaks.
