@@ -27,7 +27,9 @@ I wanted a solution that would let me automatically test that my dotfiles would 
 &lt;p&gt;Traditional &lt;span class="caps"&gt;CI&lt;/span&gt; services would have been a bit of a pain to use with all the packages that needed to be&amp;nbsp;installed.
 &lt;a href="https://hub.docker.com/r/michaelmior/dotfiles/"&gt;Docker Hub&lt;/a&gt; made things nice and&amp;nbsp;easy.
 My &lt;a href="https://github.com/michaelmior/dotfiles/blob/a9eae90d466958948a53b3b583d69eba844ed8f7/Dockerfile"&gt;Dockerfile&lt;/a&gt; simply installs the necessary &lt;span class="caps"&gt;OS&lt;/span&gt; packages, adds a new user and then tries to run my install&amp;nbsp;script.
-I currently don’t have any other testing other than to ensure that the script exits without error, but this has already saved me a lot of&amp;nbsp;trouble.&lt;/p&gt;</content>
+I currently don’t have any other testing other than to ensure that the script exits without error, but this has already saved me a lot of&amp;nbsp;trouble.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: I have since switched to using &lt;a href="https://travis-ci.org/michaelmior/dotfiles"&gt;Travis &lt;span class="caps"&gt;CI&lt;/span&gt;&lt;/a&gt; as I do with my other projects. It turns out this is easier than I expected. I still haven’t explicitly added any tests but even being able to confirm that the installation steps succeed is useful to ensure nothing&amp;nbsp;breaks.&lt;/p&gt;</content>
   </entry>
   <entry>
     <id>tag:michael.mior.ca,2014-08-21:/2014/08/21/blog/cassandra-benchmarking.html</id>
