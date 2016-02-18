@@ -2,7 +2,7 @@
 title: Projects
 ---
 
-# NoSE
+# [NoSE](https://github.com/michaelmior/NoSE)
 
 NoSE is an automated schema design tool for NoSQL databases.
 
