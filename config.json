@@ -3,11 +3,15 @@
     "url": "http://michael.mior.ca",
     "name": "Michael Mior",
     "owner": "Michael Mior",
-    "description": "Personal blog of Michael Mior"
+    "description": "Personal blog of Michael Mior",
+    "sitemap": "sitemap.xml"
   },
   "plugins": [
     "./plugins/paginator.coffee",
-    "wintersmith-livereload"
+    "wintersmith-livereload",
+    "wintersmith-contents",
+    "wintersmith-sitemap",
+    "wintersmith-robots"
   ],
   "require": {
     "moment": "moment",
