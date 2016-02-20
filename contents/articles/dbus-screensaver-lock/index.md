@@ -1,5 +1,5 @@
 ---
-title: DBUS for cross-machine screensaver locking and other cool things
+title: DBUS for cross-machine screensaver locking
 author: michaelmior
 date: 2010-10-12
 template: article.jade
