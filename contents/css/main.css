@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
 }
 
 body {
-  font-family: 'Lora', serif;
+  font-family: 'Hind', sans-serif;
   font-size: 21px;
   line-height: 1.52;
   background-color: #f8f8f8;
@@ -117,8 +117,8 @@ hr {
 }
 
 body.article-detail > header h1 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.5em;
-  font-style: italic;
   font-weight: 400;
   margin-bottom: -0.2em;
 }
@@ -181,7 +181,7 @@ footer .copy, footer .copy a {
 }
 
 .article header h2 {
-  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   font-weight: 400;
   margin: 0.8em 0;
