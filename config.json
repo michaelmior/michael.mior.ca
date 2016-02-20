@@ -6,7 +6,8 @@
     "description": "Personal blog of Michael Mior"
   },
   "plugins": [
-    "./plugins/paginator.coffee"
+    "./plugins/paginator.coffee",
+    "wintersmith-livereload"
   ],
   "require": {
     "moment": "moment",
