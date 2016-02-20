@@ -23,6 +23,15 @@ html(lang='en')
               a(href=locals.url)= locals.name
     div#content
       div.content-wrap
+        hr
+        ul.menu
+          li: a(href='/') Home
+          li: a(href='/about/') About
+          li: a(href='/contact/') Contact
+          li: a(href='/blog/') Blog
+          li: a(href='/projects/') Projects
+        hr
+
         block content
           h2 Welcome to zombocom!
     footer
