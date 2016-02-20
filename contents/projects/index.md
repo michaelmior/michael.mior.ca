@@ -1,6 +1,6 @@
 ---
 title: Projects
-template: project.jade
+template: page.jade
 ---
 
 ## [NoSE](https://github.com/michaelmior/NoSE)

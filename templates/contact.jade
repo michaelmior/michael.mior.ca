@@ -1,0 +1,33 @@
+
+
+extends page
+
+block content
+  h2 Email:&nbsp;
+    a(href='mailto:michael@mior.ca') michael@mior.ca
+  h2 Book a meeting
+  | <div id="bookingjs">
+  |   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  |   <script type="text/javascript" src="http://cdn.timekit.io/booking-js/v1/booking.min.js" defer></script>
+  |   <script type="text/javascript">
+  |       window.timekitBookingConfig = {
+  |       name: 'Michael',
+  |       email: 'michael@mior.ca',
+  |       apiToken: 'cdTKphJOM10rawT7qNT1RuCHNYbqSHLe',
+  |       calendar: 'd8f9eccc-1a55-4816-96b2-c8cde99a8775',
+  |       avatar: 'https://pbs.twimg.com/profile_images/471677968436060160/OMCoxD4Q_400x400.jpeg',
+  |       timekitFindTime: {
+  |           filters: {
+  |           and: [
+  |               {
+  |               business_hours: { }
+  |             },
+  |             {
+  |                 exclude_weekend: { }
+  |             }
+  |           ]
+  |         }
+  |       }
+  |     }
+  |   </script>
+  | </div>
