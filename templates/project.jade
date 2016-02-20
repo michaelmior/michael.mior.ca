@@ -1,0 +1,11 @@
+
+extends layout
+
+block append vars
+  - bodyclass = 'project'
+
+block header
+  h1= page.title
+
+block content
+  section.content!= page.html
