@@ -1,8 +1,12 @@
-var gulp = require('gulp'),
+var fs = require('fs'),
+    gulp = require('gulp'),
     rimraf = require('gulp-rimraf'),
     surge = require('gulp-surge'),
     runWintersmith = require('run-wintersmith'),
+    url = require('url'),
     util = require('gulp-util');
+
+var locals = JSON.parse(fs.readFileSync('config.json')).locals;
 
 // Clean the build directory
 gulp.task('clean', function() {
@@ -30,6 +34,6 @@ gulp.task('preview', function() {
 gulp.task('deploy', ['build'], function () {
   return surge({
     project: 'build',
-    domain: 'michael.mior.ca'
+    domain: url.parse(locals.url).host
   })
 })
