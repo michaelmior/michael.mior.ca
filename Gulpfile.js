@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     rimraf = require('gulp-rimraf'),
+    surge = require('gulp-surge'),
     runWintersmith = require('run-wintersmith'),
     util = require('gulp-util');
 
@@ -25,3 +26,10 @@ gulp.task('preview', function() {
   // Tell Wintersmith to run in preview mode
   runWintersmith.preview();
 });
+
+gulp.task('deploy', ['build'], function () {
+  return surge({
+    project: 'build',
+    domain: 'michael.mior.ca'
+  })
+})

@@ -8,6 +8,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-rimraf": "^0.2.0",
+    "gulp-surge": "^0.1.0",
     "gulp-util": "^3.0.7",
     "run-wintersmith": "0.0.3",
     "wintersmith-cname": "^0.2.0",
