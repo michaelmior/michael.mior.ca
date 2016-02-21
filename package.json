@@ -4,5 +4,16 @@
     "underscore": "1.4.x",
     "typogr": "0.5.x"
   },
-  "private": "true"
+  "private": "true",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-util": "^3.0.7",
+    "run-wintersmith": "0.0.3",
+    "wintersmith-cname": "^0.2.0",
+    "wintersmith-contents": "^0.2.0",
+    "wintersmith-livereload": "^0.2.2",
+    "wintersmith-robots": "^0.2.6",
+    "wintersmith-sitemap": "^0.3.1"
+  }
 }
