@@ -276,7 +276,7 @@ footer .copy, footer .copy a {
 .archive .year-label,
 .archive .month-label{
   width: 4em;
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-variant: small-caps;
   text-transform: lowercase;
   font-weight: 400;
@@ -301,7 +301,7 @@ footer .copy, footer .copy a {
 /* code styling */
 
 code {
-  font-family: 'Anonymous Pro', monospace;
+  font-family: 'Roboto Mono', monospace;
   font-size: 0.85em;
   color: #000;
 }
