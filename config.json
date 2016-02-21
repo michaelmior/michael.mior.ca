@@ -11,7 +11,8 @@
     "wintersmith-livereload",
     "wintersmith-contents",
     "wintersmith-sitemap",
-    "wintersmith-robots"
+    "wintersmith-robots",
+    "wintersmith-cname"
   ],
   "require": {
     "moment": "moment",
