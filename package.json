@@ -8,6 +8,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
+    "gulp-imagemin": "^2.4.0",
     "gulp-pleeease": "^2.0.2",
     "gulp-rev": "^7.0.0",
     "gulp-rimraf": "^0.2.0",
@@ -15,6 +16,7 @@
     "gulp-surge": "^0.1.0",
     "gulp-uglify": "^1.5.2",
     "gulp-util": "^3.0.7",
+    "imagemin-pngquant": "^4.2.2",
     "run-wintersmith": "0.0.3",
     "vinylsmith": "^1.0.0",
     "wintersmith-cname": "^0.2.0",
