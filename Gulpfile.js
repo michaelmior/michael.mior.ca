@@ -2,6 +2,7 @@ var extender = require('gulp-html-extend'),
     favicons = require('gulp-favicons'),
     fs = require('fs'),
     gulp = require('gulp'),
+    htmlmin = require('gulp-htmlmin'),
     rimraf = require('gulp-rimraf'),
     runSequence = require('run-sequence'),
     surge = require('gulp-surge'),
@@ -46,9 +47,10 @@ gulp.task('favicons', function () {
   .pipe(gulp.dest('build/favicons'));
 });
 
-gulp.task('insert-favicons', [], function() {
+gulp.task('include-html', [], function() {
   gulp.src('build/**/*.html')
     .pipe(extender({annotations: false, root: 'build'}))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'))
 });
 
@@ -64,7 +66,11 @@ gulp.task('compile', [], function(cb) {
   });
 });
 gulp.task('build', function(cb) {
-  runSequence('clean', ['compile', 'favicons'], 'insert-favicons', cb);
+  runSequence(
+    'clean',
+    ['compile', 'favicons'],
+    'include-html',
+    cb);
 });
 
 // Preview task
