@@ -14,6 +14,7 @@ module.exports = (env, callback) ->
     vinylsmith(env)
       .pipe(sass)
       .pipe(pleeease)
+      .pipe(rev)
 
   env.registerContentPlugin 'scripts', '**/*.js',
     vinylsmith(env)
