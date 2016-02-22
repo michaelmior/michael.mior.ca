@@ -1,6 +1,9 @@
-var fs = require('fs'),
+var extender = require('gulp-html-extend'),
+    favicons = require('gulp-favicons'),
+    fs = require('fs'),
     gulp = require('gulp'),
     rimraf = require('gulp-rimraf'),
+    runSequence = require('run-sequence'),
     surge = require('gulp-surge'),
     runWintersmith = require('run-wintersmith'),
     url = require('url'),
@@ -13,8 +16,44 @@ gulp.task('clean', function() {
   return gulp.src('build', { read: false }).pipe(rimraf());
 });
 
+// Helper tasks for favicons
+gulp.task('favicons', function () {
+  return gulp.src('contents/img/logo.png').pipe(favicons({
+    appName: locals.name,
+    appDescription: locals.description,
+    developerName: locals.owner,
+    developerURL: locals.url,
+    background: '#FFF',
+    path: 'favicons/',
+    url: locals.url,
+    display: 'standalone',
+    orientation: 'portrait',
+    version: 1.0,
+    logging: false,
+    online: false,
+    html: 'index.html',
+    pipeHTML: true,
+    replace: true,
+    icons: {
+      appleStartup: false,
+      coast: false,
+      opengraph: false,
+      twitter: false,
+      yandex: false
+    }
+  }))
+  .on('error', util.log)
+  .pipe(gulp.dest('build/favicons'));
+});
+
+gulp.task('insert-favicons', [], function() {
+  gulp.src('build/**/*.html')
+    .pipe(extender({annotations: false, root: 'build'}))
+    .pipe(gulp.dest('build'))
+});
+
 // Build task
-gulp.task('build', ['clean'], function(cb) {
+gulp.task('compile', [], function(cb) {
   // Tell Wintersmith to build
   runWintersmith.build(function(){
     // Log on successful build
@@ -23,6 +62,9 @@ gulp.task('build', ['clean'], function(cb) {
     // Tell gulp task has finished
     cb();
   });
+});
+gulp.task('build', function(cb) {
+  runSequence('clean', ['compile', 'favicons'], 'insert-favicons', cb);
 });
 
 // Preview task
