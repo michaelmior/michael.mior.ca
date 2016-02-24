@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/michaelmior
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://michael.mior.ca
+  * I am michaelmior (https://keybase.io/michaelmior) on keybase.
+  * I have a public key with fingerprint D833 5C62 4830 813F A8ED  6873 3AF1 2B9F 85C0 A026
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101febac9804b2a058b432c36469920c6de4fb2b8e30c9a72de6084099d8d78b3ff0a",
+            "fingerprint": "d8335c624830813fa8ed68733af12b9f85c0a026",
+            "host": "keybase.io",
+            "key_id": "3af12b9f85c0a026",
+            "kid": "0101febac9804b2a058b432c36469920c6de4fb2b8e30c9a72de6084099d8d78b3ff0a",
+            "uid": "152c831ccd66cb6dd32fc7c5b4faa600",
+            "username": "michaelmior"
+        },
+        "revoke": {
+            "sig_ids": [
+                "5d28a2bdb61715d839077b70b35df564eb369bf37103cd0d75426fe90efe885f0f"
+            ]
+        },
+        "service": {
+            "hostname": "michael.mior.ca",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1456327523,
+    "expire_in": 157680000,
+    "prev": "05cbd2b6d3c4b22545254e71caf56fe17ab273dad9a9ee263d25d1ebfaf714a8",
+    "seqno": 33,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.51
+Comment: https://keybase.io/crypto
+
+yMJxAnicrVJtaJZVGH6nzmgVyqwsBw3Oksi2cZ5znvPxPBUkhCt/KBkGTtfb+dye
+3u19Xp/32au2RvmnP2KCVhQYbAj+CBIKFwX5Ma1WrYEfWPY1Rviq6MBsTdi00XlG
+/Qj82YHD4T7nuq/7uq9zf3HPwlxdTVz+tvb60wuu14wOz/TmXhgbVX1AxnoHCPtA
+wcwfplubcpovRBqEAHrQs0YKFXDoSyQg4dLHSGHq0yBAUFFtfCuR5AZDFQiGtKGQ
++zAINNeMS2wtFKAZ2KjYaZJSEhVTR6s5xkRR5HMMuYet4EZTzjAW1kMysJwoKCCi
+LrErLmcZTpwUZdMaxe7OBfl5ebfB/8+6e+fpPIIUx55SmlIlqdYYWcUUkb4VgkKY
+AcsmKYoe49A9keoSprsnihPQ3wwSU4kLJrO2HHU63WUQbgZEIy6Q1JJ6zCPOjwAy
+JhmUmGhLqG8kpoG0mHkQKw01Iz6i1gTQWMM5sdCCDsftilYiNU+eGfVfAa2ZglaV
+tVFK4jRWcbd77ErTUpjpSneUMvA2I/P/0ORlVNTuo1xCxSTlKC6C0HNIlUYZr+cT
+ihEjCDcDs70UJSYfZQjCKIduZWVMJXOfKKmR8wkrZz4iPnHbME8J15o1HhMSMayF
+DkRgDKJYI6I9I62wzPMFB1ljW4sxCLErlYpOx+m8K4q0NzGg/8TxLYtyNXW5xbUL
+sgnO1d259N+5vuv1O+YeH90wON3W8Qfd1/Tcgz9NLGWNd1+abft1qFIanFGFnWbk
+TOONJbX5D1ZuvFW//tgUmF126ve+F/9qVsWOSz88u7jh4bc23TsZqsGhvQ3Th9uW
+j25Nf/z66GMNN6tzLeu6mq6F94tHf+sfmB5peab+e312eHh87arnP3qkSo5fnvOO
+DOxZOHV6yUvBnysnX9H1n3y+bs07K568rzB2bKCxZc2FC1cfuvLlnona05/Gk0O7
+Dp5btHHgxuYNaNPez/aVdNNIOPXV2/pU+zdP7V+2u7p2/9kj7/V+fKb94OE3J8YP
+XKxuf79v/Nx3D5zc+XJLddtrv7x66NDYu6ueaG/YNXtef/hzNLPan3zj/PoD7X8D
+xBBo7w==
+=0Hfq
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/michaelmior
+
+==================================================================
