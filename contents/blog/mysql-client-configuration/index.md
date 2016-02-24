@@ -3,6 +3,7 @@ title: MySQL Client Configuration
 author: michaelmior
 date: 2012-01-06
 template: article.jade
+summary: "The MySQL CLI has a useful configuration file that you can use to avoid retyping usernames and passwords."
 ---
 Perhaps I'm the only one who didn’t know this, but a while back, I discovered a handy trick for configuring the MySQL client.
 You can create a configuration file in your home directory, `~/.my.cnf` and set options for the MySQL client to use.

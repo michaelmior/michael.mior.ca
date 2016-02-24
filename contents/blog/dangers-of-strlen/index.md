@@ -3,6 +3,7 @@ title: The Dangers of strlen
 author: michaelmior
 date: 2010-10-31
 template: article.jade
+summary: "When used carelessly, strlen can be a significant bottleneck in an application doing heavy string manipulation."
 ---
 I’ll keep this post brief, but I wanted to share something I just found about the C `strlen` function. It’s slow. It can make a big difference in program execution time.
 

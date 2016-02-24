@@ -3,6 +3,7 @@ title: Automated Testing of Dotfiles
 author: michaelmior
 date: 2015-09-24
 template: article.jade
+summary: "Continuous integration services are useful test management of dotfiles and ensure smooth deployment."
 ---
 Several years ago I started managing my dotfiles based on Zach Holman's [dotfiles repo](https://github.com/holman/dotfiles).
 His setup is quite nice and I found it relatively easy to adapt to my own purposes.

@@ -3,6 +3,7 @@ title: Octotweets
 author: michaelmior
 date: 2010-10-24
 template: article.jade
+summary: "Popular links found on my Twitter feed in October 2010."
 ---
 In an effort to keep the blog postings more regular, I thought I would start sharing a selection of the most popular links from my Twitter feed in-between more detailed posts.
 

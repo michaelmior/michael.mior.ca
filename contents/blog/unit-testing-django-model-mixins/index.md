@@ -3,6 +3,7 @@ title: Unit testing Django model mixins
 author: michaelmior
 date: 2012-01-14
 template: article.jade
+summary: "By creating a simple subclass of Django test cases, its easy to perform unit testing on mixin model classes."
 ---
 I recently found myself having to unit test some model mixins and I thought I would share the technique I used in case anyone else finds it useful.
 You could just pick a model which uses the mixin and run the test on instances of that model.
@@ -13,7 +14,7 @@ The model shouldn't reside in `models.py` since we don’t want it in our databa
 Instead, we create the model dynamically.
 However, I wanted to test some functionality which requires saving the model to the database.
 Fortunately, Django can construct the necessary SQL to create and destroy the database table.
-we simply override setUp and tearDown to do the heavy lifting.
+We simply override setUp and tearDown to do the heavy lifting.
 
 ~~~ python
 from django.test import TestCase
