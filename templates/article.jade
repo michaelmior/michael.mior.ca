@@ -8,6 +8,15 @@ block prepend head
   meta(name='og:title', content=page.title)
   meta(name='og:description', content=page.metadata.summary)
 
+  | <script type="application/ld+json">
+  |   {
+  |     "@context": "http://schema.org",
+  |     "@type": "Article",
+  |     "headline": "#{page.metadata.title}",
+  |     "datePublished": "#{env.helpers.toISO8601(page.date)}"
+  |   }
+  | </script>
+
 block append vars
   - bodyclass = 'article-detail'
 
