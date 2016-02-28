@@ -83,7 +83,7 @@ Finally, here’s a complete list of download locations for all the tools I used
 * [JSMIN, The JavaScript Minifier](http://www.crockford.com/javascript/jsmin.html)
 * [CSS Optimizer](http://mabblog.com/cssoptimizer/download.html)
 
-I found out when researching for this post that [Lakshmi Vyas](http://twitter.com/lakshmivyas) has already come up with a solution called [Hyde](http://ringce.com/hyde) for Python.
+I found out when researching for this post that [Lakshmi Vyas](https://github.com/lakshmivyas) has already come up with a solution called [Hyde](http://ringce.com/hyde) for Python.
 There is also [jekyll](http://jekyllrb.com/) which uses Ruby.
 This just gives you more approaches to building a custom tool that suits your needs.
 
