@@ -86,7 +86,7 @@ gulp.task('deploy', ['build'], function () {
   })
 })
 
-gulp.task('checklinks', [], function(callback) {
+gulp.task('checklinks', function(callback) {
   var options = {
     pageUrls: [locals.url],
     checkLinks: true,
