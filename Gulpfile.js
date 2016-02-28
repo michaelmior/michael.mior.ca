@@ -1,4 +1,5 @@
-var extender = require('gulp-html-extend'),
+var checkPages = require('check-pages'),
+    extender = require('gulp-html-extend'),
     favicons = require('gulp-favicons'),
     fs = require('fs'),
     gulp = require('gulp'),
@@ -84,3 +85,19 @@ gulp.task('deploy', ['build'], function () {
     domain: url.parse(locals.url).host
   })
 })
+
+gulp.task('checklinks', [], function(callback) {
+  var options = {
+    pageUrls: [locals.url],
+    checkLinks: true,
+    onlySameDomain: true,
+    queryHashes: true,
+    noRedirects: true,
+    noLocalLinks: true,
+    noEmptyFragments: true,
+    checkCaching: true,
+    checkCompression: true,
+    summary: true
+  };
+  checkPages(console, options, callback);
+});
