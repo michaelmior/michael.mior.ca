@@ -1,4 +1,5 @@
-var checkPages = require('check-pages'),
+var a11y = require('gulp-a11y'),
+    checkPages = require('check-pages'),
     extender = require('gulp-html-extend'),
     favicons = require('gulp-favicons'),
     fs = require('fs'),
@@ -100,4 +101,10 @@ gulp.task('checklinks', function(callback) {
     summary: true
   };
   checkPages(console, options, callback);
+});
+
+gulp.task('a11y', ['build'], function () {
+  return gulp.src(['build/**/*.html', 'build/favicons/index.html'])
+    .pipe(a11y())
+    .pipe(a11y.reporter());
 });
