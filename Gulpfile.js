@@ -25,7 +25,7 @@ gulp.task('favicons', function () {
     developerName: locals.owner,
     developerURL: locals.url,
     background: '#FFF',
-    path: 'favicons/',
+    path: '/favicons/',
     url: locals.url,
     display: 'standalone',
     orientation: 'portrait',
