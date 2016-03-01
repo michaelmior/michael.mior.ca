@@ -4,7 +4,7 @@ template: page.jade
 ---
 
 <div class="acmdlitem">
-  <a href="publications/NoSE-ICDE2016.pdf" title="NoSE: Schema Design for NoSQL Applications">
+  <a href="NoSE-ICDE2016.pdf" title="NoSE: Schema Design for NoSQL Applications">
     NoSE: Schema Design for NoSQL Applications
   </a>
   <div style="margin-left:25px">
