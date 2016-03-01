@@ -3,6 +3,19 @@ title: Publications
 template: page.jade
 ---
 
+<div class="acmdlitem">
+  <a href="publications/NoSE-ICDE2016.pdf" title="NoSE: Schema Design for NoSQL Applications">
+    NoSE: Schema Design for NoSQL Applications
+  </a>
+  <div style="margin-left:25px">
+    Michael J. Mior, Kenneth Salem, Ashraf Aboulnaga, Rui Liu<br>
+    Data Engineering (ICDE), 2016 IEEE 32nd International Conference on<br>
+    <em>(to appear)</em>
+  </div>
+</div>
+
+<hr/>
+
 <div class="acmdlitem" id="item2602624">
   <img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
   <a href="http://dl.acm.org/authorize?N71145" title="Automated schema design for NoSQL databases">
