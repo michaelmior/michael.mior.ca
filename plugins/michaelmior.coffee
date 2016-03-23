@@ -1,6 +1,9 @@
 vinylsmith = require 'vinylsmith'
- 
+
+ampl      = require 'ampl'
+async     = require 'async'
 babel     = require 'gulp-babel'
+fs        = require 'fs'
 imagemin  = require 'gulp-imagemin'
 iso8601   = require 'iso8601'
 pleeease  = require 'gulp-pleeease'
@@ -10,6 +13,43 @@ sass      = require 'gulp-sass'
 uglify    = require 'gulp-uglify'
 
 module.exports = (env, callback) ->
+  rawView = (env, locals, contents, templates, callback) ->
+    callback null, new Buffer this.html
+
+  env.registerView 'raw', rawView
+
+  class AmpPage extends env.plugins.MarkdownPage
+    getFilename: ->
+      'amp/' + super
+
+    getTemplate: ->
+      null
+
+    getView: ->
+      'raw'
+
+    getHtml: (base=env.config.baseUrl) ->
+      @_html
+
+  AmpPage.fromFile = (filepath, callback) ->
+    async.waterfall [
+      (callback) ->
+        fs.readFile filepath.full, callback
+      (buffer, callback) ->
+        env.plugins.MarkdownPage.extractMetadata buffer.toString(), callback
+      (result, callback) =>
+        {markdown, metadata} = result
+        page = new this filepath, metadata, markdown
+        callback null, page
+      (page, callback) =>
+        ampl.parse page.markdown, '', (html) ->
+          page._html = html
+          callback null, page
+      (page, callback) =>
+        callback null, page
+    ], callback
+
+  env.registerContentPlugin 'amp', '**/*.*(markdown|mkd|md)', AmpPage
 
   env.registerContentPlugin 'styles', '**/*.scss',
     vinylsmith(env)
