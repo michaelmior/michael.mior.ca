@@ -8,6 +8,8 @@
   "devDependencies": {
     "ampl": "^1.0.4",
     "check-pages": "^0.9.0",
+    "cheerio": "^0.20.0",
+    "escape-html": "^1.0.3",
     "gulp": "^3.9.1",
     "gulp-a11y": "^0.1.1",
     "gulp-babel": "^6.1.2",

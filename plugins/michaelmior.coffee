@@ -3,6 +3,8 @@ vinylsmith = require 'vinylsmith'
 ampl      = require 'ampl'
 async     = require 'async'
 babel     = require 'gulp-babel'
+cheerio   = require 'cheerio'
+escape    = require 'escape-html'
 fs        = require 'fs'
 imagemin  = require 'gulp-imagemin'
 iso8601   = require 'iso8601'
@@ -31,6 +33,14 @@ module.exports = (env, callback) ->
     getHtml: (base=env.config.baseUrl) ->
       @_html
 
+  ampRender = (page, callback) ->
+    ampl.parse page.markdown, '', (html) ->
+      $ = cheerio.load(html)
+      $('head title').text(page.title)
+      $('body').prepend('<h1>' + escape(page.title) + '</h1>')
+      page._html = $.html()
+      callback null, page
+
   AmpPage.fromFile = (filepath, callback) ->
     async.waterfall [
       (callback) ->
@@ -41,10 +51,7 @@ module.exports = (env, callback) ->
         {markdown, metadata} = result
         page = new this filepath, metadata, markdown
         callback null, page
-      (page, callback) =>
-        ampl.parse page.markdown, '', (html) ->
-          page._html = html
-          callback null, page
+      (page, callback) => ampRender page, callback
       (page, callback) =>
         callback null, page
     ], callback
