@@ -41,22 +41,11 @@ module.exports = (env, callback) ->
       page._html = $.html()
       callback null, page
 
-  AmpPage.fromFile = (filepath, callback) ->
-    async.waterfall [
-      (callback) ->
-        fs.readFile filepath.full, callback
-      (buffer, callback) ->
-        env.plugins.MarkdownPage.extractMetadata buffer.toString(), callback
-      (result, callback) =>
-        {markdown, metadata} = result
-        page = new this filepath, metadata, markdown
-        callback null, page
-      (page, callback) => ampRender page, callback
-      (page, callback) =>
-        callback null, page
-    ], callback
-
-  env.registerContentPlugin 'amp', '**/*.*(markdown|mkd|md)', AmpPage
+  env.registerGenerator('amp', ((contents, callback) ->
+    articles = env.helpers.getArticles contents
+    async.map(articles, ((article, renderCallback) ->
+      page = new AmpPage article.filepath, article.metadata, article.markdown
+      ampRender page, renderCallback), callback)))
 
   env.registerContentPlugin 'styles', '**/*.scss',
     vinylsmith(env)
