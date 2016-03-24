@@ -1,3 +1,7 @@
+ampanalytics = """<amp-analytics type="googleanalytics" id="analytics1"><script type="application/json">
+{"vars": {"account": "UA-45085128-2"},"triggers": {"trackPageview": {"on": "visible","request": "pageview"}}}
+</script></amp-analytics>"""
+
 ampstyle = """
 /*!
  * Based on Writ by Curtis McEnroe
@@ -56,6 +60,8 @@ module.exports = (env, callback) ->
       $('head title').text(page.title)
       $('body').prepend('<h1>' + escape(page.title) + '</h1>')
       $('link[rel=canonical]').attr('href', articleUrl)
+      $('head').prepend('<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>')
+      $('body').append(ampanalytics)
       $('head').append('<style amp-custom>' + ampstyle + '</style>')
       $('head').append('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Hind:400,700,400italic,700italic|Roboto+Mono:400,700,400italic,700italic"')
 
