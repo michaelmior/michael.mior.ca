@@ -59,7 +59,7 @@ module.exports = (env, callback) ->
       # Set page title and canonical URL
       $('head title').text(page.title)
       $('body').prepend('<h1>' + escape(page.title) + '</h1>')
-      $('body').append('<center><a href="' + articleUrl + '">View comments</a>')
+      $('body').append('<center><a href="' + articleUrl + '#disqus_thread">View comments</a>')
       $('link[rel=canonical]').attr('href', articleUrl)
       $('head').prepend('<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>')
       $('body').append(ampanalytics)
