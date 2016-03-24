@@ -65,6 +65,11 @@ module.exports = (env, callback) ->
       $('body').append(ampanalytics)
       $('head').append('<style amp-custom>' + ampstyle + '</style>')
       $('head').append('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Hind:400,700,400italic,700italic|Roboto+Mono:400,700,400italic,700italic"')
+      $('head').append('<meta name="theme-color" content="#4080c0">')
+      $('head').append('<meta name="twitter:card" content="summary">')
+      $('head').append('<meta name="twitter:site" content="michaelmior">')
+      $('head').append('<meta name="og:title" content="' + page.title + '">')
+      $('head').append('<meta name="og:description" content="' + page.metadata.summary + '">')
       $('head').append("""<script type="application/ld+json">
         {
           "@context": "http://schema.org",
