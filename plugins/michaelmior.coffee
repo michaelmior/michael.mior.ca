@@ -36,8 +36,19 @@ module.exports = (env, callback) ->
   ampRender = (page, callback) ->
     ampl.parse page.markdown, '', (html) ->
       $ = cheerio.load(html)
+
+      # XXX Fix incompatible markup, should really be changed in ampl
+      $('noscript').remove()
+      $('style').remove()
+      $('head').append('<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>')
+      body = $('.wrapper-main').html()
+      $('.wrapper-main').remove()
+      $(body).insertAfter('head')
+
+      # Set page title
       $('head title').text(page.title)
       $('body').prepend('<h1>' + escape(page.title) + '</h1>')
+
       page._html = $.html()
       callback null, page
 
