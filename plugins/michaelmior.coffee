@@ -70,6 +70,12 @@ module.exports = (env, callback) ->
       $('head').append('<meta name="twitter:site" content="michaelmior">')
       $('head').append('<meta name="og:title" content="' + page.title + '">')
       $('head').append('<meta name="og:description" content="' + page.metadata.summary + '">')
+      $('head').append('<meta name="og:type" content="article">')
+      $('head').append('<meta name="og:site_name" content="Michael Mior">')
+      $('head').append('<meta name="fb:profile_id" content="227200130">')
+      $('head').append('<meta name="article:publisher" content="227200130">')
+      $('head').append('<meta name="article:author" content="227200130">')
+      $('head').append('<meta name="article:published_time" content="' + env.helpers.toISO8601(page.date) + '">')
       $('head').append("""<script type="application/ld+json">
         {
           "@context": "http://schema.org",
