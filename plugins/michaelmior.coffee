@@ -73,7 +73,7 @@ module.exports = (env, callback) ->
     articles = env.helpers.getArticles contents
     async.map(articles, ((article, renderCallback) ->
       page = new AmpPage article.filepath, article.metadata, article.markdown
-      ampRender page, article.url + article.filename, renderCallback), callback)))
+      ampRender page, article.url, renderCallback), callback)))
 
   env.registerContentPlugin 'styles', '**/*.scss',
     vinylsmith(env)
