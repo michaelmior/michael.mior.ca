@@ -65,6 +65,14 @@ module.exports = (env, callback) ->
       $('body').append(ampanalytics)
       $('head').append('<style amp-custom>' + ampstyle + '</style>')
       $('head').append('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Hind:400,700,400italic,700italic|Roboto+Mono:400,700,400italic,700italic"')
+      $('head').append("""<script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "#{page.metadata.title}",
+          "datePublished": "#{env.helpers.toISO8601(page.date)}"
+        }
+      </script>""")
 
       page._html = $.html()
       callback null, page
