@@ -1,7 +1,3 @@
-ampanalytics = """<amp-analytics type="googleanalytics" id="analytics1"><script type="application/json">
-{"vars": {"account": "UA-45085128-2"},"triggers": {"trackPageview": {"on": "visible","request": "pageview"}}}
-</script></amp-analytics>"""
-
 ampstyle = """
 /*!
  * Based on Writ by Curtis McEnroe
@@ -11,11 +7,8 @@ ampstyle = """
 
 vinylsmith = require 'vinylsmith'
 
-ampl      = require 'ampl'
 async     = require 'async'
 babel     = require 'gulp-babel'
-cheerio   = require 'cheerio'
-escape    = require 'escape-html'
 fs        = require 'fs'
 imagemin  = require 'gulp-imagemin'
 iso8601   = require 'iso8601'
@@ -26,73 +19,20 @@ sass      = require 'gulp-sass'
 uglify    = require 'gulp-uglify'
 
 module.exports = (env, callback) ->
-  rawView = (env, locals, contents, templates, callback) ->
-    callback null, new Buffer this.html
-
-  env.registerView 'raw', rawView
-
   class AmpPage extends env.plugins.MarkdownPage
+    constructor: (@article, @filepath, @metadata, @markdown) ->
+
     getFilename: ->
       'amp/' + super
 
     getTemplate: ->
-      null
+      'amp.jade'
 
-    getView: ->
-      'raw'
-
-    getHtml: (base=env.config.baseUrl) ->
-      @_html
-
-  ampRender = (page, articleUrl, callback) ->
-    ampl.parse page.markdown, '', (html) ->
-      $ = cheerio.load(html)
-
-      # XXX Fix incompatible markup, should really be changed in ampl
-      $('noscript').remove()
-      $('style').remove()
-      $('head').append('<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>')
-      body = $('.wrapper-main').html()
-      $('.wrapper-main').remove()
-      $(body).insertAfter('head')
-
-      # Set page title and canonical URL
-      $('head title').text(page.title)
-      $('body').prepend('<h1>' + escape(page.title) + '</h1>')
-      $('body').append('<center><a href="' + articleUrl + '#disqus_thread">View comments</a>')
-      $('link[rel=canonical]').attr('href', articleUrl)
-      $('head').prepend('<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>')
-      $('body').append(ampanalytics)
-      $('head').append('<style amp-custom>' + ampstyle + '</style>')
-      $('head').append('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Hind:400,700,400italic,700italic|Roboto+Mono:400,700,400italic,700italic"')
-      $('head').append('<meta name="theme-color" content="#4080c0">')
-      $('head').append('<meta name="twitter:card" content="summary">')
-      $('head').append('<meta name="twitter:site" content="michaelmior">')
-      $('head').append('<meta name="og:title" content="' + page.title + '">')
-      $('head').append('<meta name="og:description" content="' + page.metadata.summary + '">')
-      $('head').append('<meta name="og:type" content="article">')
-      $('head').append('<meta name="og:site_name" content="Michael Mior">')
-      $('head').append('<meta name="fb:profile_id" content="227200130">')
-      $('head').append('<meta name="article:publisher" content="227200130">')
-      $('head').append('<meta name="article:author" content="227200130">')
-      $('head').append('<meta name="article:published_time" content="' + env.helpers.toISO8601(page.date) + '">')
-      $('head').append("""<script type="application/ld+json">
-        {
-          "@context": "http://schema.org",
-          "@type": "BlogPosting",
-          "headline": "#{page.metadata.title}",
-          "datePublished": "#{env.helpers.toISO8601(page.date)}"
-        }
-      </script>""")
-
-      page._html = $.html()
-      callback null, page
-
-  env.registerGenerator('amp', ((contents, callback) ->
+  env.registerGenerator 'amp', (contents, callback) ->
     articles = env.helpers.getArticles contents
-    async.map(articles, ((article, renderCallback) ->
-      page = new AmpPage article.filepath, article.metadata, article.markdown
-      ampRender page, article.url, renderCallback), callback)))
+    pages = articles.map (article) ->
+      page = new AmpPage article, article.filepath, article.metadata, article.markdown
+    callback null, pages
 
   env.registerContentPlugin 'styles', '**/*.scss',
     vinylsmith(env)
