@@ -59,9 +59,13 @@ pre {
 
 /* Colors */
 
-body { color: #222; }
+body {
+  color: #171717;
+  background-color: #f8f8f8;
+}
+
 code, pre, samp, kbd { color: #111; }
-a, nav a:visited { color: #00e; }
+a, nav a:visited { color: #004b91; }
 a:visited { color: #60b; }
 mark { color: inherit; }
 
@@ -74,9 +78,23 @@ th, td { border: solid #dbdbdb; }
 
 /* Layout */
 
-body { margin: 1.5rem 1ch; }
+body { margin: 1.5rem; }
 
-body > header { text-align: center; }
+body > header {
+  margin: -1.5rem -1.5rem 0 -1.5rem;
+  padding: 0.5rem;
+  background-color: #4080c0;
+  text-align: center;
+}
+
+body > header > a {
+  color: #fff;
+  font-size: 1.728em;
+}
+
+body > header > a:visited {
+  color: #fff;
+}
 
 main, body > footer {
   display: block; /* Just in case */

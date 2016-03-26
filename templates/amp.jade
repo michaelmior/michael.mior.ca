@@ -45,6 +45,9 @@ html(lang='en', amp='')
       !='\n<!-- @@include ' + contents.styles['amp.scss'].url + '-->'
 
   body
+    header
+      a(href=locals.url)= 'Michael Mior'
+
     h1= page.title
 
     div#content
