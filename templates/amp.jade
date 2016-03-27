@@ -30,7 +30,16 @@ html(lang='en', amp='')
     |     "@context": "http://schema.org",
     |     "@type": "BlogPosting",
     |     "headline": "#{page.metadata.title}",
-    |     "datePublished": "#{env.helpers.toISO8601(page.date)}"
+    |     "name": "#{page.metadata.title}",
+    |     "datePublished": "#{env.helpers.toISO8601(page.date)}",
+    |     "author": {
+    |       "@type": "Person",
+    |       "name": "Michael Mior"
+    |     },
+    |     "mainEntityOfPage": {
+    |       "@type":"WebPage",
+    |       "@id":"#{page.article.url}"
+    |     }
     |   }
     | </script>
 
