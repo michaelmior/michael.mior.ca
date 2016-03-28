@@ -2,6 +2,7 @@
 title: The Dangers of strlen
 author: michaelmior
 date: 2010-10-31
+modified: 2012-06-14
 template: article.jade
 summary: "When used carelessly, strlen can be a significant bottleneck in an application doing heavy string manipulation."
 ---

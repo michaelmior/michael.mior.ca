@@ -16,6 +16,7 @@ block prepend head
   |     "headline": "#{page.metadata.title}",
   |     "name": "#{page.metadata.title}",
   |     "datePublished": "#{env.helpers.toISO8601(page.date)}",
+  |     "dateModified": "#{env.helpers.toISO8601(page.metadata.modified || page.date)}",
   |     "author": {
   |       "@type": "Person",
   |       "name": "Michael Mior"

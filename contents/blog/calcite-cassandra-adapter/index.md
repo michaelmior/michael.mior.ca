@@ -2,6 +2,7 @@
 title: Calcite Cassandra adapter
 author: michaelmior
 date: 2016-02-20
+modified: 2016-03-27
 template: article.jade
 summary: "It is now possible to execute SQL queries over Cassandra tables using an adapter for Apache Calcite."
 ---
@@ -45,3 +46,9 @@ Note that table names need to be quoted and there will likely be some failures w
 You can view the proposed plan for a query by prefixing it with `EXPLAIN PLAN FOR` in the `sqlline` shell.
 This will show whether the query is able to exploit filtering or sorting directly in CQL.
 This is a long way from making Cassandra a viable data warehouse, but it may be helpful for performing occasional analytical queries without needing to write a significant amount of code.
+
+## Update: March 27, 2016
+
+Calcite 1.7.0 has now been [released](https://calcite.apache.org/docs/history.html#v1-7-0) which includes the Cassandra adapter.
+In addition to what was discussed above, the adapter also now automatically recognizes [materialized views](www.datastax.com/dev/blog/new-in-cassandra-3-0-materialized-views).
+[Documentation](https://calcite.apache.org/docs/cassandra.html) is available on the Calcite website.
