@@ -24,6 +24,7 @@
     "gulp-util": "^3.0.7",
     "imagemin-pngquant": "^4.2.2",
     "iso8601": "^1.1.1",
+    "jstransformer-json": "0.0.0",
     "run-sequence": "^1.1.5",
     "run-wintersmith": "0.0.3",
     "vinylsmith": "^1.0.0",

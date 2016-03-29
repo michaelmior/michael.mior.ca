@@ -25,34 +25,34 @@ html(lang='en', amp='')
     meta(name='article:published_time', content=env.helpers.toISO8601(page.date))
 
     //- Schema.org markup
-    | <script type="application/ld+json">
-    |   {
-    |     "@context": "http://schema.org",
-    |     "@type": "BlogPosting",
-    |     "headline": "#{page.metadata.title}",
-    |     "name": "#{page.metadata.title}",
-    |     "datePublished": "#{env.helpers.toISO8601(page.date)}",
-    |     "dateModified": "#{env.helpers.toISO8601(page.metadata.modified || page.date)}",
-    |     "author": {
-    |       "@type": "Person",
-    |       "name": "Michael Mior"
-    |     },
-    |     "publisher": {
-    |       "@type": "Organization",
-    |       "name": "Michael Mior",
-    |       "logo": {
-    |         "@type": "ImageObject",
-    |         "url": "#{locals.url}/img/logo-full.png",
-    |         "width": 600,
-    |         "height": 48
-    |       }
-    |     },
-    |     "mainEntityOfPage": {
-    |       "@type":"WebPage",
-    |       "@id":"#{page.article.url}"
-    |     }
-    |   }
-    | </script>
+    script(type='application/ld+json')
+      :json
+        {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "#{page.metadata.title}",
+          "name": "#{page.metadata.title}",
+          "datePublished": "#{env.helpers.toISO8601(page.date)}",
+          "dateModified": "#{env.helpers.toISO8601(page.metadata.modified || page.date)}",
+          "author": {
+            "@type": "Person",
+            "name": "Michael Mior"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Michael Mior",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "#{locals.url}/img/logo-full.png",
+              "width": 600,
+              "height": 48
+            }
+          },
+          "mainEntityOfPage": {
+            "@type":"WebPage",
+            "@id":"#{page.article.url}"
+          }
+        }
 
     meta(name='theme-color', content='#4080c0')
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Hind:400,700,400italic,700italic|Roboto+Mono:400,700,400italic,700italic')
