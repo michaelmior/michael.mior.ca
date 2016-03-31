@@ -79,7 +79,10 @@ function htmllintReporter(filepath, issues) {
 gulp.task('include-html', [], function() {
   gulp.src('build/**/*.html')
     .pipe(extender({annotations: false, root: 'build'}))
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true
+    }))
     .pipe(htmllint({}, htmllintReporter))
     .pipe(gulp.dest('build'))
 });
