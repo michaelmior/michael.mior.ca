@@ -9,6 +9,7 @@ var a11y = require('gulp-a11y'),
     mdlint = require('gulp-remark-lint-dko'),
     rimraf = require('gulp-rimraf'),
     runSequence = require('run-sequence'),
+    sassLint = require('gulp-sass-lint'),
     surge = require('gulp-surge'),
     runWintersmith = require('run-wintersmith'),
     url = require('url'),
@@ -28,6 +29,15 @@ gulp.task('lint-markdown', function() {
     }}))
     .pipe(mdlint.report());
 });
+
+gulp.task('lint-sass', function() {
+  gulp.src('contents/styles/**/*\.s+(a|c)ss')
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
+});
+
+gulp.task('lint', ['lint-markdown', 'lint-sass']);
 
 // Clean the build directory
 gulp.task('clean', function() {

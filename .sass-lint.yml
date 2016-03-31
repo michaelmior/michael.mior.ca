@@ -1,0 +1,12 @@
+rules:
+  class-name-format: 0
+  force-element-nesting: 0
+  nesting-depth: 0
+  no-color-literals: 0
+  no-css-comments: 0
+  no-ids: 0
+  no-important: 0
+  no-qualifying-elements: 0
+
+  # XXX Currently disabled to allow media queries
+  no-mergeable-selectors: 0

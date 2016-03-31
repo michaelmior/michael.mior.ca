@@ -12,15 +12,31 @@ html {
   line-height: 1.5rem;
 }
 
-body { padding: 1.5rem; }
+body {
+  background-color: #f8f8f8;
+  color: #171717;
+  margin: 1.5rem;
+  padding: 1.5rem;
+}
 
-code, pre, samp, kbd {
+code,
+pre,
+samp,
+kbd {
+  color: #111;
   font-family: 'Roboto Mono', monospace;
-  font-size: 0.833rem;
+  font-size: .833rem;
 }
 
 kbd { font-weight: bold; }
-h1, h2, h3, h4, h5, h6, th {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
 }
@@ -32,122 +48,142 @@ h3 { font-size: 1.728em; }
 h4 { font-size: 1.44em; }
 h5 { font-size: 1.2em; }
 h6 { font-size: 1em; }
-small { font-size: 0.833em; }
+small { font-size: .833em; }
 
-h1, h2, h3 { line-height: 3rem; }
+h1,
+h2,
+h3 { line-height: 3rem; }
 
-p, ul, ol, dl, table, blockquote, pre, h1, h2, h3, h4, h5, h6 {
+p,
+ul,
+ol,
+dl,
+table,
+blockquote,
+pre,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 1.5rem 0 0;
 }
-ul ul, ol ol, ul ol, ol ul { margin: 0; }
 
-hr, center {
+ul ul,
+ol ol,
+ul ol,
+ol ul { margin: 0; }
+
+hr,
+center {
+  border: 0;
   margin: 0;
-  border: none;
   padding: 1.5rem 0 0;
-}
-
-/* Accounting for borders */
-table {
-  line-height: calc(1.5rem - 1px);
-  margin-bottom: -1px;
-}
-pre {
-  margin-top: calc(1.5rem - 1px);
-  margin-bottom: -1px;
 }
 
 /* Colors */
 
-body {
-  color: #171717;
-  background-color: #f8f8f8;
+nav a {
+  &:visited { color: #004b91; }
 }
 
-code, pre, samp, kbd { color: #111; }
-a, nav a:visited { color: #004b91; }
-a:visited { color: #60b; }
-mark { color: inherit; }
+a {
+  color: #004b91;
+  text-decoration: none;
 
-code, pre, samp, thead, tfoot { background-color: rgba(0, 0, 0, 0.05); }
-mark { background-color: #fe0; }
+  &:visited { color: #60b; }
+}
 
-main aside, blockquote, ins { border: solid rgba(0, 0, 0, 0.05); }
-pre, code, samp { border: solid rgba(0, 0, 0, 0.1); }
-th, td { border: solid #dbdbdb; }
+code,
+pre,
+samp,
+thead,
+tfoot { background-color: rgba(0, 0, 0, .05); }
+
+main aside,
+blockquote,
+ins { border: solid rgba(0, 0, 0, .05); }
+
+pre,
+code,
+samp { border: solid rgba(0, 0, 0, .1); }
 
 /* Layout */
 
-body { margin: 1.5rem; }
-
 body > header {
-  margin: -1.5rem -1.5rem 0 -1.5rem;
-  padding: 1rem 0.75rem;
-  background-image: url(/img/logo-header.png);
-  background-size: 25px 25px;
-  background-repeat: no-repeat;
-  background-position: center right;
-  background-origin: content-box;
   background-color: #4080c0;
+  background-image: url('/img/logo-header.png');
+  background-origin: content-box;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  margin: -1.5rem -1.5rem 0;
+  padding: 1rem .75rem;
   text-align: center;
 }
 
 body > header > a {
   color: #fff;
-  font-size: 1.728em;
   display: block;
-  width: 100%;
+  font-size: 1.728em;
   height: 100%;
+  width: 100%;
+
+  &:visited { color: #fff; }
 }
 
-body > header > a:visited {
-  color: #fff;
-}
-
-main, body > footer {
-  display: block; /* Just in case */
-  max-width: 78ch;
+main,
+body > footer {
+  display: block;
   margin: auto;
+  max-width: 78ch;
 }
 
-main figure, main aside {
+main figure,
+main aside {
   float: right;
   margin: 1.5rem 0 0 1ch;
 }
 
 main aside {
+  border-width: 0 0 0 .5ch;
   max-width: 26ch;
-  border-width: 0 0 0 0.5ch;
-  padding: 0 0 0 0.5ch;
+  padding: 0 0 0 .5ch;
 }
 
 /* Copy blocks */
 
 blockquote {
-  margin-right: 3ch;
+  border-width: 0 0 0 .5ch;
   margin-left: 1.5ch;
-  border-width: 0 0 0 0.5ch;
+  margin-right: 3ch;
   padding: 0 0 0 1ch;
 }
 
 pre {
-  border-width: 1px;
   border-radius: 2px;
-  padding: 0 0.5ch;
+  border-width: 1px;
+  margin-bottom: -1px;
+  margin-top: calc(1.5rem - 1px);
   overflow-x: auto;
-}
-pre code {
-  border: none;
-  padding: 0;
-  background-color: transparent;
-  white-space: inherit;
+  padding: 0 .5ch;
+
+  code {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    white-space: inherit;
+  }
 }
 
 img { max-width: 100%; }
 
 /* Lists */
 
-ul, ol, dd { padding: 0 0 0 3ch; }
+ul,
+ol,
+dd { padding: 0 0 0 3ch; }
 dd { margin: 0; }
 
 ul > li { list-style-type: disc; }
@@ -159,35 +195,40 @@ li ol > li { list-style-type: lower-roman; }
 li li ol > li { list-style-type: lower-alpha; }
 
 nav ul {
-  padding: 0;
   list-style-type: none;
+  padding: 0;
+
+  li {
+    display: inline;
+    padding-left: 1ch;
+    white-space: nowrap;
+
+    &:first-child { padding-left: 0; }
+  }
 }
-nav ul li {
-  display: inline;
-  padding-left: 1ch;
-  white-space: nowrap;
-}
-nav ul li:first-child { padding-left: 0; }
 
 /* Tables */
 
 table {
-  width: 100%;
   border-collapse: collapse;
+  line-height: calc(1.5rem - 1px);
+  margin-bottom: -1px;
   overflow-x: auto;
+  width: 100%;
 }
 
-th, td {
+th,
+td {
+  border: solid #dbdbdb;
   border-width: 1px;
-  padding: 0 0.5ch;
+  padding: 0 .5ch;
 }
 
 /* Copy inline */
 
-a { text-decoration: none; }
-
-sup, sub {
-  font-size: 0.75em;
+sup,
+sub {
+  font-size: .75em;
   line-height: 1em;
 }
 
@@ -198,12 +239,15 @@ ins {
 }
 
 mark {
+  background-color: #fe0;
+  color: inherit;
   padding: 1px;
 }
 
-code, samp {
-  border-width: 1px;
+code,
+samp {
   border-radius: 2px;
-  padding: 0.1em 0.2em;
+  border-width: 1px;
+  padding: .1em .2em;
   white-space: nowrap;
 }
