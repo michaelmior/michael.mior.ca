@@ -4,6 +4,7 @@ var a11y = require('gulp-a11y'),
     favicons = require('gulp-favicons'),
     fs = require('fs'),
     gulp = require('gulp'),
+    htmllint = require('gulp-htmllint'),
     htmlmin = require('gulp-htmlmin'),
     rimraf = require('gulp-rimraf'),
     runSequence = require('run-sequence'),
@@ -48,10 +49,24 @@ gulp.task('favicons', function () {
   .pipe(gulp.dest('build/favicons'));
 });
 
+function htmllintReporter(filepath, issues) {
+  if (issues.length > 0) {
+    issues.forEach(function (issue) {
+      util.log(util.colors.cyan('[gulp-htmllint] ') +
+               util.colors.white(filepath +
+                 ' [' + issue.line + ',' + issue.column + ']: ') +
+               util.colors.red('(' + issue.code + ') ' + issue.msg));
+    });
+
+    process.exitCode = 1;
+  }
+}
+
 gulp.task('include-html', [], function() {
   gulp.src('build/**/*.html')
     .pipe(extender({annotations: false, root: 'build'}))
     .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmllint({}, htmllintReporter))
     .pipe(gulp.dest('build'))
 });
 

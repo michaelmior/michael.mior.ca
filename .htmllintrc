@@ -1,0 +1,11 @@
+{
+  "attr-bans": ["align", "background", "bgcolor", "border", "frameborder",
+                "longdesc", "marginwidth", "marginheight", "scrolling"],
+  "attr-name-style": false,
+  "id-class-style": false,
+  "indent-style": false,
+  "indent-style": false,
+  "indent-width": false,
+  "line-end-style": false,
+  "tag-bans": ["b", "i"]
+}
