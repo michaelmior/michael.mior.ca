@@ -80,8 +80,12 @@ gulp.task('include-html', [], function() {
   gulp.src('build/**/*.html')
     .pipe(extender({annotations: false, root: 'build'}))
     .pipe(htmlmin({
+      collapseBooleanAttributes: true,
       collapseWhitespace: true,
-      removeComments: true
+      removeComments: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: true,
+      useShortDoctype: true
     }))
     .pipe(htmllint({}, htmllintReporter))
     .pipe(gulp.dest('build'))
