@@ -6,6 +6,7 @@ modified: 2012-06-14
 template: article.jade
 summary: "When used carelessly, strlen can be a significant bottleneck in an application doing heavy string manipulation."
 ---
+
 I’ll keep this post brief, but I wanted to share something I just found about the C `strlen` function. It’s slow. It can make a big difference in program execution time.
 
 For example, I had a function in an external which consumes a string, so I call `strdup` each time around a loop to make sure I have a copy for the next iteration.

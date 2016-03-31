@@ -41,7 +41,11 @@ By automating this process, NoSE is able to explore a much larger set of possibl
 
 We consider [RUBiS](http://rubis.ow2.org/), a simple version of an online auction website. If we attempt to recreate RUBiS as a Cassandra application, there are several entities and relationships which we must model.
 
+<!--lint disable no-html-->
+
 <img src="NoSE/rubis.png" alt="RUBiS entities" style="max-width:100%">
+
+<!--lint enable no-html-->
 
 There are several queries which the application must answer such as:
 

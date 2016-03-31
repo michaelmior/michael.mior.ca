@@ -6,6 +6,7 @@ var a11y = require('gulp-a11y'),
     gulp = require('gulp'),
     htmllint = require('gulp-htmllint'),
     htmlmin = require('gulp-htmlmin'),
+    mdlint = require('gulp-remark-lint-dko'),
     rimraf = require('gulp-rimraf'),
     runSequence = require('run-sequence'),
     surge = require('gulp-surge'),
@@ -14,6 +15,19 @@ var a11y = require('gulp-a11y'),
     util = require('gulp-util');
 
 var locals = JSON.parse(fs.readFileSync('config.json')).locals;
+
+// Lint
+gulp.task('lint-markdown', function() {
+  return gulp.src('contents/**/*.md')
+    .pipe(mdlint({rules: {
+      'first-heading-level': false, // XXX Should really be 2 if possible
+      'list-item-indent': false,
+      'maximum-line-length': false,
+      'no-file-name-mixed-case': false,
+      'no-multiple-toplevel-headings': false
+    }}))
+    .pipe(mdlint.report());
+});
 
 // Clean the build directory
 gulp.task('clean', function() {

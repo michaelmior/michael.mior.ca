@@ -3,6 +3,8 @@ title: Publications
 template: page.jade
 ---
 
+<!--lint disable no-html-->
+
 <div class="acmdlitem">
   <a href="NoSE-ICDE2016.pdf" title="NoSE: Schema Design for NoSQL Applications">
     NoSE: Schema Design for NoSQL Applications
@@ -42,3 +44,5 @@ template: page.jade
     SYSTOR '11 Proceedings of the 4th Annual International Conference on Systems and Storage,&nbsp;2011
   </div>
 </div>
+
+<!--lint enable no-html-->

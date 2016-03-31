@@ -5,6 +5,7 @@ date: 2010-10-12
 template: article.jade
 summary: "DBUS signals in gnome-screensaver can be used to synchronize locking and unlocking across multiple machines."
 ---
+
 I typically work with two computers on a regular basis.
 When I bring my laptop into the office, that makes three.
 I have a habit of locking my computer(s) when I step out, but it gets to be a pain when I have three machines running at once.

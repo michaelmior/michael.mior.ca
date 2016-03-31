@@ -1,6 +1,7 @@
 ---
 title: Home
 ---
+
 You've reached the website of computer science Master Michael Mior.
 I'm currently a PhD student in the [David R. Cheriton School of Computer Science](https://cs.uwaterloo.ca/) at the [University of Waterloo](https://uwaterloo.ca/).
 

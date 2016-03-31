@@ -5,6 +5,7 @@ date: 2012-01-14
 template: article.jade
 summary: "By creating a simple subclass of Django test cases, its easy to perform unit testing on mixin model classes."
 ---
+
 I recently found myself having to unit test some model mixins and I thought I would share the technique I used in case anyone else finds it useful.
 You could just pick a model which uses the mixin and run the test on instances of that model.
 But the goal of a mixin is to provide reusable functionality independent of any model.

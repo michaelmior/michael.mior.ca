@@ -5,6 +5,7 @@ date: 2010-12-02
 template: article.jade
 summary: "Using a simple Makefile its, easy to build a CMS-like system that operates entirely offline."
 ---
+
 First the obvious question.
 What on earth is an offline CMS?
 Isn't the whole point of having a CMS that you don’t have to change anything offline? Well, yes that’s true.
@@ -68,6 +69,8 @@ $(HTM): web/%.htm: src/tmpl/%.tmpl
 To get this to work for you, you should just be able to change `SERVER` to the address of your web server.
 The directory structure I used looks like this:
 
+<!--lint disable list-item-spacing no-missing-blank-lines-->
+
 * bin
 * src
   * tmpl
@@ -76,6 +79,8 @@ The directory structure I used looks like this:
   * js
 * web
   * img
+
+<!--lint enable list-item-spacing no-missing-blank-lines-->
 
 Finally, here’s a complete list of download locations for all the tools I used:
 
