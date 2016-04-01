@@ -4,6 +4,7 @@ author: michaelmior
 date: 2010-12-02
 template: article.jade
 summary: "Using a simple Makefile its, easy to build a CMS-like system that operates entirely offline."
+image: offline.png
 ---
 
 First the obvious question.

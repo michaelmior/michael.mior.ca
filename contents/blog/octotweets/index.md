@@ -4,6 +4,7 @@ author: michaelmior
 date: 2010-11-14
 template: article.jade
 summary: "A series of interesting links from tweets posted in October 2010."
+image: twitter.png
 ---
 
 Below is a few more links from my latest tweets from the end of October.

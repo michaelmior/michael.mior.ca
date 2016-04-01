@@ -4,6 +4,7 @@ author: michaelmior
 date: 2011-03-06
 template: article.jade
 summary: "By hooking into SSH clients, you can set different colour schemes per host in your terminal to make it clear where you're connected to."
+image: terminal.png
 ---
 
 With the looming prospect of deploying software to production systems and horror stories of accidental commands executed on production systems instead of development machines, I wanted to try to find a way to ensure this never happened to me.

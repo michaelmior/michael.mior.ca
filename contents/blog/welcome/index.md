@@ -4,6 +4,7 @@ author: michaelmior
 date: 2010-09-28
 template: article.jade
 summary: "An introduction to my personal website and blog."
+image: house.png
 ---
 
 This is my new blog which I’ve been meaning to put up for some time now.

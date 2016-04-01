@@ -5,6 +5,7 @@ date: 2016-02-20
 modified: 2016-03-27
 template: article.jade
 summary: "It is now possible to execute SQL queries over Cassandra tables using an adapter for Apache Calcite."
+image: calcite.png
 ---
 
 For those not familiar, [Calcite](https://calcite.apache.org/) is a generic SQL query optimizer which can execute SQL queries over multiple backend data sources.

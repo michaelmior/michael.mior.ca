@@ -26,6 +26,7 @@ html(lang='en', amp='')
 
     //- Schema.org markup
     script(type='application/ld+json')
+      - var imageObject = env.helpers.blogImageObject(page)
       :json
         {
           "@context": "http://schema.org",
@@ -49,8 +50,14 @@ html(lang='en', amp='')
             }
           },
           "mainEntityOfPage": {
-            "@type":"WebPage",
-            "@id":"#{page.article.url}"
+            "@type": "WebPage",
+            "@id": "#{page.article.url}"
+          },
+          "image": {
+            "@type": "ImageObject",
+            "url": "#{imageObject.url}",
+            "height": "#{imageObject.height}",
+            "width": "#{imageObject.width}"
           }
         }
 

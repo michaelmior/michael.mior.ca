@@ -4,6 +4,7 @@ author: michaelmior
 date: 2012-01-06
 template: article.jade
 summary: "The MySQL CLI has a useful configuration file that you can use to avoid retyping usernames and passwords."
+image: database.png
 ---
 
 Perhaps I'm the only one who didn’t know this, but a while back, I discovered a handy trick for configuring the MySQL client.

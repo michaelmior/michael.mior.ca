@@ -4,6 +4,7 @@ author: michaelmior
 date: 2010-10-12
 template: article.jade
 summary: "DBUS signals in gnome-screensaver can be used to synchronize locking and unlocking across multiple machines."
+image: screensaver.png
 ---
 
 I typically work with two computers on a regular basis.

@@ -4,7 +4,9 @@ async     = require 'async'
 babel     = require 'gulp-babel'
 fs        = require 'fs'
 imagemin  = require 'gulp-imagemin'
+imageSize = require 'image-size'
 iso8601   = require 'iso8601'
+path      = require 'path'
 pleeease  = require 'gulp-pleeease'
 pngquant  = require 'imagemin-pngquant'
 rev       = require 'gulp-rev'
@@ -43,9 +45,24 @@ module.exports = (env, callback) ->
     vinylsmith(env)
       .pipe(imagemin, {progressive: true, use: [pngquant()]})
 
+  env.registerContentPlugin 'images', 'blog/*/*.png',
+    vinylsmith(env)
+      .pipe(imagemin, {progressive: true, use: [pngquant()]})
+
   toISO8601 = (date) ->
     iso8601.fromDate(date)
 
   env.helpers.toISO8601 = toISO8601
+
+  blogImageObject = (page) ->
+    image = path.dirname(page.filepath.full) + '/' + page.metadata.image
+    size = imageSize(image)
+    {
+      'url': page.metadata.image,
+      'height': size.height,
+      'width': size.width
+    }
+
+  env.helpers.blogImageObject = blogImageObject
 
   callback()

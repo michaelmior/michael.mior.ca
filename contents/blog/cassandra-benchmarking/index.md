@@ -4,6 +4,7 @@ author: michaelmior
 date: 2014-08-21
 template: article.jade
 summary: "Carefully orchestrating the loading of replicated data on Cassandra can have a significant impact on load times."
+image: speedo.png
 ---
 
 I was recently trying to run some benchmarks against [Cassandra](http://cassandra.apache.org/) on [EC2](http://aws.amazon.com/ec2/) since unfortunately the servers I had in our machine room were destroyed in a fire.

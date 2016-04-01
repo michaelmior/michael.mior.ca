@@ -4,6 +4,7 @@ author: michaelmior
 date: 2011-01-05
 template: article.jade
 summary: "Updates to the RUBBoS bulletin board application for Web application benchmarking fixes bugs in the PHP implementation."
+image: board.png
 ---
 
 While working on my Masters thesis, I needed a solid database benchmark.

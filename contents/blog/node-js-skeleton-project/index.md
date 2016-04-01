@@ -4,6 +4,7 @@ author: michaelmior
 date: 2012-09-15
 template: article.jade
 summary: "A simple skeleton Node.js server project using the Locomotive library."
+image: node-js.png
 ---
 
 Unfortunately, it's obviously been a long time since this blog has been updated.

@@ -4,6 +4,7 @@ author: michaelmior
 date: 2015-09-24
 template: article.jade
 summary: "Continuous integration services are useful test management of dotfiles and ensure smooth deployment."
+image: test-tube.png
 ---
 
 Several years ago I started managing my dotfiles based on Zach Holman's [dotfiles repo](https://github.com/holman/dotfiles).
