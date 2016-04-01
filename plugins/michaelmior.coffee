@@ -45,9 +45,10 @@ module.exports = (env, callback) ->
     vinylsmith(env)
       .pipe(imagemin, {progressive: true, use: [pngquant()]})
 
-  env.registerContentPlugin 'images', 'blog/*/*.png',
-    vinylsmith(env)
-      .pipe(imagemin, {progressive: true, use: [pngquant()]})
+  # XXX This takes too long so images are converted AOT
+  #env.registerContentPlugin 'images', 'blog/*/*.png',
+  #  vinylsmith(env)
+  #    .pipe(imagemin, {progressive: true, use: [pngquant()]})
 
   toISO8601 = (date) ->
     iso8601.fromDate(date)
