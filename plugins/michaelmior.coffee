@@ -56,10 +56,11 @@ module.exports = (env, callback) ->
   env.helpers.toISO8601 = toISO8601
 
   blogImageObject = (page) ->
+    url = path.dirname(page.filepath.relative) + '/' + page.metadata.image
     image = path.dirname(page.filepath.full) + '/' + page.metadata.image
     size = imageSize(image)
     {
-      'url': page.metadata.image,
+      'url': env.locals.url + '/' + url,
       'height': size.height,
       'width': size.width
     }
