@@ -46,3 +46,15 @@ template: page.jade
 </div>
 
 <!--lint enable no-html-->
+
+
+## Academic Social Networks
+
+* [Academia.edu](https://uwaterloo.academia.edu/MichaelMior)
+* [ACM Digital Library](http://dl.acm.org/author_page.cfm?id=81485657205)
+* [DBLP](http://dblp.uni-trier.de/pers/hd/m/Mior:Michael_J=)
+* [Google Scholar](https://scholar.google.com/citations?user=bpO_ZLoAAAAJ?branch=master)
+* [ORCID](http://orcid.org/0000-0002-4057-8726)
+* [ResearcherID](http://www.researcherid.com/rid/L-1862-2013)
+* [ResearchGate](https://www.researchgate.net/profile/Michael_Mior)
+* [Scopus](http://www.scopus.com/authid/detail.uri?authorId=42561437500)
