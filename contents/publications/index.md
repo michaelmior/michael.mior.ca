@@ -45,6 +45,8 @@ template: page.jade
   </div>
 </div>
 
+<hr/>
+
 <!--lint enable no-html-->
 
 
