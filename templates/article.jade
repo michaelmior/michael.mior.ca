@@ -6,6 +6,7 @@ block prepend head
   meta(name='twitter:card', content='summary')
   meta(name='twitter:site', content='michaelmior')
 
+  meta(property='og:url', content="#{locals.url}#{page.url}")
   meta(property='og:title', content=page.title)
   meta(property='og:description', content=page.metadata.summary)
   meta(property='og:type', content='article')

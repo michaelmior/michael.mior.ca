@@ -8,13 +8,14 @@ html(lang='en', amp='')
     title= page.title
 
     meta(name='viewport', content='width=device-width,minimum-scale=1,initial-scale=1')
-    link(rel='canonical', href=page.article.url)
+    link(rel='canonical', href="#{locals.url}#{page.article.url}")
 
     //- Twitter card tags
     meta(name='twitter:card', content='summary')
     meta(name='twitter:site', content='michaelmior')
 
     //- OG meta tags
+    meta(property='og:url', content="#{locals.url}#{page.article.url}")
     meta(property='og:title', content=page.title)
     meta(property='og:description', content=page.metadata.summary)
     meta(property='og:type', content='article')
