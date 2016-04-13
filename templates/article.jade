@@ -6,11 +6,16 @@ block prepend head
   meta(name='twitter:card', content='summary')
   meta(name='twitter:site', content='michaelmior')
 
+  - var imageObject = env.helpers.blogImageObject(page)
+
   meta(property='og:url', content="#{locals.url}#{page.url}")
   meta(property='og:title', content=page.title)
   meta(property='og:description', content=page.metadata.summary)
   meta(property='og:type', content='article')
   meta(property='og:site_name', content='Michael Mior')
+  meta(property='og:image', content=imageObject.url)
+  meta(property='og:image:width', content=imageObject.width)
+  meta(property='og:image:height', content=imageObject.height)
   meta(property='fb:profile_id', content='227200130')
   meta(property='article:publisher', content='227200130')
   meta(property='article:author', content='227200130')
@@ -42,6 +47,12 @@ block prepend head
         "mainEntityOfPage": {
           "@type":"WebPage",
           "@id":"#{page.url}"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "#{imageObject.url}",
+          "height": "#{imageObject.height}",
+          "width": "#{imageObject.width}"
         }
       }
 
