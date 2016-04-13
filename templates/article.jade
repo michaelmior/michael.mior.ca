@@ -8,6 +8,12 @@ block prepend head
 
   meta(name='og:title', content=page.title)
   meta(name='og:description', content=page.metadata.summary)
+  meta(name='og:type', content='article')
+  meta(name='og:site_name', content='Michael Mior')
+  meta(name='fb:profile_id', content='227200130')
+  meta(name='article:publisher', content='227200130')
+  meta(name='article:author', content='227200130')
+  meta(name='article:published_time', content=env.helpers.toISO8601(page.date))
 
   script(type='application/ld+json')
     :json
