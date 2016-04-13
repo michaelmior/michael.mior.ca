@@ -65,6 +65,7 @@ gulp.task('favicons', function () {
     icons: {
       appleStartup: false,
       coast: false,
+      facebook: false,
       twitter: false,
       yandex: false
     }
