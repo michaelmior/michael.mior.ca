@@ -3,6 +3,8 @@ title: "NoSE: NoSQL Schema Evaluator"
 template: page.jade
 ---
 
+*NoSE is available on [GitHub](https://github.com/michaelmior/NoSE)*
+
 # Abstract
 
 Database design is critical for high performance in relational databases and many tools exist to aid application designers in selecting an appropriate schema. While the problem of schema optimization is also highly relevant for Cassandra, existing tools for relational databases are inadequate for this setting. Application designers wishing to use Cassandra instead rely on rules of thumb to select an appropriate schema. These rules can be challenging to apply without experience because they are often vague or contradictory. NoSE, an automated solution to Cassandra schema design, attempts to avoid these pitfalls.
@@ -99,3 +101,34 @@ This example is simple, but demonstrates a tradeoff NoSE is able to make. Across
 # Conclusion
 
 Schema design for Cassandra databases is a complex problem with many additional challenges as compared to relational schema design. We have developed a workload-driven approach for schema design which is able to effectively explore various tradeoffs in the design space. For example, NoSE allows applications to explicitly control the tradeoff between normalization and query performance by varying a space constraint. Our approach implicitly captures best practices in Cassandra schema design with relying on general design rules-of-thumb, and is thereby able to generate effective Cassandra schema designs.
+
+# Publications
+
+<!--lint disable no-html-->
+
+<div class="acmdlitem">
+  <a href="NoSE-ICDE2016.pdf" title="NoSE: Schema Design for NoSQL Applications">
+    NoSE: Schema Design for NoSQL Applications
+  </a>
+  <div style="margin-left:25px">
+    Michael J. Mior, Kenneth Salem, Ashraf Aboulnaga, Rui Liu<br>
+    Data Engineering (ICDE), 2016 IEEE 32nd International Conference on<br>
+    <em>(to appear)</em>
+  </div>
+</div>
+
+<hr/>
+
+<div class="acmdlitem" id="item2602624">
+  <img src="http://dl.acm.org/images/oa.gif" width="25" height="25" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+  <a href="http://dl.acm.org/authorize?N71145" title="Automated schema design for NoSQL databases">
+    Automated schema design for NoSQL databases
+  </a>
+
+  <div style="margin-left:25px">
+    <a href="http://dl.acm.org/author_page.cfm?id=81485657205" >Michael J. Mior</a><br>
+      SIGMOD'14 PhD Symposium Proceedings of the 2014 SIGMOD PhD symposium,&nbsp;2014
+  </div>
+</div>
+
+<!--lint enable no-html-->

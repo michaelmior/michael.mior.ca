@@ -3,7 +3,7 @@ title: Projects
 template: page.jade
 ---
 
-## [NoSE](https://github.com/michaelmior/NoSE)
+## [NoSE](/projects/NoSE/)
 
 NoSE is an automated schema design tool for NoSQL databases.
 
