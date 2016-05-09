@@ -3,6 +3,8 @@ extends layout
 
 block prepend head
   link(rel='amphtml', href=locals.url + '/amp' + page.url)
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css', integrity='sha384-aNUYGqSUL9wG/vP7+cWZ5QOM4gsQou3sBfWRr/8S3R1Lv0rysEmnwsRKMbhiQX/O', crossorigin='anonymous')
+
   meta(name='twitter:card', content='summary')
   meta(name='twitter:site', content='michaelmior')
 
@@ -68,6 +70,20 @@ block header
 block content
   article.article
     section.content!= typogr(page.html).typogrify()
+    div.share
+      a(title='Share on Twitter', href="https://twitter.com/intent/tweet?source=#{encodeURIComponent(locals.url + page.url)}&text=#{encodeURIComponent(page.title + ' ' + locals.url + page.url)}&via=michaelmior", target='_blank')
+        i.fa.fa-twitter-square(aria-hidden='true')
+      a(title='Submit to Hacker News', href="https://news.ycombinator.com/submitlink?u=#{encodeURIComponent(locals.url + page.url)}&t=#{encodeURIComponent(page.title)}", target='_blank')
+        i.fa.fa-hacker-news(aria-hidden='true')
+      a(title='Submit to Reddit', href="http://www.reddit.com/r/programming/submit?url=#{encodeURIComponent(locals.url + page.url)}&title=#{encodeURIComponent(page.title)}", target='_blank')
+        i.fa.fa-reddit-square(aria-hidden='true')
+      a(title='Share on Google+', href="https://plus.google.com/share?url=#{encodeURIComponent(locals.url + page.url)}", target='_blank')
+        i.fa.fa-google-plus-square(aria-hidden='true')
+      a(title='Share on LinkedIn', href="https://www.linkedin.com/shareArticle?mini=true&url=#{encodeURIComponent(locals.url + page.url)}&title=#{encodeURIComponent(page.title)}&summary=#{encodeURIComponent(page.metadata.summary)}&source=#{encodeURIComponent(locals.url + page.url)}", target='_blank')
+        i.fa.fa-linkedin-square(aria-hidden='true')
+      a(title='Share on Facebook', href="https://www.facebook.com/sharer.php?u=#{encodeURIComponent(locals.url + page.url)}", target='_blank')
+        i.fa.fa-facebook-square(aria-hidden='true')
+
     | <div id="disqus_thread"></div>
     | <script>
     | var disqus_config = function () {
