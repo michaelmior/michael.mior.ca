@@ -2,6 +2,7 @@ doctype html
 html(lang='en', amp='')
   head
     script(async='', src='https://cdn.ampproject.org/v0.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css')
     script(async='', custom-element='amp-analytics', src='https://cdn.ampproject.org/v0/amp-analytics-0.1.js')
 
     meta(charset='utf-8')
@@ -86,6 +87,19 @@ html(lang='en', amp='')
       div.content-wrap
         article.article
           section.content!= typogr(page.html).typogrify()
+        div.share
+          a(title='Share on Twitter', href="https://twitter.com/intent/tweet?source=#{encodeURIComponent(locals.url + page.article.url)}&text=#{encodeURIComponent(page.title + ' ' + locals.url + page.article.url)}&via=michaelmior", target='_blank')
+            i.fa.fa-twitter-square(aria-hidden='true')
+          a(title='Submit to Hacker News', href="https://news.ycombinator.com/submitlink?u=#{encodeURIComponent(locals.url + page.article.url)}&t=#{encodeURIComponent(page.title)}", target='_blank')
+            i.fa.fa-hacker-news(aria-hidden='true')
+          a(title='Submit to Reddit', href="http://www.reddit.com/r/programming/submit?url=#{encodeURIComponent(locals.url + page.article.url)}&title=#{encodeURIComponent(page.title)}", target='_blank')
+            i.fa.fa-reddit-square(aria-hidden='true')
+          a(title='Share on Google+', href="https://plus.google.com/share?url=#{encodeURIComponent(locals.url + page.article.url)}", target='_blank')
+            i.fa.fa-google-plus-square(aria-hidden='true')
+          a(title='Share on LinkedIn', href="https://www.linkedin.com/shareArticle?mini=true&url=#{encodeURIComponent(locals.url + page.article.url)}&title=#{encodeURIComponent(page.title)}&summary=#{encodeURIComponent(page.metadata.summary)}&source=#{encodeURIComponent(locals.url + page.article.url)}", target='_blank')
+            i.fa.fa-linkedin-square(aria-hidden='true')
+          a(title='Share on Facebook', href="https://www.facebook.com/sharer.php?u=#{encodeURIComponent(locals.url + page.article.url)}", target='_blank')
+            i.fa.fa-facebook-square(aria-hidden='true')
         center
           a(href=page.article.url)= 'View comments'
 
