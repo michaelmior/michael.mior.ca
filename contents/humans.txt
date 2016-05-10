@@ -1,0 +1,11 @@
+# Check it out: http://humanstxt.org/
+
+# TEAM
+
+    Developer: Michael Mior
+    Contact: michael [at] mior.ca
+    Twitter: @michaelmior
+
+# THANKS
+
+    Johan Nordberg for Wintersmith -- http://wintersmith.io/
