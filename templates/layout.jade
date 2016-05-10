@@ -12,10 +12,10 @@ html(lang='en')
       // @@include /favicons/index.html 
       | !{ livereloadScript }
       | <script>
-      |   (function(M,i,c,h,a,e,l){M['GoogleAnalyticsObject']=a;M[a]=M[a]||function(){
-      |   (M[a].q=M[a].q||[]).push(arguments)},M[a].l=1*new Date();e=i.createElement(c),
-      |   l=i.getElementsByTagName(c)[0];e.async=1;e.src=h;l.parentNode.insertBefore(e,l)
-      |   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      |   !function(M,i,c,h,a,e,l){M.GoogleAnalyticsObject=c;M[c]||(M[c]=function(){
+      |   (M[c].q=M[c].q||[]).push(arguments)});M[c].l=+new Date;e=i.createElement(h);
+      |   l=i.getElementsByTagName(h)[0];e.src=a;l.parentNode.insertBefore(e,l)}
+      |   (window,document,'ga','script','//www.google-analytics.com/analytics.js');
       | 
       |   ga('create', 'UA-45085128-1', 'auto');
       |   ga('send', 'pageview');
