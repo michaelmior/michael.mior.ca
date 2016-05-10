@@ -3,7 +3,6 @@ extends layout
 
 block prepend head
   link(rel='amphtml', href=locals.url + '/amp' + page.url)
-  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css', integrity='sha384-aNUYGqSUL9wG/vP7+cWZ5QOM4gsQou3sBfWRr/8S3R1Lv0rysEmnwsRKMbhiQX/O', crossorigin='anonymous')
 
   meta(name='twitter:card', content='summary')
   meta(name='twitter:site', content='michaelmior')
@@ -104,3 +103,6 @@ block content
 block prepend footer
   div.nav
     a(href=contents.index.url) « Blog archive
+
+block append footer
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css', integrity='sha384-aNUYGqSUL9wG/vP7+cWZ5QOM4gsQou3sBfWRr/8S3R1Lv0rysEmnwsRKMbhiQX/O', crossorigin='anonymous')
