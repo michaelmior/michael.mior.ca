@@ -53,4 +53,4 @@ This is a long way from making Cassandra a viable data warehouse, but it may be 
 
 Calcite 1.7.0 has now been [released](https://calcite.apache.org/docs/history.html#v1-7-0) which includes the Cassandra adapter.
 In addition to what was discussed above, the adapter also now automatically recognizes [materialized views](www.datastax.com/dev/blog/new-in-cassandra-3-0-materialized-views).
-[Documentation](https://calcite.apache.org/docs/cassandra.html) is available on the Calcite website.
+[Documentation](https://calcite.apache.org/docs/cassandra_adapter.html) is available on the Calcite website.
