@@ -1,5 +1,5 @@
 ---
-title: Calcite Cassandra adapter
+title: Apache Calcite Cassandra adapter
 author: michaelmior
 date: 2016-02-20
 modified: 2016-03-27
@@ -8,7 +8,7 @@ summary: "It is now possible to execute SQL queries over Cassandra tables using 
 image: calcite.png
 ---
 
-For those not familiar, [Calcite](https://calcite.apache.org/) is a generic SQL query optimizer which can execute SQL queries over multiple backend data sources.
+For those not familiar, [Apache Calcite](https://calcite.apache.org/) is a generic SQL query optimizer which can execute SQL queries over multiple backend data sources.
 This is a powerful concept because it allows complex queries to be executed over sources which provide much simpler interfaces from [CSV files](https://calcite.apache.org/apidocs/org/apache/calcite/adapter/csv/package-summary.html) to [MongoDB](https://calcite.apache.org/apidocs/org/apache/calcite/adapter/mongodb/package-summary.html).
 Calcite is also leveraged as the cost-based-optimizer framework for the [Hive](https://cwiki.apache.org/confluence/display/Hive/Cost-based+optimization+in+Hive) data warehouse.
 
