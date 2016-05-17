@@ -1,13 +1,13 @@
 ---
-title: Cassandra benchmarking
+title: Apache Cassandra benchmarking
 author: michaelmior
 date: 2014-08-21
 template: article.jade
-summary: "Carefully orchestrating the loading of replicated data on Cassandra can have a significant impact on load times."
+summary: "Carefully orchestrating the loading of replicated data on Apache Cassandra can have a significant impact on load times."
 image: speedo.png
 ---
 
-I was recently trying to run some benchmarks against [Cassandra](http://cassandra.apache.org/) on [EC2](http://aws.amazon.com/ec2/) since unfortunately the servers I had in our machine room were destroyed in a fire.
+I was recently trying to run some benchmarks against [Apache Cassandra](http://cassandra.apache.org/) on [EC2](http://aws.amazon.com/ec2/) since unfortunately the servers I had in our machine room were destroyed in a fire.
 For all my local testing, I used a single instance running on my desktop machine, but I wanted to ramp things up for the real benchmarks and use three nodes.
 Since my workload is read-only and the dataset is fairly small, I also wanted a replication factor of three so each node would have a copy of all the data.
 

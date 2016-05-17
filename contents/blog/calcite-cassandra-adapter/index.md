@@ -1,18 +1,18 @@
 ---
-title: Apache Calcite Cassandra adapter
+title: A Calcite adapter for Apache Cassandra
 author: michaelmior
 date: 2016-02-20
 modified: 2016-03-27
 template: article.jade
-summary: "It is now possible to execute SQL queries over Cassandra tables using an adapter for Apache Calcite."
+summary: "It is now possible to execute SQL queries over Apache Cassandra tables using an adapter for Apache Calcite."
 image: calcite.png
 ---
 
 For those not familiar, [Apache Calcite](https://calcite.apache.org/) is a generic SQL query optimizer which can execute SQL queries over multiple backend data sources.
 This is a powerful concept because it allows complex queries to be executed over sources which provide much simpler interfaces from [CSV files](https://calcite.apache.org/apidocs/org/apache/calcite/adapter/csv/package-summary.html) to [MongoDB](https://calcite.apache.org/apidocs/org/apache/calcite/adapter/mongodb/package-summary.html).
-Calcite is also leveraged as the cost-based-optimizer framework for the [Hive](https://cwiki.apache.org/confluence/display/Hive/Cost-based+optimization+in+Hive) data warehouse.
+Calcite is also leveraged as the cost-based-optimizer framework for the [Apache Hive](https://cwiki.apache.org/confluence/display/Hive/Cost-based+optimization+in+Hive) data warehouse.
 
-Much of my PhD research has revolved around generating optimized schemas for NoSQL databases such as [Cassandra](https://cassandra.apache.org/).
+Much of my PhD research has revolved around generating optimized schemas for NoSQL databases such as [Apache Cassandra](https://cassandra.apache.org/).
 (For a proof-of-concept tool, check out the [NoSQL Schema Evaluator](https://github.com/michaelmior/NoSE).)
 On discovering calcite, this seemed like a good fit with my work.
 One of the challenges with using NoSQL databases for complex queries is the necessity of working within the restrictions set by the query language.
