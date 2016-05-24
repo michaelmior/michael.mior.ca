@@ -1,0 +1,182 @@
+/* code styling */
+
+code {
+  color: #000;
+  font-family: 'Roboto Mono', monospace;
+  font-size: .85em;
+}
+
+p code {
+  background: #fffff3;
+  border-radius: .3em;
+  padding: .1em .3em .2em;
+  position: relative;
+  white-space: nowrap;
+}
+
+/* syntax hl stuff */
+
+code.lang-markdown {
+  color: #424242;
+
+  .header,
+  .strong {
+    font-weight: bold;
+  }
+
+  .emphasis {
+    font-style: italic;
+  }
+
+  .horizontal_rule,
+  .link_label,
+  .code,
+  .header,
+  .link_url {
+    color: #555;
+  }
+
+  .blockquote,
+  .bullet {
+    color: #bbb;
+  }
+}
+
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+.tomorrow-comment {
+  color: #8e908c;
+}
+
+.tomorrow-orange {
+  color: #f5871f;
+}
+
+.tomorrow-yellow {
+  color: #eab700;
+}
+
+.tomorrow-green {
+  color: #718c00;
+}
+
+.tomorrow-blue {
+  color: #4271ae;
+}
+
+.tomorrow-purple {
+  color: #8959a8;
+}
+
+.tomorrow-red {
+  color: #c82829;
+}
+
+.tomorrow-aqua,
+pre .css .hexcolor {
+  color: #3e999f;
+}
+
+pre {
+  background: #fff;
+  border: 1px dashed #d2d2d2;
+  border-radius: .25em;
+  font-size: .9em;
+  margin-bottom: 1.8em;
+  overflow: auto;
+  padding: 1em;
+
+  code {
+    display: block;
+    line-height: 1.1;
+  }
+
+  .comment,
+  .title {
+    color: #8e908c;
+  }
+
+  .variable,
+  .attribute,
+  .tag,
+  .regexp,
+  .ruby .constant {
+    color: #c82829;
+  }
+
+  .xml {
+    .tag .title,
+    .pi,
+    .doctype {
+      color: #c82829;
+    }
+  }
+
+  .html .doctype {
+    color: #c82829;
+  }
+
+  .css {
+    .id,
+    .class,
+    .pseudo {
+      color: #c82829;
+    }
+  }
+
+  .number,
+  .preprocessor,
+  .built_in,
+  .literal,
+  .params,
+  .constant {
+    color: #f5871f;
+  }
+
+  .class,
+  .ruby .class .title,
+  .css .rules .attribute {
+    color: #eab700;
+  }
+
+  .string,
+  .value,
+  .inheritance,
+  .header,
+  .ruby .symbol,
+  .xml .cdata {
+    color: #718c00;
+  }
+
+  .function {
+    color: #4271ae;
+  }
+
+  .python {
+    .decorator,
+    .title {
+      color: #4271ae;
+    }
+  }
+
+  .ruby {
+    .function .title,
+    .title .keyword {
+      color: #4271ae;
+    }
+  }
+
+  .perl .sub,
+  .javascript .title,
+  .coffeescript .title {
+    color: #4271ae;
+  }
+
+  .keyword,
+  .javascript .function {
+    color: #8959a8;
+  }
+}
