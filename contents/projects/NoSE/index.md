@@ -45,7 +45,7 @@ We consider [RUBiS](http://rubis.ow2.org/), a simple version of an online auctio
 
 <!--lint disable no-html-->
 
-<img src="NoSE/rubis.png" alt="RUBiS entities" style="max-width:100%">
+<img src="rubis.png" alt="RUBiS entities" style="max-width:100%">
 
 <!--lint enable no-html-->
 
