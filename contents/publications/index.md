@@ -13,8 +13,7 @@ When possible, slides from public talks are posted on [Speaker Deck](https://spe
   </a>
   <div style="margin-left:25px">
     Michael J. Mior, Kenneth Salem, Ashraf Aboulnaga, Rui Liu<br>
-    2016 IEEE 32nd International Conference on Data Engineering<br>
-    <em>(to appear)</em>
+    2016 IEEE 32nd International Conference on Data Engineering
   </div>
 </div>
 

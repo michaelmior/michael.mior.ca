@@ -112,8 +112,7 @@ Schema design for Cassandra databases is a complex problem with many additional 
   </a>
   <div style="margin-left:25px">
     Michael J. Mior, Kenneth Salem, Ashraf Aboulnaga, Rui Liu<br>
-    Data Engineering (ICDE), 2016 IEEE 32nd International Conference on<br>
-    <em>(to appear)</em>
+    Data Engineering (ICDE), 2016 IEEE 32nd International Conference on
   </div>
 </div>
 
