@@ -151,7 +151,7 @@ gulp.task('checklinks', function(callback) {
 });
 
 gulp.task('a11y', ['build'], function () {
-  return gulp.src(['build/**/*.html', 'build/favicons/index.html'])
+  return gulp.src(['build/**/*.html', '!build/favicons/index.html', '!build/pinterest-*.html'])
     .pipe(a11y())
     .pipe(a11y.reporter());
 });
