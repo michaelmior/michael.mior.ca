@@ -88,7 +88,9 @@ function htmllintReporter(filepath, issues) {
 }
 
 gulp.task('include-html', [], function() {
-  gulp.src(['build/**/*.html', '!build/pinterest-*.html'])
+  gulp.src(['build/**/*.html',
+            '!build/mywot*.html',
+            '!build/pinterest-*.html'])
     .pipe(extender({annotations: false, root: 'build'}))
     .pipe(htmlmin({
       collapseBooleanAttributes: true,
@@ -151,7 +153,10 @@ gulp.task('checklinks', function(callback) {
 });
 
 gulp.task('a11y', ['build'], function () {
-  return gulp.src(['build/**/*.html', '!build/favicons/index.html', '!build/pinterest-*.html'])
+  return gulp.src(['build/**/*.html',
+                   '!build/favicons/index.html',
+                   '!build/mywot*.html',
+                   '!build/pinterest-*.html'])
     .pipe(a11y())
     .pipe(a11y.reporter());
 });
