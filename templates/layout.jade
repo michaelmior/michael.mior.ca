@@ -11,6 +11,12 @@ html(lang='en')
       meta(property='fb:admins', content='227200130')
       // @@include /favicons/index.html 
       | !{ livereloadScript }
+      title
+        block title
+          = locals.name
+      link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
+      link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat:400|Hind:400,700,400italic')
+      link(rel='stylesheet', href=contents.styles['main.scss'].url)
       | <script>
       |   !function(M,i,c,h,a,e,l){M.GoogleAnalyticsObject=c;M[c]||(M[c]=function(){
       |   (M[c].q=M[c].q||[]).push(arguments)});M[c].l=+new Date;e=i.createElement(h);
@@ -21,12 +27,6 @@ html(lang='en')
       |   ga('send', 'pageview');
       | 
       | </script>
-      title
-        block title
-          = locals.name
-      link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
-      link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat:400|Hind:400,700,400italic')
-      link(rel='stylesheet', href=contents.styles['main.scss'].url)
   body(class=bodyclass)
     header.header
       div.content-wrap
