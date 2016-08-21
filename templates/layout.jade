@@ -17,16 +17,15 @@ html(lang='en')
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
       link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat:400|Hind:400,700,400italic')
       link(rel='stylesheet', href=contents.styles['main.scss'].url)
-      | <script>
-      |   !function(M,i,c,h,a,e,l){M.GoogleAnalyticsObject=c;M[c]||(M[c]=function(){
-      |   (M[c].q=M[c].q||[]).push(arguments)});M[c].l=+new Date;e=i.createElement(h);
-      |   l=i.getElementsByTagName(h)[0];e.src=a;l.parentNode.insertBefore(e,l)}
-      |   (window,document,'ga','script','//www.google-analytics.com/analytics.js');
-      | 
-      |   ga('create', 'UA-45085128-1', 'auto');
-      |   ga('send', 'pageview');
-      | 
-      | </script>
+      script
+        :uglify-js(mangle=false)
+          !function(M,i,c,h,a,e,l){M.GoogleAnalyticsObject=c;M[c]||(M[c]=function(){
+          (M[c].q=M[c].q||[]).push(arguments)});M[c].l=+new Date;e=i.createElement(h);
+          l=i.getElementsByTagName(h)[0];e.src=a;l.parentNode.insertBefore(e,l)}
+          (window,document,'ga','script','//www.google-analytics.com/analytics.js');
+
+          ga('create', 'UA-45085128-1', 'auto');
+          ga('send', 'pageview');
   body(class=bodyclass)
     header.header
       div.content-wrap
