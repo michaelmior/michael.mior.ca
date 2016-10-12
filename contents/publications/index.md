@@ -50,7 +50,6 @@ When possible, slides from public talks are posted on [Speaker Deck](https://spe
 
 <!--lint enable no-html-->
 
-
 ## Academic Social Networks
 
 * [Academia.edu](https://uwaterloo.academia.edu/MichaelMior)

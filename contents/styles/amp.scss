@@ -52,7 +52,9 @@ small { font-size: .833em; }
 
 h1,
 h2,
-h3 { line-height: 3rem; }
+h3 {
+  line-height: 3rem;
+}
 
 p,
 ul,
@@ -73,7 +75,9 @@ h6 {
 ul ul,
 ol ol,
 ul ol,
-ol ul { margin: 0; }
+ol ul {
+  margin: 0;
+}
 
 hr,
 center {
@@ -99,15 +103,21 @@ code,
 pre,
 samp,
 thead,
-tfoot { background-color: rgba(0, 0, 0, .05); }
+tfoot {
+  background-color: rgba(0, 0, 0, .05);
+}
 
 main aside,
 blockquote,
-ins { border: solid rgba(0, 0, 0, .05); }
+ins {
+  border: solid rgba(0, 0, 0, .05);
+}
 
 pre,
 code,
-samp { border: solid rgba(0, 0, 0, .1); }
+samp {
+  border: solid rgba(0, 0, 0, .1);
+}
 
 /* Layout */
 
@@ -183,7 +193,9 @@ img { max-width: 100%; }
 
 ul,
 ol,
-dd { padding: 0 0 0 3ch; }
+dd {
+  padding: 0 0 0 3ch;
+}
 dd { margin: 0; }
 
 ul > li { list-style-type: disc; }
@@ -253,31 +265,36 @@ samp {
 }
 
 .share {
-  text-align: center;
   font-size: 2em;
   padding-top: 2em;
+  text-align: center;
 
   a {
     color: #e7edf4;
     padding: 0 .25em;
 
-    .fa-twitter-square:hover {
-      color: #4099ff;
+    .fa-twitter-square {
+      &:hover { color: #4099ff; }
     }
-    .fa-hacker-news:hover {
-      color: #ff6600;
+
+    .fa-hacker-news {
+      &:hover { color: #f60; }
     }
-    .fa-reddit-square:hover {
-      color: #5f99cf;
+
+    .fa-reddit-square {
+      &:hover { color: #5f99cf; }
     }
-    .fa-google-plus-square:hover {
-      color: #dd4b39;
+
+    .fa-google-plus-square {
+      &:hover { color: #dd4b39; }
     }
-    .fa-linkedin-square:hover {
-      color: #007bb6;
+
+    .fa-linkedin-square {
+      &:hover { color: #007bb6; }
     }
-    .fa-facebook-square:hover {
-      color: #3b5998;
+
+    .fa-facebook-square {
+      &:hover { color: #3b5998; }
     }
   }
 }
