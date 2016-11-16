@@ -140,7 +140,7 @@ gulp.task('checklinks', function(callback) {
   var options = {
     pageUrls: [locals.url],
     checkLinks: true,
-    onlySameDomain: true,
+    onlySameDomain: false,
     queryHashes: true,
     noRedirects: true,
     noLocalLinks: true,
