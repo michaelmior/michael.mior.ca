@@ -13,7 +13,7 @@
     "gulp-babel": "^6.1.2",
     "gulp-favicons": "^2.2.6",
     "gulp-html-extend": "^1.1.6",
-    "gulp-htmllint": "0.0.11",
+    "gulp-htmllint": "0.0.7",
     "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^3.0.3",
     "gulp-pleeease": "^2.0.2",
