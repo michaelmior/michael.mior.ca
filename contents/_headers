@@ -1,0 +1,5 @@
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Content-Security-Policy: default-src https:; script-src https: data: 'unsafe-inline'; object-src 'none'; style-src 'self' 'unsafe-inline' https:; img-src 'self'; media-src 'none'; child-src 'none'; font-src https:; connect-src https:
