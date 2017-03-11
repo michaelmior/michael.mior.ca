@@ -17,7 +17,7 @@ First, several column families are created and loaded with data.
 Next, the different types of transactions in the RUBiS benchmark are executed while measuring the response time.
 Before I continue, first a disclaimer that the methodology behind the results is not as rigorous as it could be, but still leaves me skeptical of some of the claims made by Scylla.
 
-These experiments were run using a single node Cassandra installation.
+These experiments were run using single node installations of Cassandra 3.0.9 and Scylla 1.6.1.
 While this is not a typical setup, much of the reasons for performance improvements claimed by Scylla (e.g. lock-free data structures and improved memory management) should still manifest themselves on a single node.
 One of the nice things about Scylla is the `scylla_setup` command that attempts to configure the OS for optimal performance including benchmarking the disk storing the data directory.
 This configuration was used for both Scylla and Cassandra and otherwise the default settings were used for both systems.
