@@ -2,6 +2,7 @@
 title: Benchmarking ScyllaDB
 author: michaelmior
 date: 2017-03-11
+date: 2017-03-13
 template: article.jade
 summary: ""
 image: graph.png
@@ -26,6 +27,8 @@ The first striking difference is that the on-disk size of the data for Scylla (9
 Despite this, there was not a large difference in load times with Cassandra taking 3 hours 43 minutes and Scylla taking 3 hours 59 minutes.
 Below is a graph with the write throughput of the SSD storing the data files in each case.
 Scylla seems to push the drive much harder but it's able to keep up.
+
+**Update**: After looking at the number of keys in each table for both Scylla and Cassandra, it seems as though Scylla was storing significantly more data. Stay tuned for updates on resolving this issue.
 
 ![Write throughput while loading](write-throughput.png)
 
