@@ -2,7 +2,7 @@
 title: Benchmarking ScyllaDB
 author: michaelmior
 date: 2017-03-11
-date: 2017-03-13
+modified: 2017-03-13
 template: article.jade
 summary: ""
 image: graph.png
