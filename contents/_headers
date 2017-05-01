@@ -2,4 +2,4 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
-  Content-Security-Policy: default-src https:; script-src https: data: 'unsafe-inline'; object-src 'none'; style-src 'self' 'unsafe-inline' https:; img-src 'self' https://referrer.disqus.com https://*.disquscdn.com https://dl.acm.org; media-src 'none'; child-src https://disqus.com; font-src https:; connect-src https:
+  Content-Security-Policy: default-src https:; script-src https: data: 'unsafe-inline'; object-src 'none'; style-src 'self' 'unsafe-inline' https:; img-src 'self' https://referrer.disqus.com https://*.disquscdn.com https://dl.acm.org https://www.google-analytics.com; media-src 'none'; child-src https://disqus.com; font-src https:; connect-src https:
