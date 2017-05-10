@@ -27,11 +27,11 @@ To avoid the complexity of manually attempting to satisfy the conflicting requir
 
 1. **CQL Table Enumeration**
 
-   The schema design process starts by constructing a set of column families which are useful to answer application queries. These column families are chosen according to a simple model of query execution which uses one or more CQL tables to answer queries in the application.
+   The schema design process starts by constructing a set of tables which are useful to answer application queries. These tables are chosen according to a simple model of query execution which uses one or more CQL tables to answer queries in the application.
 
 2. **Query Plan Generation**
 
-   In addition to these column families enumerated in step one, NoSE assumes that some application-side logic may be necessary to answer queries. For example, if a particular CQL table returns data which is sorted incorrectly, the application may need to sort the data after it has been retrieved.
+   In addition to tables enumerated in step one, NoSE assumes that some application-side logic may be necessary to answer queries. For example, if a particular CQL table returns data which is sorted incorrectly, the application may need to sort the data after it has been retrieved.
 
 3. **Schema Selection**
 
