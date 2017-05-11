@@ -90,7 +90,8 @@ function htmllintReporter(filepath, issues) {
 gulp.task('include-html', [], function() {
   gulp.src(['build/**/*.html',
             '!build/mywot*.html',
-            '!build/pinterest-*.html'])
+            '!build/pinterest-*.html',
+            '!build/projects/NoSE/rubis.html'])
     .pipe(extender({annotations: false, root: 'build'}))
     .pipe(htmlmin({
       collapseBooleanAttributes: true,
