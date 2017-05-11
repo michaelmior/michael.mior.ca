@@ -98,6 +98,8 @@ This table now provides the ID of an item and requires the item data to be fetch
 
 This example is simple, but demonstrates a tradeoff NoSE is able to make. Across entire workloads, these tradeoffs consider interaction between many different queries. Because the recommendation process completes in seconds, it is also possible for the application designer to explore many different workload parameters. For example, it is easy to adjust the ratio of writes to reads and see how this affects the recommended schema and the performance of each application query.
 
+NoSE can provide output in multiple formats including a simple [HTML report](rubis.html).
+
 # Conclusion
 
 Schema design for Cassandra databases is a complex problem with many additional challenges as compared to relational schema design. We have developed a workload-driven approach for schema design which is able to effectively explore various tradeoffs in the design space. For example, NoSE allows applications to explicitly control the tradeoff between normalization and query performance by varying a space constraint. Our approach implicitly captures best practices in Cassandra schema design with relying on general design rules-of-thumb, and is thereby able to generate effective Cassandra schema designs.
