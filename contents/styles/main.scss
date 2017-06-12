@@ -146,9 +146,34 @@ hr {
       font-weight: 400;
       padding: 9px 13px;
       text-decoration: none;
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px transparent;
+      position: relative;
+      overflow: hidden;
 
-      &:hover {
-        border-bottom: 3px solid #4080c0;
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        background: #4080c0;
+        height: 3px;
+        -webkit-transition-property: left, right;
+        transition-property: left, right;
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+      }
+
+      &:hover:before, &:focus:before, &:active:before {
+        left: 0;
+        right: 0;
       }
     }
   }
