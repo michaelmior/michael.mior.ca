@@ -6,6 +6,15 @@ template: page.jade
 When possible, slides from public talks are posted on [Speaker Deck](https://speakerdeck.com/michaelmior/).
 
 <!--lint disable no-html-->
+<div class="acmdlitem">
+  <a href="NoSE-TKDE2017.pdf" title="NoSE: Schema Design for NoSQL Applications">
+    NoSE: Schema Design for NoSQL Applications
+  </a>
+  <div style="margin-left:25px">
+    Michael J. Mior, Kenneth Salem, Ashraf Aboulnaga, Rui Liu<br>
+    2016 IEEE 32nd International Conference on Data Engineering
+  </div>
+</div>
 
 <div class="acmdlitem">
   <a href="https://www.researchgate.net/publication/296485511_NoSE_Schema_Design_for_NoSQL_Applications" title="NoSE: Schema Design for NoSQL Applications">
