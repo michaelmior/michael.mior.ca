@@ -15,6 +15,9 @@
     "wintersmith-robots",
     "wintersmith-cname"
   ],
+  "ignore": [
+    "**/_*.scss"
+  ],
   "require": {
     "moment": "moment",
     "_": "underscore",
