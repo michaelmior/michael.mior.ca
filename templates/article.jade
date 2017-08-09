@@ -4,6 +4,8 @@ extends layout
 block prepend head
   link(rel='amphtml', href=locals.url + '/amp' + page.url)
 
+  meta(name='description', content=page.metadata.summary)
+
   meta(name='twitter:card', content='summary')
   meta(name='twitter:site', content='michaelmior')
 
