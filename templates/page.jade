@@ -4,6 +4,9 @@ extends layout
 block append vars
   - bodyclass = 'project'
 
+block title
+  | #{page.title}
+
 block header
   h1= page.title
 
