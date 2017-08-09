@@ -25,7 +25,7 @@ The simplest possible implementation of an adapter provides a set of tables alon
 While this is sufficient to enable Calcite to perform query execution, scanning a table in Cassandra is [very inefficient](http://www.myhowto.org/bigdata/2013/11/04/scanning-the-entire-cassandra-column-family-with-cql/).
 This is a result of the fact that partitions in a Cassandra table are commonly distributed across nodes via hash partitioning.
 While it is possible to retrieve all rows, they will be produced in a random order and the query will need to contact all nodes in the database.
-Assuming that the query the user wants to issue does not need to touch all rows in a table, it is possible to use filtering in the Cassandra Query Language ([CQL](https://cassandra.apache.org/doc/cql/CQL.html)) to push filtering down to Cassandra.
+Assuming that the query the user wants to issue does not need to touch all rows in a table, it is possible to use filtering in the Cassandra Query Language ([CQL](http://docs.datastax.com/en/cql/3.3/cql/cql_reference/cqlReferenceTOC.html)) to push filtering down to Cassandra.
 
 The current version of the adapter also supports exploiting the native sort order of Cassandra tables by [clustering key](https://docs.datastax.com/en/cql/3.0/cql/ddl/ddl_compound_keys_c.html).
 There is still a lot of work to be done, but an initial version of this adapter should be shipped in Calcite 1.7.0.
