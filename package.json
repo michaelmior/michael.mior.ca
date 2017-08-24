@@ -6,6 +6,7 @@
   },
   "private": "true",
   "devDependencies": {
+    "async": "^2.5.0",
     "check-pages": "^0.10.0",
     "gulp": "^3.9.1",
     "gulp-a11y": "^0.1.1",
