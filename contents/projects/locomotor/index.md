@@ -5,7 +5,6 @@ template: page.jade
 
 *Locomotor is available on [GitHub](https://github.com/michaelmior/locomotor)*
 
-
 Server-side execution is a well-known method for improving the performance of database applications.
 Running code on the database server eliminates round trips to the client application resulting in significantly reduced latency.
 However, the common approach of explicitly writing server-side code in stored procedures has significant drawbacks.
