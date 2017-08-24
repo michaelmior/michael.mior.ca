@@ -4,6 +4,7 @@
   X-Content-Type-Options: nosniff
   Content-Security-Policy: default-src https:; script-src https: data: 'unsafe-inline'; object-src 'none'; style-src 'self' 'unsafe-inline' https:; img-src data: 'self' https://referrer.disqus.com https://*.disquscdn.com https://dl.acm.org https://www.google-analytics.com https://*.twimg.com; media-src 'none'; child-src https://disqus.com; font-src https:; connect-src https:
   Referrer-Policy: no-referrer-when-downgrade
+  Expect-CT: max-age=0; report-uri="https://mior.report-uri.io/r/default/ct/reportOnly"
 
 /fonts/*.woff2
   Content-Type: application/font-woff2
