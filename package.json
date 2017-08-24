@@ -35,10 +35,10 @@
     "run-sequence": "^1.1.5",
     "run-wintersmith": "0.0.3",
     "vinylsmith": "^1.0.0",
-    "wintersmith-cname": "^0.5.0",
-    "wintersmith-contents": "^0.5.0",
-    "wintersmith-livereload": "^0.2.2",
+    "wintersmith-cname": "^0.6.1",
+    "wintersmith-contents": "^0.7.0",
+    "wintersmith-livereload": "^1.0.0",
     "wintersmith-robots": "^0.2.6",
-    "wintersmith-sitemap": "^0.6.0"
+    "wintersmith-sitemap": "^0.8.0"
   }
 }
