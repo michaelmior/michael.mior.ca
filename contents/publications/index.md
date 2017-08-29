@@ -7,6 +7,18 @@ When possible, slides from public talks are posted on [Speaker Deck](https://spe
 
 <!--lint disable no-html-->
 <div class="acmdlitem">
+  <a href="https://www.researchgate.net/publication/319329199_Locomotor_transparent_migration_of_client-side_database_code" title="Locomotor: transparent migration of client-side database code">
+    Locomotor: transparent migration of client-side database code
+  </a>
+  <div style="margin-left:25px">
+    Michael J. Mior<br>
+    In Proceedings of The 16th International Symposium on Database Programming Languages (DBPL '17)
+  </div>
+</div>
+
+<hr/>
+
+<div class="acmdlitem">
   <a href="NoSE-TKDE2017.pdf" title="NoSE: Schema Design for NoSQL Applications">
     NoSE: Schema Design for NoSQL Applications
   </a>
