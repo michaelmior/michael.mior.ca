@@ -109,12 +109,12 @@ Schema design for Cassandra databases is a complex problem with many additional 
 <!--lint disable no-html-->
 
 <div class="acmdlitem">
-  <a href="https://www.researchgate.net/publication/296485511_NoSE_Schema_Design_for_NoSQL_Applications" title="NoSE: Schema Design for NoSQL Applications">
+  <a href="NoSE-TKDE2017.pdf" title="NoSE: Schema Design for NoSQL Applications">
     NoSE: Schema Design for NoSQL Applications
   </a>
   <div style="margin-left:25px">
     Michael J. Mior, Kenneth Salem, Ashraf Aboulnaga, Rui Liu<br>
-    Data Engineering (ICDE), 2016 IEEE 32nd International Conference on
+    IEEE Transactions on Knowledge and Data Engineering
   </div>
 </div>
 

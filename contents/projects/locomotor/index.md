@@ -17,3 +17,16 @@ Locomotor operates on Python applications using the Redis key-value store.
 Through static analysis, it identifies fragments of code which can benefit from being executed on the server and automatically performs translation to execute the fragments on the server.
 Unlike many previous systems, Locomotor is not pattern-based and is able to ship a wide variety of code.
 By shipping code to the server, Locomotor is able to achieve significant performance gains over client-side execution with no modifications to the application code.
+
+# Publications
+
+<!--lint disable no-html-->
+<div class="acmdlitem">
+  <a href="https://www.researchgate.net/publication/319329199_Locomotor_transparent_migration_of_client-side_database_code" title="Locomotor: transparent migration of client-side database code">
+    Locomotor: transparent migration of client-side database code
+  </a>
+  <div style="margin-left:25px">
+    Michael J. Mior<br>
+    In Proceedings of The 16th International Symposium on Database Programming Languages (DBPL '17)
+  </div>
+</div>
