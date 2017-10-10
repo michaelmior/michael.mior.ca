@@ -89,6 +89,7 @@ function htmllintReporter(filepath, issues) {
 
 gulp.task('include-html', [], function() {
   gulp.src(['build/**/*.html',
+            '!build/4914eddbc3a49e00fa7bcd5cc44991efa7e9a179e8cb00fb69091f77c4c59635.html',
             '!build/mywot*.html',
             '!build/pinterest-*.html',
             '!build/projects/NoSE/rubis.html'])
@@ -155,6 +156,7 @@ gulp.task('checklinks', function(callback) {
 
 gulp.task('a11y', ['build'], function () {
   return gulp.src(['build/**/*.html',
+                   '!build/4914eddbc3a49e00fa7bcd5cc44991efa7e9a179e8cb00fb69091f77c4c59635.html',
                    '!build/favicons/index.html',
                    '!build/mywot*.html',
                    '!build/pinterest-*.html'])
