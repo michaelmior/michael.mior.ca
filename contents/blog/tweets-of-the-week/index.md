@@ -1,5 +1,5 @@
 ---
-title: Octotweets
+title: Tweets of the Week
 author: michaelmior
 date: 2010-10-24
 template: article.jade
