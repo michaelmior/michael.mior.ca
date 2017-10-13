@@ -35,5 +35,5 @@ In an effort to keep the blog postings more regular, I thought I would start sha
 
 * [How to Fund a Startup](http://www.paulgraham.com/startupfunding.html)
 
-  [Paul Graham](http://en.wikipedia.org/wiki/Paul_Graham_(computer_programmer)) is a well known fellow within the startup community.
+  [Paul Graham](http://en.wikipedia.org/wiki/Paul_Graham_(computer_programmer) is a well known fellow within the startup community.
   This post has some lovely advice for those startups a little light on cash.
