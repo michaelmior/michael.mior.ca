@@ -33,6 +33,9 @@ html(lang='en', amp='')
     meta(property='article:author', content='227200130')
     meta(property='article:published_time', content=env.helpers.toISO8601(page.date))
 
+    //- Opt in to Google AMP Client ID API
+    meta(name='amp-google-client-id-api', content='googleanalytics')
+
     //- Schema.org markup
     script(type='application/ld+json')
       :json
