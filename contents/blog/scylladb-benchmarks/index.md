@@ -2,7 +2,7 @@
 title: Benchmarking ScyllaDB
 author: michaelmior
 date: 2017-03-11
-modified: 2017-03-13
+modified: 2017-10-31
 template: article.jade
 summary: ""
 image: graph.png
@@ -28,7 +28,7 @@ Despite this, there was not a large difference in load times with Cassandra taki
 Below is a graph with the write throughput of the SSD storing the data files in each case.
 Scylla seems to push the drive much harder but it's able to keep up.
 
-**Update**: After looking at the number of keys in each table for both Scylla and Cassandra, it seems as though Scylla was storing significantly more data. Stay tuned for updates on resolving this issue.
+**Update**: After looking at the number of keys in each table for both Scylla and Cassandra, it seems as though Scylla was storing significantly more data. Repeating the experiment seems to have resolved this issue with no significant impact on performance.
 
 ![Write throughput while loading](write-throughput.png)
 
@@ -38,3 +38,5 @@ The graph below shows the top eight interactions by frequency and the average re
 I won't go into a detailed analysis here, but the performance claims made by Scylla don't seem to play out here.
 
 ![RUBiS benchmark comparison](compare.png)
+
+**Update**: A discussion with the CEO of Scylla suggests that Scylla is primarily optimized for throughput and isn't likely to show much improvement in the case of this benchmark which is single-threaded and focused on latency. Rerunning the same experiment concurrently with 10 threads doesn't show significant changes. However, I wasn't measuring the load on the system during these experiments and I can imagine that performance improvements would start to manifest as the system becomes more heavily loaded. Excited to see the continued work of the Scylla team!
