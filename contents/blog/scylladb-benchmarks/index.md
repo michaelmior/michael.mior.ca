@@ -4,7 +4,7 @@ author: michaelmior
 date: 2017-03-11
 modified: 2017-10-31
 template: article.jade
-summary: ""
+summary: "A performance analysis of ScyllaDB vs Apache Cassandra."
 image: graph.png
 ---
 
