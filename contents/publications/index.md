@@ -6,6 +6,24 @@ template: page.jade
 When possible, slides from public talks are posted on [Speaker Deck](https://speakerdeck.com/michaelmior/).
 
 <!--lint disable no-html-->
+
+<div class="acmdlitem" id="item3155893">
+  <img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+  <a href="https://dl.acm.org/authorize?N42764" title="Netstore: leveraging network optimizations to improve distributed transaction processing performance">
+  Netstore: leveraging network optimizations to improve distributed transaction processing performance
+  </a>
+
+  <div style="margin-left:25px">
+    <a href="http://dl.acm.org/author_page.cfm?id=99659225796" >Xu Cui</a>,
+    <a href="http://dl.acm.org/author_page.cfm?id=81485657205" >Michael Mior</a>,
+    <a href="http://dl.acm.org/author_page.cfm?id=81488650037" >Bernard Wong</a>,
+    <a href="http://dl.acm.org/author_page.cfm?id=81300068501" >Khuzaima Daudjee</a>,
+    <a href="http://dl.acm.org/author_page.cfm?id=81464667893" >Sajjad Rizvi</a>
+    <br />
+    ACTIVE '17 Proceedings of the Second International Workshop on Active Middleware on Modern Hardware, 2017
+  </div>
+</div>
+
 <div class="acmdlitem">
   <a href="https://www.researchgate.net/publication/319329199_Locomotor_transparent_migration_of_client-side_database_code" title="Locomotor: transparent migration of client-side database code">
     Locomotor: transparent migration of client-side database code
