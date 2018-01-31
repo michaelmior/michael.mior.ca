@@ -22,3 +22,80 @@
   for = "/fonts/*"
   [headers.values]
   Cache-Control = "public, max-age=31536000"
+
+# Redirects to handle old blog links
+[[redirects]]
+  from = "/2010/10/12/blog/dbus-screensaver-lock.html"
+  to = "/blog/dbus-screensaver-lock/"
+
+[[redirects]]
+  from = "/2010/10/12/dbus-screensaver-lock/"
+  to = "/blog/dbus-screensaver-lock/"
+
+[[redirects]]
+  from = "/2010/10/24/tweets-of-the-week/"
+  to = "/blog/tweets-of-the-week/"
+
+[[redirects]]
+  from = "/2010/10/31/blog/dangers-of-strlen.html"
+  to = "/blog/dangers-of-strlen/"
+
+[[redirects]]
+  from = "/2010/10/31/dangers-of-strlen/"
+  to = "/blog/dangers-of-strlen/"
+
+[[redirects]]
+  from = "/2010/12/02/blog/designing-an-offline-cms.html"
+  to = "/blog/designing-an-offline-cms/"
+
+[[redirects]]
+  from = "/2010/12/02/designing-an-offline-cms/"
+  to = "/blog/designing-an-offline-cms/"
+
+[[redirects]]
+  from = "/2011/01/05/blog/rubbos.html"
+  to = "/blog/rubbos/"
+
+[[redirects]]
+  from = "/2011/01/05/rubbos/"
+  to = "/blog/rubbos/"
+
+[[redirects]]
+  from = "/2011/03/06/coloured-ssh-terminals/"
+  to = "/blog/coloured-ssh-terminals/"
+
+[[redirects]]
+  from = "/2012/01/06/mysql-client-configuration/"
+  to = "/blog/mysql-client-configuration/"
+
+[[redirects]]
+  from = "/2012/01/14/blog/unit-testing-django-model-mixins.html"
+  to = "/blog/unit-testing-django-model-mixins/"
+
+[[redirects]]
+  from = "/2012/01/14/unit-testing-django-model-mixins/"
+  to = "/blog/unit-testing-django-model-mixins/"
+
+[[redirects]]
+  from = "/2012/09/15/blog/node-js-skeleton-project.html"
+  to = "/blog/node-js-skeleton-project/"
+
+[[redirects]]
+  from = "/2012/09/15/node-js-skeleton-project/"
+  to = "/blog/node-js-skeleton-project/"
+
+[[redirects]]
+  from = "/2014/08/21/blog/cassandra-benchmarking.html"
+  to = "/blog/cassandra-benchmarking/"
+
+[[redirects]]
+  from = "/2015/09/24/blog/automated-testing-of-dotfiles.html"
+  to = "/blog/automated-testing-of-dotfiles/"
+
+[[redirects]]
+  from = "/blog/archive/2012.html"
+  to = "/blog/"
+
+[[redirects]]
+  from = "/blog/archive/2015.html"
+  to = "/blog/"
