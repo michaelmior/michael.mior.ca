@@ -8,7 +8,7 @@ When possible, slides from public talks are posted on [Speaker Deck](https://spe
 <!--lint disable no-html-->
 
 <div class="acmdlitem" id="item3155893">
-  <img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+  <img src="http://dl.acm.org/images/oa.gif" width="25" height="25" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
   <a href="https://dl.acm.org/authorize?N42764" title="Netstore: leveraging network optimizations to improve distributed transaction processing performance">
   Netstore: leveraging network optimizations to improve distributed transaction processing performance
   </a>
