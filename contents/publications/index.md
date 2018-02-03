@@ -24,6 +24,8 @@ When possible, slides from public talks are posted on [Speaker Deck](https://spe
   </div>
 </div>
 
+<hr/>
+
 <div class="acmdlitem">
   <a href="https://www.researchgate.net/publication/319329199_Locomotor_transparent_migration_of_client-side_database_code" title="Locomotor: transparent migration of client-side database code">
     Locomotor: transparent migration of client-side database code
