@@ -109,7 +109,7 @@ Schema design for Cassandra databases is a complex problem with many additional 
 <!--lint disable no-html-->
 
 <div class="acmdlitem">
-  <a href="NoSE-TKDE2017.pdf" title="NoSE: Schema Design for NoSQL Applications">
+  <a href="../../publications/NoSE-TKDE2017.pdf" title="NoSE: Schema Design for NoSQL Applications">
     NoSE: Schema Design for NoSQL Applications
   </a>
   <div style="margin-left:25px">
