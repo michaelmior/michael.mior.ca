@@ -1,5 +1,6 @@
 var a11y = require('gulp-a11y'),
     checkPages = require('check-pages'),
+    cheerio = require('gulp-cheerio'),
     extender = require('gulp-html-extend'),
     favicons = require('gulp-favicons'),
     fs = require('fs'),
@@ -7,9 +8,11 @@ var a11y = require('gulp-a11y'),
     htmllint = require('gulp-htmllint'),
     htmlmin = require('gulp-htmlmin'),
     mdlint = require('gulp-remark-lint-dko'),
+    path = require('path'),
     rimraf = require('gulp-rimraf'),
     runSequence = require('run-sequence'),
     sassLint = require('gulp-sass-lint'),
+    sizeOf = require('image-size'),
     surge = require('gulp-surge'),
     runWintersmith = require('run-wintersmith'),
     url = require('url'),
@@ -94,6 +97,22 @@ gulp.task('include-html', [], function() {
             '!build/pinterest-*.html',
             '!build/projects/NoSE/rubis.html'])
     .pipe(extender({annotations: false, root: 'build'}))
+    .pipe(cheerio(function ($, file) {
+      $('img').replaceWith(function() {
+        if (this.attribs.src[0] != '/') {
+          return $(this);
+        }
+
+        var img = $(/\/amp\//.test(file.path) ? '<amp-img>' : '<img>');
+        img.attr('alt', this.attribs.alt);
+        img.attr('src', this.attribs.src.replace(/^\/amp/, ''));
+        var dimensions = sizeOf(path.join('./build', img.attr('src')));
+        img.attr('width', dimensions.width);
+        img.attr('height', dimensions.height);
+
+        return img;
+      })
+    }))
     .pipe(htmlmin({
       collapseBooleanAttributes: true,
       collapseWhitespace: true,
