@@ -24,6 +24,45 @@ html(lang='en')
 
           ga('create', 'UA-45085128-1', 'auto', {'useAmpClientId': true});
           ga('send', 'pageview');
+
+          // Time on Site tracking (c) LittleData.co.uk 2014
+          (function(e) {
+            var t = true;
+            var n = 0;
+            var r = true;
+            var i = function(){ t = false };
+            var s = function(){ t = true };
+            if (window.addEventListener) {
+              window.addEventListener("blur", i, true);
+              window.addEventListener("focus", s, true);
+            } else if (window.attachEvent) {
+              window.attachEvent("onblur", i);
+              window.attachEvent("onfocus", s);
+            }
+            var o = function(e) {
+              return Math.floor(e/60) + ":" + (e % 60 == 0 ? "00" : e % 60);
+            }
+            var u = window.setInterval(function(){
+              e = e + 10;
+              if(t) {
+                n = n + 10;
+                if (typeof _gaq === "object"){
+                  _gaq.push(["_trackEvent", "Time", "Log", o(n), n, r]);
+                } else if(typeof ga === "function") {
+                  ga("send", {
+                    hitType: "event",
+                    eventCategory: "Time",
+                    eventAction: "Log",
+                    eventLabel: o(n),
+                    eventValue: 10,
+                    nonInteraction: "true"
+                  })
+                }
+              }
+            }, 1e4);
+            window.setTimeout(function() { clearInterval(u); }, 601e3)
+          })(0);
+
   body(class=bodyclass)
     header.header
       div.content-wrap
