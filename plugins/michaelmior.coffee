@@ -1,8 +1,6 @@
 vinylsmith = require 'vinylsmith'
 
-async     = require 'async'
 babel     = require 'gulp-babel'
-fs        = require 'fs'
 imagemin  = require 'gulp-imagemin'
 imageSize = require 'image-size'
 iso8601   = require 'iso8601'
@@ -14,21 +12,6 @@ sass      = require 'gulp-sass'
 uglify    = require 'gulp-uglify'
 
 module.exports = (env, callback) ->
-  class AmpPage extends env.plugins.MarkdownPage
-    constructor: (@article, @filepath, @metadata, @markdown) ->
-
-    getFilename: ->
-      'amp/' + super
-
-    getTemplate: ->
-      'amp.jade'
-
-  env.registerGenerator 'amp', (contents, callback) ->
-    articles = env.helpers.getArticles contents
-    pages = articles.map (article) ->
-      page = new AmpPage article, article.filepath, article.metadata, article.markdown
-    callback null, pages
-
   env.registerContentPlugin 'styles', '**/*.scss',
     vinylsmith(env)
       .pipe(sass)
