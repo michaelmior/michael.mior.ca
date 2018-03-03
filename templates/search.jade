@@ -1,0 +1,101 @@
+
+extends page
+
+block title
+  = 'Search'
+
+block header
+  h1= 'Search'
+
+block content
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.6/lunr.min.js', integrity='sha256-zD8ZTg2mp4ePN5bWMHN4r77s2FgpjVIzBlM8Dls10DQ=', crossorigin='anonymous')
+
+  input(type='text', id='search-query', placeholder='Enter a query…', style='margin: 0 0 2em 2em; background: white; border-radius: 5px')
+  ul(id='search-results')
+
+  script
+    :uglify-js
+      var lunrIndex, $results, pagesIndex;
+
+      // Initialize lunrjs using our generated index file
+      function initLunr() {
+        // First retrieve the index file
+        $.getJSON('/search_index.json')
+          .done(function(index) {
+            pagesIndex = index;
+            lunrIndex = lunr(function() {
+              this.field('title', { boost: 10 });
+              this.field('category', { boost: 5 });
+              this.field('summary');
+              this.ref('uri');
+     
+              pagesIndex.forEach(function (page) {
+                this.add(page)
+              }, this)
+            });
+          })
+          .fail(function(jqxhr, textStatus, error) {
+            var err = textStatus + ', ' + error;
+            console.error('Error getting index file: ', err);
+          });
+      }
+     
+      // Nothing crazy here, just hook up a listener on the input field
+      function initUI() {
+        $results = $('#search-results');
+        $('#search-query').keyup(function() {
+          $results.empty();
+     
+          // Only trigger a search when at least 2 chars have been provided
+          var query = $(this).val();
+          if (query.length < 2) {
+            return;
+          }
+     
+          var results = search(query);
+          renderResults(results);
+        });
+      }
+     
+      /**
+       * Trigger a search in Lunr and transform the result
+       *
+       * @param  {String} query
+       * @return {Array}  results
+       */
+      function search(query) {
+        return lunrIndex.search(query).map(function(result) {
+            return pagesIndex.filter(function(page) {
+              return page.uri === result.ref;
+            })[0];
+          });
+      }
+     
+      /**
+       * Display the 10 first results
+       *
+       * @param  {Array} results to display
+       */
+      function renderResults(results) {
+        if (!results.length) {
+          return;
+        }
+     
+        // Only show the ten first results
+        results.slice(0, 100).forEach(function(result) {
+          var $result = $('<li>');
+          $result.append($('<a>', {
+            href: result.uri,
+            text: result.title
+          }));
+          $results.append($result);
+        });
+      }
+     
+      // Let's get started
+      initLunr();
+      $(document).ready(function() {
+        $('#search-query').val('');
+        initUI();
+      });

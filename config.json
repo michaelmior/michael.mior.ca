@@ -10,6 +10,7 @@
     "./plugins/amp.coffee",
     "./plugins/michaelmior.coffee",
     "./plugins/paginator.coffee",
+    "./plugins/search.coffee",
     "wintersmith-livereload",
     "wintersmith-contents",
     "wintersmith-sitemap",
