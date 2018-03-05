@@ -3,6 +3,12 @@ title: Projects
 template: page.jade
 ---
 
+## [Apache Calcite](https://calcite.apache.org)
+
+Apache Calcite is a modular framework useful for building query processing and optimization systems over heterogeneous data sources.
+You can view a preprint of a paper describing more of the details of Calcite on [arXiv](https://arxiv.org/abs/1802.10233).
+I am currently serving as the project management committee (PMC) chair.
+
 ## [NoSE](/projects/NoSE/)
 
 NoSE is an automated schema design tool for NoSQL databases.
