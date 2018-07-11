@@ -13,7 +13,6 @@ var a11y = require('gulp-a11y'),
     runSequence = require('run-sequence'),
     sassLint = require('gulp-sass-lint'),
     sizeOf = require('image-size'),
-    surge = require('gulp-surge'),
     runWintersmith = require('run-wintersmith'),
     url = require('url'),
     util = require('gulp-util');
@@ -149,13 +148,6 @@ gulp.task('preview', function() {
   // Tell Wintersmith to run in preview mode
   runWintersmith.preview();
 });
-
-gulp.task('deploy', ['build'], function () {
-  return surge({
-    project: 'build',
-    domain: url.parse(locals.url).host
-  })
-})
 
 gulp.task('checklinks', function(callback) {
   var options = {
