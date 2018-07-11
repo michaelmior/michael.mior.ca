@@ -109,6 +109,7 @@ When possible, slides from public talks are posted on [Speaker Deck](https://spe
 * [ACM Digital Library](https://dl.acm.org/author_page.cfm?id=81485657205)
 * [DBLP](https://dblp.uni-trier.de/pers/hd/m/Mior:Michael_J=)
 * [Google Scholar](https://scholar.google.com/citations?user=bpO_ZLoAAAAJ?branch=master)
+* [Microsoft Academic Search](https://academic.microsoft.com/#/detail/2230614102)
 * [ORCID](https://orcid.org/0000-0002-4057-8726)
 * [ResearcherID](https://www.researcherid.com/rid/L-1862-2013)
 * [ResearchGate](https://www.researchgate.net/profile/Michael_Mior)
