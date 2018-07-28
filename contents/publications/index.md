@@ -7,7 +7,7 @@ When possible, slides from public talks are posted on [Speaker Deck](https://spe
 
 <!--lint disable no-html-->
 <div class="acmdlitem">
-  Renormalization of NoSQL Database Systems
+  <div>Renormalization of NoSQL Database Systems</div>
 
   <div style="margin-left:25px">
     Michael J. Mior, Kenneth Salem
