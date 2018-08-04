@@ -3,7 +3,7 @@ title: Home
 ---
 
 You've reached the personal website of Michael Mior.
-I recently completed my PhD in the [David R. Cheriton School of Computer Science](https://cs.uwaterloo.ca/) at the [University of Waterloo](https://uwaterloo.ca/). Starting mid-August, I'm an Assistant Professor at the (Rochester Institute of Technology](https://www.cs.rit.edu/).
+I recently completed my PhD in the [David R. Cheriton School of Computer Science](https://cs.uwaterloo.ca/) at the [University of Waterloo](https://uwaterloo.ca/). Starting mid-August, I'm an Assistant Professor at the [Rochester Institute of Technology](https://www.cs.rit.edu/).
 
 The rest of the site has more [about me](/about/).
 To get in touch, send me an [email](mailto:michael@mior.ca) and we'll talk. (Students should contact me using my [RIT email](mailto:mmior@cs.rit.edu).
