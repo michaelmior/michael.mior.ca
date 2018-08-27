@@ -60,17 +60,17 @@ block prepend head
       }
 
 block append vars
-  - bodyclass = 'article-detail'
+  - bodyclass = 'article-detail h-entry'
 
 block title
   | #{page.title}
 
 block header
-  h1= page.title
+  h1.p-name= page.title
 
 block content
   article.article
-    section.content!= typogr(page.html).typogrify()
+    section.content.e-content!= typogr(page.html).typogrify()
     div.share
       a(title='Share on Twitter', href="https://twitter.com/intent/tweet?source=#{encodeURIComponent(locals.url + page.url)}&text=#{encodeURIComponent(page.title + ' ' + locals.url + page.url)}&via=michaelmior", target='_blank')
         i.fa.fa-twitter-square(aria-hidden='true')
