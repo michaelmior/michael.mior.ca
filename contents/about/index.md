@@ -11,5 +11,5 @@ I then made my way to the Department of Computer Science at the University of To
 My research revolved around scaling databases using the [SnowFlock project](http://sysweb.cs.toronto.edu/projects/1).
 I graduated in February 2011 and spent some time working in the startup scene in Toronto and Montreal.
 I am now completing my PhD in computer science at the University of Waterloo under the supervision of Professor Ken Salem.
-As of August 2018, I will be joining the faculty at the [Rochester Institute of Technology](https://www.cs.rit.edu/).
+As of August 2018, I have joined the faculty at the [Rochester Institute of Technology](https://www.cs.rit.edu/).
 This site contains some information on [projects I have worked on](/projects/).
