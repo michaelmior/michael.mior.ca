@@ -17,6 +17,25 @@ When possible, slides from public talks are posted on [Speaker Deck](https://spe
 
 <hr/>
 
+<div class="acmdlitem" id="item3190662">
+  <div style="margin-left:-25px"><img src="https://dl.acm.org/images/oa.gif" width="25" height="25" alt="ACM DL Author-ize service" style="float:left"/></div>
+  <a href="https://dl.acm.org/authorize?N668510" title="Apache Calcite: A Foundational Framework for Optimized Query Processing Over Heterogeneous Data Sources">
+  Apache Calcite: A Foundational Framework for Optimized Query Processing Over Heterogeneous Data Sources
+  </a>
+
+  <div style="margin-left:25px">
+    <a href="http://dl.acm.org/author_page.cfm?id=81508704531">Edmon Begoli</a>,
+    <a href="http://dl.acm.org/author_page.cfm?id=81548042172">Jesús Camacho-Rodríguez</a>,
+    <a href="http://dl.acm.org/author_page.cfm?id=99659274501">Julian Hyde</a>,
+    <a href="http://dl.acm.org/author_page.cfm?id=81485657205">Michael J. Mior</a>,
+    <a href="http://dl.acm.org/author_page.cfm?id=81100092997" >Daniel Lemire</a>
+    <br />
+    SIGMOD '18 Proceedings of the 2018 International Conference on Management of Data, 2018
+  </div>
+</div>
+
+<hr/>
+
 <div class="acmdlitem" id="item3155893">
   <div style="margin-left:-25px"><img src="https://dl.acm.org/images/oa.gif" width="25" height="25" alt="ACM DL Author-ize service" style="float:left"/></div>
   <a href="https://dl.acm.org/authorize?N42764" title="Netstore: leveraging network optimizations to improve distributed transaction processing performance">
