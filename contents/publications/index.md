@@ -7,11 +7,12 @@ When possible, slides from public talks are posted on [Speaker Deck](https://spe
 
 <!--lint disable no-html-->
 <div class="acmdlitem">
-  <div>Renormalization of NoSQL Database Systems</div>
-
+  <a href="https://www.researchgate.net/publication/327878732_Renormalization_of_NoSQL_Database_Schemas_37th_International_Conference_ER_2018_Xi'an_China_October_22-25_2018_Proceedings" title="Renormalization of NoSQL Database Systems">
+    Renormalization of NoSQL Database Systems
+  </a>
   <div style="margin-left:25px">
     Michael J. Mior, Kenneth Salem
-    ER '18 Proceedings of the 36th International Conference on Conceptual Modeling, 2018 <em>(to appear)</em>
+    ER '18 Proceedings of the 36th International Conference on Conceptual Modeling, 2018
   </div>
 </div>
 
