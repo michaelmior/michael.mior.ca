@@ -10,5 +10,7 @@ To get in touch, send me an <a rel="me" class="u-email" href="mailto:michael@mio
 (Students should contact me using my [RIT email](mailto:mmior@cs.rit.edu).)
 </div>
 
+---
+
 **I am currently looking to hire a PhD student for next fall.
 If you're interested, please take a look at some of my current [projects](/projects/) and if you think it meets your interests, please contact me.**
