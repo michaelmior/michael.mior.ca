@@ -2,11 +2,6 @@
 title: Home
 ---
 
-**I am currently looking to hire a PhD student for next fall.
-If you're interested, please take a look at some of my current [projects](/projects/) and if you think it meets your interests, please contact me.**
-
----
-
 <div class="h-card">
 You've reached the personal website of <a class="p-name u-url" rel="me" href="https://michael.mior.ca/">Michael Mior</a>.
 I'm an Assistant Professor in the Computer Science Department at the [Rochester Institute of Technology](https://www.cs.rit.edu/).
