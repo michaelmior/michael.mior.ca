@@ -3,6 +3,8 @@ title: Projects
 template: page.jade
 ---
 
+## [NoSQL database renormalization](/projects/eson/)
+
 ## [Apache Calcite](https://calcite.apache.org)
 
 Apache Calcite is a modular framework useful for building query processing and optimization systems over heterogeneous data sources.
@@ -13,7 +15,7 @@ I am currently serving as the project management committee (PMC) chair.
 
 NoSE is an automated schema design tool for NoSQL databases.
 
-## [Locomotor](/projects/locomotor)
+## [Locomotor](/projects/locomotor/)
 
 Locomotor is an exploration of the automated translation of application code accessing a database into stored procedures.
 
