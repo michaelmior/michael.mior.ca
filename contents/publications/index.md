@@ -126,6 +126,7 @@ When possible, slides from public talks are posted on [Speaker Deck](https://spe
 ## Academic Social Networks
 
 * [Academia.edu](https://uwaterloo.academia.edu/MichaelMior)
+* [arXiv](https://arxiv.org/a/mior_m_1.html)
 * [ACM Digital Library](https://dl.acm.org/author_page.cfm?id=81485657205)
 * [DBLP](https://dblp.uni-trier.de/pers/hd/m/Mior:Michael_J=)
 * [Google Scholar](https://scholar.google.com/citations?user=bpO_ZLoAAAAJ?branch=master)
