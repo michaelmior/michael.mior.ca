@@ -1,0 +1,3 @@
+Contact: michael@mior.ca
+Preferred-Languages: en,fr
+Canonical: https://michael.mior.ca/.well-known/security.txt
