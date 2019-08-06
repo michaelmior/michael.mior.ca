@@ -1,1 +1,3 @@
+# Placeholder to indicate no ads served/sold
+placeholder.example.com, placeholder, DIRECT, placeholder
 contact=https://michael.mior.ca/contact/
