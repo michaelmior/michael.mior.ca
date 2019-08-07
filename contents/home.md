@@ -1,5 +1,6 @@
 ---
 title: Home
+noindex: true
 ---
 
 <div class="h-card">
