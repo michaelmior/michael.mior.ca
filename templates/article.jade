@@ -78,8 +78,6 @@ block content
         i.fa.fa-hacker-news(aria-hidden='true')
       a(title='Submit to Reddit', href="http://www.reddit.com/r/programming/submit?url=#{encodeURIComponent(locals.url + page.url)}&title=#{encodeURIComponent(page.title)}", target='_blank')
         i.fa.fa-reddit-square(aria-hidden='true')
-      a(title='Share on Google+', href="https://plus.google.com/share?url=#{encodeURIComponent(locals.url + page.url)}", target='_blank')
-        i.fa.fa-google-plus-square(aria-hidden='true')
       a(title='Share on LinkedIn', href="https://www.linkedin.com/shareArticle?mini=true&url=#{encodeURIComponent(locals.url + page.url)}&title=#{encodeURIComponent(page.title)}&summary=#{encodeURIComponent(page.metadata.summary)}&source=#{encodeURIComponent(locals.url + page.url)}", target='_blank')
         i.fa.fa-linkedin-square(aria-hidden='true')
       a(title='Share on Facebook', href="https://www.facebook.com/sharer.php?u=#{encodeURIComponent(locals.url + page.url)}", target='_blank')
