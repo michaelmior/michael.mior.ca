@@ -10,3 +10,6 @@ I received my PhD from the [David R. Cheriton School of Computer Science](https:
 To get in touch, send me an <a rel="me" class="u-email" href="mailto:michael@mior.ca">email</a> and we'll talk.
 (Students should contact me using my [RIT email](mailto:mmior@cs.rit.edu).)
 </div>
+
+**I am currently recruiting a PhD student to start in Fall 2021 working in the area of JSON data integration.
+Qualified and motivated students with a specific interest in this area should contact me with their CV and any other relevant background information.**
