@@ -32,7 +32,6 @@
     "iso8601": "^1.1.1",
     "jstransformer-json": "0.0.0",
     "jstransformer-uglify-js": "^1.1.1",
-    "run-sequence": "^2.2.1",
     "run-wintersmith": "0.0.4",
     "vinylsmith": "^1.0.0",
     "wintersmith-cname": "^1.0.0",

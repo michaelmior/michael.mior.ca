@@ -10,7 +10,6 @@ var a11y = require('gulp-a11y'),
     mdlint = require('gulp-remark-lint-dko'),
     path = require('path'),
     rimraf = require('gulp-rimraf'),
-    runSequence = require('run-sequence'),
     sassLint = require('gulp-sass-lint'),
     sizeOf = require('image-size'),
     runWintersmith = require('run-wintersmith'),
@@ -135,13 +134,8 @@ gulp.task('compile', [], function(cb) {
     cb();
   });
 });
-gulp.task('build', function(cb) {
-  runSequence(
-    'clean',
-    ['compile', 'favicons'],
-    'include-html',
-    cb);
-});
+
+gulp.task('build', ['clean', 'compile', 'favicons', 'include-html']);
 
 // Preview task
 gulp.task('preview', function() {
