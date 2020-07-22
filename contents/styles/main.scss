@@ -25,6 +25,7 @@ body {
   color: #171717;
   font-family: 'Hind', sans-serif;
   font-size: 21px;
+  font-size-adjust: .509;
   line-height: 1.52;
   text-rendering: optimizeLegibility;
 }
@@ -45,6 +46,11 @@ a {
 
 p {
   margin-bottom: 1.52em;
+
+  [lang='en'] {
+    hyphens: auto;
+    text-align: justify;
+  }
 }
 
 h1 {
