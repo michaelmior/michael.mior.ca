@@ -20,7 +20,6 @@
     "**/_*.scss"
   ],
   "require": {
-    "moment": "moment",
     "_": "underscore",
     "typogr": "typogr"
   },

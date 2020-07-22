@@ -11,7 +11,7 @@ Database design is critical for high performance in relational databases and man
 
 # Introduction
 
-NoSE is a system for recommending database schemas for Cassandra applications. Our cost-based approach uses a novel integer linear programming formulation to guide the mapping from a simple model of the application workload to a database schema. 
+NoSE is a system for recommending database schemas for Cassandra applications. Our cost-based approach uses a novel integer linear programming formulation to guide the mapping from a simple model of the application workload to a database schema
 
 Our prototype is able to implicitly capture rules of thumb used by expert designers without explicitly encoding the rules. Automating the design process allows NoSE to produce efficient schemas and to examine more alternatives than would be possible with a manual rule-based approach.
 
@@ -19,7 +19,7 @@ Our prototype is able to implicitly capture rules of thumb used by expert design
 
 Many experts in Cassandra data modeling have released [guidelines](http://www.datastax.com/dev/blog/basic-rules-of-cassandra-data-modeling) on how to best design schemas. These guidelines suggest that schemas should be modeled very differently from a relational database and emphasize the importance of relying on knowledge of queries which will be issued by the application.
 
-This results in denormalization and data duplication in order to improve the performance of reads. In common deployment scenarios, writes are inexpensive in Cassandra and this denormalization results in improved performance across the entire application workload. However, when the workload becomes  complex, using a CQL table for each query can result in expensive updates and heavy storage utilization. 
+This results in denormalization and data duplication in order to improve the performance of reads. In common deployment scenarios, writes are inexpensive in Cassandra and this denormalization results in improved performance across the entire application workload. However, when the workload becomes  complex, using a CQL table for each query can result in expensive updates and heavy storage utilization
 
 # Automating Schema Design
 
@@ -73,7 +73,7 @@ Suppose one application query is to retrieve items in particular category where 
 
 This allows all the items for a given category to be read by a single Cassandra query. NoSE also provides the query to the application developer:
 
-    SELECT item_name, item_description FROM 
+    SELECT item_name, item_description FROM
     items_by_category WHERE
     category_id = ? AND item_end_date > ?;
 

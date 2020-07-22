@@ -3,6 +3,7 @@
                 "longdesc", "marginwidth", "marginheight", "scrolling"],
   "attr-name-style": false,
   "id-class-style": false,
+  "id-class-no-ad": false,
   "indent-style": false,
   "indent-style": false,
   "indent-width": false,

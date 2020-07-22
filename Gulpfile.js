@@ -1,20 +1,20 @@
-var a11y = require('gulp-a11y'),
-    checkPages = require('check-pages'),
+var checkPages = require('check-pages'),
     cheerio = require('gulp-cheerio'),
-    extender = require('gulp-html-extend'),
+    colors = require('ansi-colors'),
     favicons = require('gulp-favicons'),
+    fileinclude = require('gulp-file-include'),
     fs = require('fs'),
     gulp = require('gulp'),
     htmllint = require('gulp-htmllint'),
     htmlmin = require('gulp-htmlmin'),
+    log = require('fancy-log'),
     mdlint = require('gulp-remark-lint-dko'),
     path = require('path'),
     rimraf = require('gulp-rimraf'),
     sassLint = require('gulp-sass-lint'),
     sizeOf = require('image-size'),
-    runWintersmith = require('run-wintersmith'),
     url = require('url'),
-    util = require('gulp-util');
+    wintersmith = require('wintersmith');
 
 var locals = JSON.parse(fs.readFileSync('config.json')).locals;
 
@@ -38,11 +38,14 @@ gulp.task('lint-sass', function() {
     .pipe(sassLint.failOnError())
 });
 
-gulp.task('lint', ['lint-markdown', 'lint-sass']);
+gulp.task('lint', gulp.parallel('lint-markdown', 'lint-sass'));
 
 // Clean the build directory
 gulp.task('clean', function() {
-  return gulp.src('build', { read: false }).pipe(rimraf());
+  return gulp.src('build', {
+    allowEmpty: true,
+    read: false
+  }).pipe(rimraf());
 });
 
 // Helper tasks for favicons
@@ -71,30 +74,30 @@ gulp.task('favicons', function () {
       yandex: false
     }
   }))
-  .on('error', util.log)
+  .on('error', log)
   .pipe(gulp.dest('build/favicons'));
 });
 
 function htmllintReporter(filepath, issues) {
   if (issues.length > 0) {
     issues.forEach(function (issue) {
-      util.log(util.colors.cyan('[gulp-htmllint] ') +
-               util.colors.white(filepath +
-                 ' [' + issue.line + ',' + issue.column + ']: ') +
-               util.colors.red('(' + issue.code + ') ' + issue.msg));
+      log(colors.cyan('[gulp-htmllint] ') +
+          colors.white(filepath +
+            ' [' + issue.line + ',' + issue.column + ']: ') +
+          colors.red('(' + issue.code + ') ' + issue.msg));
     });
 
     process.exitCode = 1;
   }
 }
 
-gulp.task('include-html', [], function() {
-  gulp.src(['build/**/*.html',
+gulp.task('include-html', function() {
+  return gulp.src(['build/**/*.html',
             '!build/4914eddbc3a49e00fa7bcd5cc44991efa7e9a179e8cb00fb69091f77c4c59635.html',
             '!build/mywot*.html',
             '!build/pinterest-*.html',
             '!build/projects/NoSE/rubis.html'])
-    .pipe(extender({annotations: false, root: 'build'}))
+    .pipe(fileinclude({basepath: '@root'}))
     .pipe(cheerio(function ($, file) {
       $('img').replaceWith(function() {
         if (this.attribs.src[0] != '/') {
@@ -124,26 +127,13 @@ gulp.task('include-html', [], function() {
 });
 
 // Build task
-gulp.task('compile', [], function(cb) {
-  // Tell Wintersmith to build
-  runWintersmith.build(function(){
-    // Log on successful build
-    util.log('Wintersmith has finished building!');
-
-    // Tell gulp task has finished
-    cb();
-  });
+gulp.task('compile', function(cb) {
+  var env = wintersmith('config.json');
+  env.build(cb);
 });
+var build = gulp.series('clean', 'compile', 'favicons', 'include-html');
 
-gulp.task('build', ['clean', 'compile', 'favicons', 'include-html']);
-
-// Preview task
-gulp.task('preview', function() {
-  // Tell Wintersmith to run in preview mode
-  runWintersmith.preview();
-});
-
-gulp.task('checklinks', function(callback) {
+gulp.task('checklinks', function(cb) {
   var options = {
     pageUrls: [locals.url],
     checkLinks: true,
@@ -156,15 +146,8 @@ gulp.task('checklinks', function(callback) {
     checkCompression: true,
     summary: true
   };
-  checkPages(console, options, callback);
+  checkPages(console, options, cb);
 });
 
-gulp.task('a11y', ['build'], function () {
-  return gulp.src(['build/**/*.html',
-                   '!build/4914eddbc3a49e00fa7bcd5cc44991efa7e9a179e8cb00fb69091f77c4c59635.html',
-                   '!build/favicons/index.html',
-                   '!build/mywot*.html',
-                   '!build/pinterest-*.html'])
-    .pipe(a11y())
-    .pipe(a11y.reporter());
-});
+exports.build = build;
+exports.default = build;
