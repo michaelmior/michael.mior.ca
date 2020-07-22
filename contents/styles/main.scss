@@ -45,12 +45,9 @@ a {
 }
 
 p {
+  hyphens: auto;
   margin-bottom: 1.52em;
-
-  [lang='en'] {
-    hyphens: auto;
-    text-align: justify;
-  }
+  text-align: justify;
 }
 
 h1 {
