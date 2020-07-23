@@ -3,6 +3,8 @@ title: Projects
 template: page.jade
 ---
 
+## [Relational Playground](/projects/relational-playground/)
+
 ## [NoSQL database renormalization](/projects/eson/)
 
 ## [Apache Calcite](https://calcite.apache.org)
