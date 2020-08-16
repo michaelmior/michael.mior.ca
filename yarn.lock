@@ -11065,13 +11065,6 @@ winston@^2.3.0:
     isstream "0.1.x"
     stack-trace "0.0.x"
 
-wintersmith-cname@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npm.taobao.org/wintersmith-cname/download/wintersmith-cname-1.0.0.tgz#3729805d5e4e1e4bae056409f217c5a876434846"
-  integrity sha1-NymAXV5OHkuuBWQJ8hfFqHZDSEY=
-  dependencies:
-    wintersmith "^2.4.1"
-
 wintersmith-contents@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/wintersmith-contents/download/wintersmith-contents-1.0.0.tgz#b4d1d3e01939451472ede7d8fd79cc21e8eebce0"

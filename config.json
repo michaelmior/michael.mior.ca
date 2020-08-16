@@ -12,8 +12,7 @@
     "./plugins/paginator.coffee",
     "wintersmith-livereload",
     "wintersmith-contents",
-    "wintersmith-sitemap",
-    "wintersmith-cname"
+    "wintersmith-sitemap"
   ],
   "ignore": [
     "**/_*.scss"

@@ -31,7 +31,6 @@
     "jstransformer-json": "0.0.0",
     "jstransformer-uglify-js": "^1.2.0",
     "vinylsmith": "^1.0.0",
-    "wintersmith-cname": "^1.0.0",
     "wintersmith-contents": "^1.0.0",
     "wintersmith-livereload": "^1.0.1",
     "wintersmith-sitemap": "^1.0.0"
