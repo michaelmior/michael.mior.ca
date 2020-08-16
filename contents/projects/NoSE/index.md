@@ -1,6 +1,6 @@
 ---
 title: "NoSE: NoSQL Schema Evaluator"
-template: page.jade
+template: page.pug
 ---
 
 *NoSE is available on [GitHub](https://github.com/michaelmior/NoSE)*

@@ -2,7 +2,7 @@
 title: DBUS for cross-machine screensaver locking
 author: michaelmior
 date: 2010-10-12
-template: article.jade
+template: article.pug
 summary: "DBUS signals in gnome-screensaver can be used to synchronize locking and unlocking across multiple machines."
 image: screensaver.png
 ---

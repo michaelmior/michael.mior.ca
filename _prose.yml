@@ -20,7 +20,7 @@ prose:
             - name: "template"
               field:
                   element: "hidden"
-                  value: "article.jade"
+                  value: "article.pug"
             - name: "summary"
               field:
                   element: "text"

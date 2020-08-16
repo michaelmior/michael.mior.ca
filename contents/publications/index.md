@@ -1,6 +1,6 @@
 ---
 title: Publications
-template: page.jade
+template: page.pug
 ---
 
 When possible, slides from public talks are posted on [Speaker Deck](https://speakerdeck.com/michaelmior/).

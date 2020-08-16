@@ -2,7 +2,7 @@
 title: Node.js skeleton project
 author: michaelmior
 date: 2012-09-15
-template: article.jade
+template: article.pug
 summary: "A simple skeleton Node.js server project using the Locomotive library."
 image: node-js.png
 ---

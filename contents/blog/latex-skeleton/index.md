@@ -2,7 +2,7 @@
 title: LaTeX Skeleton
 author: michaelmior
 date: 2018-03-02
-template: article.jade
+template: article.pug
 summary: "This is a quick overview of a template that I use when writing papers using LaTeX."
 image: paper.png
 ---

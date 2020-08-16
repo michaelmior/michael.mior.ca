@@ -2,7 +2,7 @@
 title: Automated Testing of Dotfiles
 author: michaelmior
 date: 2015-09-24
-template: article.jade
+template: article.pug
 summary: "Continuous integration services are useful test management of dotfiles and ensure smooth deployment."
 image: test-tube.png
 ---

@@ -1,6 +1,6 @@
 ---
 title: "NoSQL database renormalization"
-template: page.jade
+template: page.pug
 ---
 
 *An implementation of our ESON normalization algorithm is available on [GitHub](https://github.com/michaelmior/eson)*

@@ -3,7 +3,7 @@ title: A Calcite adapter for Apache Cassandra
 author: michaelmior
 date: 2016-02-20
 modified: 2016-03-27
-template: article.jade
+template: article.pug
 summary: "It is now possible to execute SQL queries over Apache Cassandra tables using an adapter for Apache Calcite."
 image: calcite.png
 ---

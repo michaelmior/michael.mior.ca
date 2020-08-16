@@ -1,4 +1,4 @@
 ---
 title: Contact
-template: contact.jade
+template: contact.pug
 ---

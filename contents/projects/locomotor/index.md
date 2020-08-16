@@ -1,6 +1,6 @@
 ---
 title: "Locomotor"
-template: page.jade
+template: page.pug
 ---
 
 *Locomotor is available on [GitHub](https://github.com/michaelmior/locomotor)*

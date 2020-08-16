@@ -2,7 +2,7 @@
 title: Reinforcement learning for Las Vegas
 author: michaelmior
 date: 2018-02-04
-template: article.jade
+template: article.pug
 summary: "A walkthrough of an implementation of deep reinforcement learning for the dice game Las Vegas."
 image: dice.png
 ---

@@ -1,6 +1,6 @@
 ---
 title: About
-template: page.jade
+template: page.pug
 ---
 
 I was born in the small town of Bobcaygeon, Ontario (home of the amazing [Kawartha Dairy](http://kawarthadairy.com/)!)

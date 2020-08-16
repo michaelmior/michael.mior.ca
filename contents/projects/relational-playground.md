@@ -1,6 +1,6 @@
 ---
 title: "Relational Playground"
-template: page.jade
+template: page.pug
 ---
 
 [Relational Playground](https://relationalplayground.com/) is an environment for students to explore the relationship between relational algebra expressions and SQL queries.

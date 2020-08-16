@@ -2,7 +2,7 @@
 title: Tweets of the Week
 author: michaelmior
 date: 2010-10-24
-template: article.jade
+template: article.pug
 summary: "Popular links found on my Twitter feed in October 2010."
 image: twitter.png
 ---
