@@ -6949,13 +6949,6 @@ min-document@^2.19.0:
   dependencies:
     brace-expansion "^1.0.0"
 
-minimatch@^2.0.1:
-  version "2.0.10"
-  resolved "https://registry.npm.taobao.org/minimatch/download/minimatch-2.0.10.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fminimatch%2Fdownload%2Fminimatch-2.0.10.tgz#8d087c39c6b38c001b97fca7ce6d0e1e80afbac7"
-  integrity sha1-jQh8OcazjAAbl/ynzm0OHoCvusc=
-  dependencies:
-    brace-expansion "^1.0.0"
-
 minimatch@^3.0.0, minimatch@^3.0.3, minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npm.taobao.org/minimatch/download/minimatch-3.0.4.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fminimatch%2Fdownload%2Fminimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
@@ -11079,13 +11072,6 @@ wintersmith-cname@^1.0.0:
   dependencies:
     wintersmith "^2.4.1"
 
-wintersmith-contents@^0.1.2:
-  version "0.1.5"
-  resolved "https://registry.npm.taobao.org/wintersmith-contents/download/wintersmith-contents-0.1.5.tgz#756105bf6508a39769598b452223d67ba89b1cf6"
-  integrity sha1-dWEFv2UIo5dpWYtFIiPWe6ibHPY=
-  dependencies:
-    minimatch "^2.0.1"
-
 wintersmith-contents@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/wintersmith-contents/download/wintersmith-contents-1.0.0.tgz#b4d1d3e01939451472ede7d8fd79cc21e8eebce0"
@@ -11101,14 +11087,6 @@ wintersmith-livereload@^1.0.1:
   dependencies:
     ws "^3.3.3"
 
-wintersmith-robots@^0.2.6:
-  version "0.2.6"
-  resolved "https://registry.npm.taobao.org/wintersmith-robots/download/wintersmith-robots-0.2.6.tgz#5893e1067b486e4200d7244c46223e8c67b2e7f1"
-  integrity sha1-WJPhBntIbkIA1yRMRiI+jGey5/E=
-  dependencies:
-    wintersmith "^2.1.0"
-    wintersmith-contents "^0.1.2"
-
 wintersmith-sitemap@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/wintersmith-sitemap/download/wintersmith-sitemap-1.0.0.tgz#7d62f0735bddec0e6da77cbd1b05165b864d4c9c"
@@ -11119,7 +11097,7 @@ wintersmith-sitemap@^1.0.0:
     wintersmith "^2.4.1"
     wintersmith-contents "^1.0.0"
 
-wintersmith@^2.1.0, wintersmith@^2.4.1:
+wintersmith@^2.4.1:
   version "2.4.1"
   resolved "https://registry.npm.taobao.org/wintersmith/download/wintersmith-2.4.1.tgz#4a7db6417ea0ad0765caeda021d306acd5ce0ec3"
   integrity sha1-Sn22QX6grQdlyu2gIdMGrNXODsM=

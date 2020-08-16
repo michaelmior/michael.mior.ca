@@ -34,7 +34,6 @@
     "wintersmith-cname": "^1.0.0",
     "wintersmith-contents": "^1.0.0",
     "wintersmith-livereload": "^1.0.1",
-    "wintersmith-robots": "^0.2.6",
     "wintersmith-sitemap": "^1.0.0"
   },
   "resolutions": {

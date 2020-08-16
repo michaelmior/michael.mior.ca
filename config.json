@@ -13,7 +13,6 @@
     "wintersmith-livereload",
     "wintersmith-contents",
     "wintersmith-sitemap",
-    "wintersmith-robots",
     "wintersmith-cname"
   ],
   "ignore": [
