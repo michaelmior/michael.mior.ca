@@ -5,7 +5,7 @@ imagemin  = require 'gulp-imagemin'
 imageSize = require 'image-size'
 path      = require 'path'
 rev       = require 'gulp-rev'
-sass      = require 'gulp-sass'
+sass      = require 'gulp-dart-sass'
 uglify    = require 'gulp-uglify'
 
 module.exports = (env, callback) ->
