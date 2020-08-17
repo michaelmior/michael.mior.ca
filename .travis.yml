@@ -1,0 +1,11 @@
+language: node_js
+os:
+- linux
+cache:
+  directories:
+  - node_modules
+git:
+  autocrlf: input
+script:
+- yarn gulp lint
+- yarn gulp build
