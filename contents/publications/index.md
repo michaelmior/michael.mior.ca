@@ -7,6 +7,18 @@ When possible, slides from public talks are posted on [Speaker Deck](https://spe
 
 <!--lint disable no-html-->
 <div class="acmdlitem">
+  <a href="https://www.researchgate.net/publication/343769199_Semantic_Data_Understanding_With_Character_Level_Learning" title="Semantic Data Understanding With Character Level Learning">
+    Semantic Data Understanding With Character Level Learning
+  </a>
+  <div style="margin-left:25px">
+    Michael J. Mior, Ken Q. Pu
+    2020 IEEE 21st International Conference on Information Reuse and Integration for Data Science
+  </div>
+</div>
+
+<hr/>
+
+<div class="acmdlitem">
   <a href="https://www.researchgate.net/publication/327878732_Renormalization_of_NoSQL_Database_Schemas_37th_International_Conference_ER_2018_Xi'an_China_October_22-25_2018_Proceedings" title="Renormalization of NoSQL Database Systems">
     Renormalization of NoSQL Database Systems
   </a>
