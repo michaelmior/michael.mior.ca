@@ -7,11 +7,35 @@ When possible, slides from public talks are posted on [Speaker Deck](https://spe
 
 <!--lint disable no-html-->
 <div class="acmdlitem">
+  <a href="https://ieeexplore.ieee.org/document/9378228" title="Maintaining NoSQL Database Quality During Conceptual Model Evolution">
+    Maintaining NoSQL Database Quality During Conceptual Model Evolution
+  </a>
+  <div style="margin-left:25px">
+    Pablo Suárez-Otero, Michael J. Mior, Maria José Suárez-Cabal, Javier Tuya<br>
+    6th International Workshop on Methods to Improve Big Data Science Projects
+  </div>
+</div>
+
+<hr/>
+
+<div class="acmdlitem">
+  <a href="ReSpark-BigData2020.pdf" title="ReSpark: Automatic Caching for Iterative Applications in Apache Spark">
+    ReSpark: Automatic Caching for Iterative Applications in Apache Spark
+  </a>
+  <div style="margin-left:25px">
+    Michael J. Mior, Kenneth Salem<br>
+    2020 IEEE International Conference on Big Data
+  </div>
+</div>
+
+<hr/>
+
+<div class="acmdlitem">
   <a href="https://www.researchgate.net/publication/343769199_Semantic_Data_Understanding_With_Character_Level_Learning" title="Semantic Data Understanding With Character Level Learning">
     Semantic Data Understanding With Character Level Learning
   </a>
   <div style="margin-left:25px">
-    Michael J. Mior, Ken Q. Pu
+    Michael J. Mior, Ken Q. Pu<br>
     2020 IEEE 21st International Conference on Information Reuse and Integration for Data Science
   </div>
 </div>
@@ -23,7 +47,7 @@ When possible, slides from public talks are posted on [Speaker Deck](https://spe
     Renormalization of NoSQL Database Systems
   </a>
   <div style="margin-left:25px">
-    Michael J. Mior, Kenneth Salem
+    Michael J. Mior, Kenneth Salem<br>
     ER '18 Proceedings of the 36th International Conference on Conceptual Modeling, 2018
   </div>
 </div>
