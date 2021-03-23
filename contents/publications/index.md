@@ -6,6 +6,8 @@ template: page.jade
 When possible, slides from public talks are posted on [Speaker Deck](https://speakerdeck.com/michaelmior/).
 
 <!--lint disable no-html-->
+<hr/>
+
 <div class="acmdlitem">
   <a href="https://ieeexplore.ieee.org/document/9378228" title="Maintaining NoSQL Database Quality During Conceptual Model Evolution">
     Maintaining NoSQL Database Quality During Conceptual Model Evolution
