@@ -1,5 +1,6 @@
 /* hind-regular - latin */
 @font-face {
+  font-display: fallback;
   font-family: 'Hind';
   font-style: normal;
   font-weight: 400;
@@ -13,6 +14,7 @@
 }
 /* hind-700 - latin */
 @font-face {
+  font-display: fallback;
   font-family: 'Hind';
   font-style: normal;
   font-weight: 700;
