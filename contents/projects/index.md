@@ -5,7 +5,7 @@ template: page.jade
 
 ## [Relational Playground](/projects/relational-playground/)
 
-## [NoSQL database renormalization](/projects/eson/)
+## [NoSQL conceptual modeling](/projects/eson/)
 
 ## [Apache Calcite](https://calcite.apache.org)
 
