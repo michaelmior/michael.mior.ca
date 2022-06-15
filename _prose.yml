@@ -31,3 +31,5 @@ prose:
                   element: "text"
                   label: "Image"
                   value: ""
+    ignore:
+        - .well-known
