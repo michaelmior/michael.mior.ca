@@ -1,0 +1,24 @@
+backend:
+  # Use netlify identity as backend
+  name: git-gateway
+  branch: main
+media_folder: "contents/img"
+public_folder: "/img"
+
+# Please run "npx netlify-cms-proxy-server" for local backend
+local_backend: true
+collections:
+  - label: "Blog"
+    name: "blog"
+    folder: "contents/blog"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "hidden", default: "michaelmior" }
+      - { label: "Publish Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
+      - { label: "Template", name: "template", widget: "hidden", default: "article.jade" }
+      - { label: "Summary", name: "summary", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
