@@ -6,6 +6,7 @@ backend:
 media_folder: "contents/img"
 public_folder: "/img"
 site_url: "https://michael.mior.ca"
+logo_url: "https://michael.mior.ca/img/logo.png"
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
