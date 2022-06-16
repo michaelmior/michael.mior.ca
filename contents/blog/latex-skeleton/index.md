@@ -4,7 +4,7 @@ author: michaelmior
 date: 2018-03-02
 template: article.jade
 summary: "This is a quick overview of a template that I use when writing papers using LaTeX."
-image: paper.png
+image: scroll.png
 ---
 
 A repeated task I run into when I start working on a new paper is the laying out the initial structure of the repository to store the paper text.
