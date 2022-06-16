@@ -25,3 +25,5 @@ collections:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
     path: "{{title}}/index"
+    media_folder: ''
+    public_folder: ''
