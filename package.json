@@ -36,6 +36,7 @@
     "wintersmith-sitemap": "^1.0.0"
   },
   "resolutions": {
+    "imgsizefix": "git+https://github.com/AtuyL/imgsizefix.git#1e3daf40eda643eae15d989d72e6bbd4c2ef7f93",
     "node-sass": "^4.14.1",
     "pleeease": "^4.3.0",
     "vinyl-fs": "^3.0.3"

@@ -5316,9 +5316,9 @@ imagesize@^1.0.0:
   resolved "https://registry.npm.taobao.org/imagesize/download/imagesize-1.0.0.tgz#db161d15bf182a36d56e19abad10793c32c34c30"
   integrity sha1-2xYdFb8YKjbVbhmrrRB5PDLDTDA=
 
-"imgsizefix@git://github.com/AtuyL/imgsizefix.git#1e3daf40eda643eae15d989d72e6bbd4c2ef7f93":
+"imgsizefix@git+https://github.com/AtuyL/imgsizefix.git#1e3daf40eda643eae15d989d72e6bbd4c2ef7f93", "imgsizefix@git://github.com/AtuyL/imgsizefix.git#1e3daf40eda643eae15d989d72e6bbd4c2ef7f93":
   version "1.1.2"
-  resolved "git://github.com/AtuyL/imgsizefix.git#1e3daf40eda643eae15d989d72e6bbd4c2ef7f93"
+  resolved "git+https://github.com/AtuyL/imgsizefix.git#1e3daf40eda643eae15d989d72e6bbd4c2ef7f93"
   dependencies:
     async "^0.9.0"
     imagesize "^1.0.0"
