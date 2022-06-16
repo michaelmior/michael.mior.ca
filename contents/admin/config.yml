@@ -22,3 +22,4 @@ collections:
       - { label: "Summary", name: "summary", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
+    path: "{{title}}/index"
