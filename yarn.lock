@@ -7041,15 +7041,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gulp-plumber@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "gulp-plumber@npm:1.2.0"
+"gulp-plumber@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "gulp-plumber@npm:1.2.1"
   dependencies:
     chalk: ^1.1.3
     fancy-log: ^1.3.2
     plugin-error: ^0.1.2
     through2: ^2.0.3
-  checksum: 4d046c0477fe025101fc7e4314e393dfb96487100a0442d509ea0d1d8907c6cd1f082d9cf96a894481c6bf59db5478ef4a6a686a7d5b1363f40ce02175261243
+  checksum: 95f880be326c0fab9286956539861a84416f02c41633f670a7540287c089e49b2853f39c4379e6e2da83450e6fc2e4055a7efddf929a1960b61a0aef376f770a
   languageName: node
   linkType: hard
 
@@ -13327,7 +13327,7 @@ __metadata:
     gulp-htmlmin: ^4.0.0
     gulp-imagemin: ^7.1.0
     gulp-imgsizefix: ^1.3.1
-    gulp-plumber: ^1.2.0
+    gulp-plumber: ^1.2.1
     gulp-remark-lint-dko: ^1.0.2
     gulp-rev: ^9.0.0
     gulp-rimraf: ^1.0.0
