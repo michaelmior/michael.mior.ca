@@ -6957,9 +6957,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gulp-file-include@npm:^2.2.2":
-  version: 2.2.2
-  resolution: "gulp-file-include@npm:2.2.2"
+"gulp-file-include@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "gulp-file-include@npm:2.3.0"
   dependencies:
     balanced-match: ^1.0.0
     concat-stream: ^2.0.0
@@ -6967,9 +6967,9 @@ __metadata:
     flatnest: ^1.0.0
     json5: ^2.1.3
     plugin-error: ^1.0.1
-    through2: ^3.0.1
-    vinyl: ^2.2.0
-  checksum: d336233aa907c86a7c98c447fdac23803eff26b78848753e3362fc8e47516f58cbb533385b4297fccd753d67cd9a2f13d1f1e5495d040c8a2122887423fa5034
+    through2: ^4.0.2
+    vinyl: ^2.2.1
+  checksum: cdfe3d96b88d6a6473dba8017b0351421824d1baae1db5fa5657b9cc001bd968201b702b3b6b11aa4ec20228215808a305d4ba1f55c6d1197dbd21be41629d9c
   languageName: node
   linkType: hard
 
@@ -13322,7 +13322,7 @@ __metadata:
     gulp-babel: ^8.0.0
     gulp-cheerio: ^1.0.0
     gulp-favicons: ^3.0.0
-    gulp-file-include: ^2.2.2
+    gulp-file-include: ^2.3.0
     gulp-htmllint: ^0.0.19
     gulp-htmlmin: ^4.0.0
     gulp-imagemin: ^7.1.0
@@ -15688,7 +15688,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vinyl@npm:^2.0.0, vinyl@npm:^2.0.1, vinyl@npm:^2.1.0, vinyl@npm:^2.2.0":
+"vinyl@npm:^2.0.0, vinyl@npm:^2.0.1, vinyl@npm:^2.1.0":
   version: 2.2.0
   resolution: "vinyl@npm:2.2.0"
   dependencies:
