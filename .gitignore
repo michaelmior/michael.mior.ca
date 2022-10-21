@@ -48,3 +48,6 @@ build/
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+!.yarn/cache
+.yarn/cache/*
+!.yarn/cache/imgsizefix-https-8dc7f86d66-9ca3c5f351.zip
