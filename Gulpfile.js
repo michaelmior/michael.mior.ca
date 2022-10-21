@@ -7,7 +7,6 @@ var checkPages = require('check-pages'),
     gulp = require('gulp'),
     htmllint = require('gulp-htmllint'),
     htmlmin = require('gulp-htmlmin'),
-    log = require('fancy-log'),
     mdlint = require('gulp-remark-lint-dko'),
     path = require('path'),
     rimraf = require('gulp-rimraf'),
@@ -74,14 +73,14 @@ gulp.task('favicons', function () {
       yandex: false
     }
   }))
-  .on('error', log)
+  .on('error', console.error)
   .pipe(gulp.dest('build/favicons'));
 });
 
 function htmllintReporter(filepath, issues) {
   if (issues.length > 0) {
     issues.forEach(function (issue) {
-      log(colors.cyan('[gulp-htmllint] ') +
+      console.error(colors.cyan('[gulp-htmllint] ') +
           colors.white(filepath +
             ' [' + issue.line + ',' + issue.column + ']: ') +
           colors.red('(' + issue.code + ') ' + issue.msg));
