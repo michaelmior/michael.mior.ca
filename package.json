@@ -14,7 +14,7 @@
     "check-pages": "^0.10.0",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
-    "gulp-favicons": "^2.2.6",
+    "gulp-favicons": "^3.0.0",
     "gulp-file-include": "^2.2.2",
     "gulp-htmllint": "0.0.19",
     "gulp-htmlmin": "^4.0.0",
