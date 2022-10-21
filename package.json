@@ -7,7 +7,6 @@
     "typogr": "^0.6.8",
     "underscore": "^1.12.1"
   },
-  "private": "true",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
@@ -43,5 +42,6 @@
   },
   "engines": {
     "node": ">=14"
-  }
+  },
+  "packageManager": "yarn@3.2.4"
 }
