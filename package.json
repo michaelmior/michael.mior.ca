@@ -23,12 +23,13 @@
     "gulp-remark-lint-dko": "^1.0.2",
     "gulp-rev": "^9.0.0",
     "gulp-rimraf": "^1.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sass-lint": "^1.4.0",
     "gulp-uglify": "^3.0.2",
     "image-size": "^0.8.3",
     "jstransformer-json": "0.0.0",
     "jstransformer-uglify-js": "^1.2.0",
+    "node-sass": "^4.14.1",
     "vinylsmith": "^1.0.0",
     "wintersmith-contents": "^1.0.0",
     "wintersmith-livereload": "^1.0.1",
@@ -36,7 +37,6 @@
   },
   "resolutions": {
     "imgsizefix": "git+https://github.com/AtuyL/imgsizefix.git#1e3daf40eda643eae15d989d72e6bbd4c2ef7f93",
-    "node-sass": "^4.14.1",
     "pleeease": "^4.3.0",
     "vinyl-fs": "^3.0.3"
   },
