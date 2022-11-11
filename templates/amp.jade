@@ -107,9 +107,15 @@ html(lang='en', amp='')
           a(href=page.article.url)= 'View comments'
 
     // AMP analytics
-    | <amp-analytics type="googleanalytics" id="analytics1">
+    | <amp-analytics type="gtag" data-credentials="include">
     |   <script type="application/json">
-    |     { "vars": {"account": "UA-45085128-2"},
-    |       "triggers": {"trackPageview": {"on": "visible","request": "pageview"}}}
+    |     {
+    |       "vars" : {
+    |         "gtag_id": "G-E78Z2E2DJE",
+    |         "config" : {
+    |           "G-E78Z2E2DJE": { "groups": "default" }
+    |         }
+    |       }
+    |     }
     |   </script>
     | </amp-analytics>
