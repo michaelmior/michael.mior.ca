@@ -5,7 +5,8 @@ template: page.jade
 
 When possible, slides from public talks are posted on [Speaker Deck](https://speakerdeck.com/michaelmior/).
 
-<!--lint disable no-html-->
+<!--lint disable no-html maximum-line-length-->
+
 <hr/>
 
 <div class="acmdlitem">

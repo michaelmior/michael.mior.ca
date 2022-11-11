@@ -23,6 +23,7 @@ I first built a simple class structure for the game in Python to represent all t
 The next step was to decide how the state was going to fed into the network.
 In the original deep Q-learning paper, the authors used a [convolutional neural network](https://en.wikipedia.org/wiki/Convolutional_neural_network) to feed in frames from gameplay video.
 I instead chose to explicit represent the state using the following values:
+
 * Number of players in the game
 * Current game round number
 * Cash currently held by each player
