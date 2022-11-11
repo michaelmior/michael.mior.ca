@@ -31,7 +31,7 @@ gulp.task('lint-markdown', function() {
 });
 
 gulp.task('lint-sass', function() {
-  gulp.src('contents/styles/**/*\.s+(a|c)ss')
+  return gulp.src('contents/styles/**/*\.s+(a|c)ss')
     .pipe(sassLint())
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError())
