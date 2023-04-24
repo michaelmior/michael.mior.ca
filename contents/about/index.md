@@ -11,5 +11,5 @@ I then made my way to the [Department of Computer Science](http://web.cs.toronto
 My research revolved around scaling databases using the [SnowFlock project](http://sysweb.cs.toronto.edu/projects/1).
 I graduated in February 2011 and spent some time working in the startup scene in Toronto and Montreal.
 I then completed my PhD in the [Data Systems Group](https://uwaterloo.ca/data-systems-group/) computer science at the University of Waterloo under the supervision of Professor [Ken Salem](https://cs.uwaterloo.ca/~kmsalem/).
-As of August 2018, I have joined the faculty at the [Rochester Institute of Technology](https://www.cs.rit.edu/) as an Assistant Professor.
+As of August 2018, I have joined the faculty at the [Rochester Institute of Technology](https://www.cs.rit.edu/) as an Assistant Professor and director of the [Data Unity Lab](https://cs.rit.edu/~dataunitylab).
 This site contains some information on [projects I have worked on](/projects/).
