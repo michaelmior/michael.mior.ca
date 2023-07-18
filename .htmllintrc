@@ -1,5 +1,5 @@
 {
-  "attr-bans": ["align", "background", "bgcolor", "border", "frameborder",
+  "attr-bans": ["align", "background", "bgcolor", "border",
                 "longdesc", "marginwidth", "marginheight", "scrolling"],
   "attr-name-style": false,
   "id-class-style": false,

@@ -3,7 +3,7 @@
   for = "/*"
 
   [headers.values]
-    Content-Security-Policy = "default-src https:; script-src https: data: 'unsafe-inline' 'unsafe-eval'; object-src 'none'; style-src 'self' 'unsafe-inline' https:; img-src blob: data: 'self' https://referrer.disqus.com https://*.disquscdn.com https://dl.acm.org https://www.google-analytics.com https://*.twimg.com; media-src 'none'; frame-src https://disqus.com; font-src https: data:; connect-src https:; report-uri https://mior.report-uri.io/r/default/csp/enforce"
+    Content-Security-Policy = "default-src https:; script-src https: data: 'unsafe-inline' 'unsafe-eval'; object-src 'none'; style-src 'self' 'unsafe-inline' https:; img-src blob: data: 'self' https://referrer.disqus.com https://*.disquscdn.com https://dl.acm.org https://www.google-analytics.com https://*.twimg.com; media-src 'none'; frame-src https://disqus.com https://calendar.google.com; font-src https: data:; connect-src https:; report-uri https://mior.report-uri.io/r/default/csp/enforce"
     Referrer-Policy = "no-referrer-when-downgrade"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
