@@ -9554,31 +9554,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.0.0, lodash@npm:^4.1.0, lodash@npm:^4.14.0, lodash@npm:^4.3.0":
-  version: 4.17.4
-  resolution: "lodash@npm:4.17.4"
-  checksum: 5fbe7d7c79cd11830d3a827e9eaae688778bc9c7f719207c5fb1fed9b1e60766e50904832990f0fd087b81fe207e944c80b12df5330d00b2f4d5b9ebc7bb1f18
-  languageName: node
-  linkType: hard
-
-"lodash@npm:^4.17.11, lodash@npm:^4.17.19":
-  version: 4.17.19
-  resolution: "lodash@npm:4.17.19"
-  checksum: a5cc77099fae9f0052003e8242b06d7572be7c88cbe5152ddf5a3d97bc795cfaf73f10befeb6e23efac84fae94e2255d398cb371349cb3f878c9792a0213cacd
-  languageName: node
-  linkType: hard
-
-"lodash@npm:^4.17.15, lodash@npm:^4.17.4":
+"lodash@npm:^4.0.0, lodash@npm:^4.1.0, lodash@npm:^4.14.0, lodash@npm:^4.17.11, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.4, lodash@npm:^4.3.0, lodash@npm:~4.17.10":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
-  languageName: node
-  linkType: hard
-
-"lodash@npm:~4.17.10":
-  version: 4.17.10
-  resolution: "lodash@npm:4.17.10"
-  checksum: baacda081c6fc0db71aee8c73fbbd3b3a008c16d8495755264a2ff1285e95422e07aa8332c6e22ac0f7d9f9b7793d0561429069f62214b497ead4679d8605f14
   languageName: node
   linkType: hard
 
