@@ -1,6 +1,6 @@
 ---
 title: Uses
-template: page.jade
+template: page.pug
 ---
 
 Below is a list of some of my favorite tools that I use in my work.

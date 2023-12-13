@@ -2,7 +2,7 @@
 title: "Welcome!"
 author: michaelmior
 date: 2010-09-28
-template: article.jade
+template: article.pug
 summary: "An introduction to my personal website and blog."
 image: house.png
 ---

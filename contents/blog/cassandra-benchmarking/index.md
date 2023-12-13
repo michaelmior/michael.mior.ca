@@ -2,7 +2,7 @@
 title: Apache Cassandra benchmarking
 author: michaelmior
 date: 2014-08-21
-template: article.jade
+template: article.pug
 summary: "Carefully orchestrating the loading of replicated data on Apache Cassandra can have a significant impact on load times."
 image: speedo.png
 ---

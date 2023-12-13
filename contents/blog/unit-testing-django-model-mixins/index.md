@@ -2,7 +2,7 @@
 title: Unit testing Django model mixins
 author: michaelmior
 date: 2012-01-14
-template: article.jade
+template: article.pug
 summary: "By creating a simple subclass of Django test cases, its easy to perform unit testing on mixin model classes."
 image: django.png
 ---

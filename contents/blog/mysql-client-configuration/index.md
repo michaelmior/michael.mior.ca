@@ -2,7 +2,7 @@
 title: MySQL Client Configuration
 author: michaelmior
 date: 2012-01-06
-template: article.jade
+template: article.pug
 summary: "The MySQL CLI has a useful configuration file that you can use to avoid retyping usernames and passwords."
 image: database.png
 ---

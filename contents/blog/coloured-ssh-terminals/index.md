@@ -2,7 +2,7 @@
 title: Coloured SSH terminals
 author: michaelmior
 date: 2011-03-06
-template: article.jade
+template: article.pug
 summary: "By hooking into SSH clients, you can set different colour schemes per host in your terminal to make it clear where you're connected to."
 image: terminal.png
 ---

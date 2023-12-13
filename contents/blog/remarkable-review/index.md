@@ -2,7 +2,7 @@
 title: reMarkable review
 author: michaelmior
 date: 2017-10-31
-template: article.jade
+template: article.pug
 summary: "The reMarkable tablet is suffering from a lack of polish that can be expected from an early stage product, but looks very promising."
 image: paper.png
 ---

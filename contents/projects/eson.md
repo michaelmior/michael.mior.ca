@@ -1,6 +1,6 @@
 ---
 title: "NoSQL conceptual modeling"
-template: page.jade
+template: page.pug
 ---
 
 ## Conceptual modeling for NoSQL

@@ -2,7 +2,7 @@
 title: Zotero reMarkable sync
 author: michaelmior
 date: 2018-03-23
-template: article.jade
+template: article.pug
 summary: "With a reverse-engineered reMarkable API now available, I built a quick script to upload documents from Zotero to my reMarkable tablet."
 image: sync.png
 ---

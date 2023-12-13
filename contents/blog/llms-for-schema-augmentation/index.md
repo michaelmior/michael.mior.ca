@@ -2,7 +2,7 @@
 title: LLMs for Schema Augmentation
 author: michaelmior
 date: 2023-07-18
-template: article.jade
+template: article.pug
 summary: "Large language models can be exploited to automatically augment JSON Schemas with useful information."
 image: chatgpt.jpg
 ---

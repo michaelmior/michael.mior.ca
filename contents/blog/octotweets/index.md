@@ -2,7 +2,7 @@
 title: Octotweets
 author: michaelmior
 date: 2010-11-14
-template: article.jade
+template: article.pug
 summary: "A series of interesting links from tweets posted in October 2010."
 image: twitter.png
 ---

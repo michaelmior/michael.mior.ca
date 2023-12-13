@@ -2,7 +2,7 @@
 title: RUBBoS
 author: michaelmior
 date: 2011-01-05
-template: article.jade
+template: article.pug
 summary: "Updates to the RUBBoS bulletin board application for Web application benchmarking fixes bugs in the PHP implementation."
 image: board.png
 ---
