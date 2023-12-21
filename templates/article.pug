@@ -3,6 +3,7 @@ extends layout
 
 block prepend head
   link(rel='amphtml', href=locals.url + '/amp' + page.url)
+  link(rel='canonical', href=locals.url + page.url)
 
   meta(name='description', content=page.metadata.summary)
 
