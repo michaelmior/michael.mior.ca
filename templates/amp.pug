@@ -9,7 +9,7 @@ html(lang='en', amp='')
     title= page.title
 
     meta(name='viewport', content='width=device-width,minimum-scale=1,initial-scale=1')
-    link(rel='canonical', href="#{locals.url}#{page.article.url}")
+    link(rel='canonical', href=locals.url + page.article.url)
 
     meta(name='description', content=page.metadata.summary)
 
@@ -20,7 +20,7 @@ html(lang='en', amp='')
     - var imageObject = env.helpers.blogImageObject(page)
 
     //- OG meta tags
-    meta(property='og:url', content="#{locals.url}#{page.article.url}")
+    meta(property='og:url', content=locals.url + page.article.url)
     meta(property='og:title', content=page.title)
     meta(property='og:description', content=page.metadata.summary)
     meta(property='og:type', content='article')
@@ -38,39 +38,38 @@ html(lang='en', amp='')
 
     //- Schema.org markup
     script(type='application/ld+json')
-      :json
-        {
-          "@context": "http://schema.org",
-          "@type": "BlogPosting",
-          "headline": "#{page.metadata.title}",
-          "name": "#{page.metadata.title}",
-          "datePublished": "#{page.date.toISOString()}",
-          "dateModified": "#{(page.metadata.modified || page.date).toISOString()}",
-          "author": {
-            "@type": "Person",
-            "name": "Michael Mior"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Michael Mior",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "#{locals.url}/img/logo-full.png",
-              "width": 600,
-              "height": 48
-            }
-          },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "#{page.article.url}"
-          },
-          "image": {
-            "@type": "ImageObject",
-            "url": "#{imageObject.url}",
-            "height": "#{imageObject.height}",
-            "width": "#{imageObject.width}"
-          }
-        }
+        |  {
+        |    "@context": "http://schema.org",
+        |    "@type": "BlogPosting",
+        |    "headline": "#{page.metadata.title}",
+        |    "name": "#{page.metadata.title}",
+        |    "datePublished": "#{page.date.toISOString()}",
+        |    "dateModified": "#{(page.metadata.modified || page.date).toISOString()}",
+        |    "author": {
+        |      "@type": "Person",
+        |      "name": "Michael Mior"
+        |    },
+        |    "publisher": {
+        |      "@type": "Organization",
+        |      "name": "Michael Mior",
+        |      "logo": {
+        |        "@type": "ImageObject",
+        |        "url": "#{locals.url}/img/logo-full.png",
+        |        "width": 600,
+        |        "height": 48
+        |      }
+        |    },
+        |    "mainEntityOfPage": {
+        |      "@type": "WebPage",
+        |      "@id": "#{page.article.url}"
+        |    },
+        |    "image": {
+        |      "@type": "ImageObject",
+        |      "url": "#{imageObject.url}",
+        |      "height": "#{imageObject.height}",
+        |      "width": "#{imageObject.width}"
+        |    }
+        |  }
 
     meta(name='theme-color', content='#4080c0')
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat:400|Hind:400,700|Roboto+Mono:400,700,400italic,700italic')
@@ -93,15 +92,15 @@ html(lang='en', amp='')
         article.article
           section.content!= typogr(page.html).typogrify()
         div.share
-          a(title='Share on Twitter', href="https://twitter.com/intent/tweet?source=#{encodeURIComponent(locals.url + page.article.url)}&text=#{encodeURIComponent(page.title + ' ' + locals.url + page.article.url)}&via=michaelmior", target='_blank', rel='noopener')
+          a(title='Share on Twitter', href="https://twitter.com/intent/tweet?source=" + encodeURIComponent(locals.url + page.article.url) + "&text=" + encodeURIComponent(page.title + ' ' + locals.url + page.article.url) + "&via=michaelmior", target='_blank', rel='noopener')
             i.fa.fa-twitter-square(aria-hidden='true')
-          a(title='Submit to Hacker News', href="https://news.ycombinator.com/submitlink?u=#{encodeURIComponent(locals.url + page.article.url)}&t=#{encodeURIComponent(page.title)}", target='_blank', rel='noopener')
+          a(title='Submit to Hacker News', href="https://news.ycombinator.com/submitlink?u=" + encodeURIComponent(locals.url + page.article.url) + "&t=" + encodeURIComponent(page.title), target='_blank', rel='noopener')
             i.fa.fa-hacker-news(aria-hidden='true')
-          a(title='Submit to Reddit', href="http://www.reddit.com/r/programming/submit?url=#{encodeURIComponent(locals.url + page.article.url)}&title=#{encodeURIComponent(page.title)}", target='_blank', rel='noopener')
+          a(title='Submit to Reddit', href="http://www.reddit.com/r/programming/submit?url=" + encodeURIComponent(locals.url + page.article.url) + "&title=" + encodeURIComponent(page.title), target='_blank', rel='noopener')
             i.fa.fa-reddit-square(aria-hidden='true')
-          a(title='Share on LinkedIn', href="https://www.linkedin.com/shareArticle?mini=true&url=#{encodeURIComponent(locals.url + page.article.url)}&title=#{encodeURIComponent(page.title)}&summary=#{encodeURIComponent(page.metadata.summary)}&source=#{encodeURIComponent(locals.url + page.article.url)}", target='_blank', rel='noopener')
+          a(title='Share on LinkedIn', href="https://www.linkedin.com/shareArticle?mini=true&url=" + encodeURIComponent(locals.url + page.article.url) + "&title=" + encodeURIComponent(page.title) + "&summary=" + encodeURIComponent(page.metadata.summary) + "&source=" + encodeURIComponent(locals.url + page.article.url), target='_blank', rel='noopener')
             i.fa.fa-linkedin-square(aria-hidden='true')
-          a(title='Share on Facebook', href="https://www.facebook.com/sharer.php?u=#{encodeURIComponent(locals.url + page.article.url)}", target='_blank', rel='noopener')
+          a(title='Share on Facebook', href="https://www.facebook.com/sharer.php?u=" + encodeURIComponent(locals.url + page.article.url), target='_blank', rel='noopener')
             i.fa.fa-facebook-square(aria-hidden='true')
         center
           a(href=page.article.url)= 'View comments'

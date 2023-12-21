@@ -11,7 +11,7 @@ block prepend head
 
   - var imageObject = env.helpers.blogImageObject(page)
 
-  meta(property='og:url', content="#{locals.url}#{page.url}")
+  meta(property='og:url', content=locals.url + '#' + page.url)
   meta(property='og:title', content=page.title)
   meta(property='og:description', content=page.metadata.summary)
   meta(property='og:type', content='article')
@@ -25,39 +25,38 @@ block prepend head
   meta(property='article:published_time', content=page.date.toISOString())
 
   script(type='application/ld+json')
-    :json
-      {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "#{page.metadata.title}",
-        "name": "#{page.metadata.title}",
-        "datePublished": "#{page.date.toISOString()}",
-        "dateModified": "#{(page.metadata.modified || page.date).toISOString()}",
-        "author": {
-          "@type": "Person",
-          "name": "Michael Mior"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Michael Mior",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "#{locals.url}/img/logo-full.png",
-            "width": 600,
-            "height": 48
-          }
-        },
-        "mainEntityOfPage": {
-          "@type":"WebPage",
-          "@id":"#{page.url}"
-        },
-        "image": {
-          "@type": "ImageObject",
-          "url": "#{imageObject.url}",
-          "height": "#{imageObject.height}",
-          "width": "#{imageObject.width}"
-        }
-      }
+      |  {
+      |    "@context": "http://schema.org",
+      |    "@type": "BlogPosting",
+      |    "headline": "#{page.metadata.title}",
+      |    "name": "#{page.metadata.title}",
+      |    "datePublished": "#{page.date.toISOString()}",
+      |    "dateModified": "#{(page.metadata.modified || page.date).toISOString()}",
+      |    "author": {
+      |      "@type": "Person",
+      |      "name": "Michael Mior"
+      |    },
+      |    "publisher": {
+      |      "@type": "Organization",
+      |      "name": "Michael Mior",
+      |      "logo": {
+      |        "@type": "ImageObject",
+      |        "url": "#{locals.url}/img/logo-full.png",
+      |        "width": 600,
+      |        "height": 48
+      |      }
+      |    },
+      |    "mainEntityOfPage": {
+      |      "@type":"WebPage",
+      |      "@id":"#{page.url}"
+      |    },
+      |    "image": {
+      |      "@type": "ImageObject",
+      |      "url": "#{imageObject.url}",
+      |      "height": "#{imageObject.height}",
+      |      "width": "#{imageObject.width}"
+      |    }
+      |  }
 
 block append vars
   - bodyclass = 'article-detail h-entry'
@@ -72,13 +71,13 @@ block content
   article.article
     section.content.e-content!= typogr(page.html).typogrify()
     div.share
-      a(title='Share on Twitter', href="https://twitter.com/intent/tweet?source=#{encodeURIComponent(locals.url + page.url)}&text=#{encodeURIComponent(page.title + ' ' + locals.url + page.url)}&via=michaelmior", target='_blank', rel='noopener')
+      a(title='Share on Twitter', href="https://twitter.com/intent/tweet?source=" + encodeURIComponent(locals.url + page.url) + "&text=" + encodeURIComponent(page.title + ' ' + locals.url + page.url) + "&via=michaelmior", target='_blank', rel='noopener')
         i.fa.fa-twitter-square(aria-hidden='true')
-      a(title='Submit to Hacker News', href="https://news.ycombinator.com/submitlink?u=#{encodeURIComponent(locals.url + page.url)}&t=#{encodeURIComponent(page.title)}", target='_blank', rel='noopener')
+      a(title='Submit to Hacker News', href="https://news.ycombinator.com/submitlink?u=" + encodeURIComponent(locals.url + page.url) + "&t=" + encodeURIComponent(page.title), target='_blank', rel='noopener')
         i.fa.fa-hacker-news(aria-hidden='true')
-      a(title='Submit to Reddit', href="http://www.reddit.com/r/programming/submit?url=#{encodeURIComponent(locals.url + page.url)}&title=#{encodeURIComponent(page.title)}", target='_blank', rel='noopener')
+      a(title='Submit to Reddit', href="http://www.reddit.com/r/programming/submit?url=" + encodeURIComponent(locals.url + page.url) + "&title=" + encodeURIComponent(page.title), target='_blank', rel='noopener')
         i.fa.fa-reddit-square(aria-hidden='true')
-      a(title='Share on LinkedIn', href="https://www.linkedin.com/shareArticle?mini=true&url=#{encodeURIComponent(locals.url + page.url)}&title=#{encodeURIComponent(page.title)}&summary=#{encodeURIComponent(page.metadata.summary)}&source=#{encodeURIComponent(locals.url + page.url)}", target='_blank', rel='noopener')
+      a(title='Share on LinkedIn', href="https://www.linkedin.com/shareArticle?mini=true&url=" + encodeURIComponent(locals.url + page.url) + "&title=" + encodeURIComponent(page.title) + "&summary=" + encodeURIComponent(page.metadata.summary) + "&source=" + encodeURIComponent(locals.url + page.url), target='_blank', rel='noopener')
         i.fa.fa-linkedin-square(aria-hidden='true')
       a(title='Share on Facebook', href="https://www.facebook.com/sharer.php?u=#{encodeURIComponent(locals.url + page.url)}", target='_blank', rel='noopener')
         i.fa.fa-facebook-square(aria-hidden='true')

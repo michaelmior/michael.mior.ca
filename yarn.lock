@@ -9734,13 +9734,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jstransformer-json@npm:0.0.0":
-  version: 0.0.0
-  resolution: "jstransformer-json@npm:0.0.0"
-  checksum: 1d5a7037445a97874e70bbfc018efba9df88608b88e64b80fdd74643a70fb70cb92835adad3eebf9e40329bb22fd182e399a722b7e38ea2e79f38bc76ceb54c0
-  languageName: node
-  linkType: hard
-
 "jstransformer-uglify-js@npm:^1.2.0":
   version: 1.2.0
   resolution: "jstransformer-uglify-js@npm:1.2.0"
@@ -14292,7 +14285,6 @@ __metadata:
     gulp-sass-lint: ^1.4.0
     gulp-uglify: ^3.0.2
     image-size: ^0.8.3
-    jstransformer-json: 0.0.0
     jstransformer-uglify-js: ^1.2.0
     node-sass: ^7.0.3
     typogr: ^0.6.8
