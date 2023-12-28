@@ -8227,6 +8227,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"image-size@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "image-size@npm:1.1.0"
+  dependencies:
+    queue: 6.0.2
+  bin:
+    image-size: bin/image-size.js
+  checksum: 988290629f8e07b12d3a4647aa0e1f43b12c79a32c1d49f570dbd94177cae4391dfec9bffa32d082ab54c0b27b02d989ba622c3e047999d8878860f3e72cad35
+  languageName: node
+  linkType: hard
+
 "imagemin-gifsicle@npm:^7.0.0":
   version: 7.0.0
   resolution: "imagemin-gifsicle@npm:7.0.0"
@@ -13280,6 +13291,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"queue@npm:6.0.2":
+  version: 6.0.2
+  resolution: "queue@npm:6.0.2"
+  dependencies:
+    inherits: ~2.0.3
+  checksum: ebc23639248e4fe40a789f713c20548e513e053b3dc4924b6cb0ad741e3f264dcff948225c8737834dd4f9ec286dbc06a1a7c13858ea382d9379f4303bcc0916
+  languageName: node
+  linkType: hard
+
 "quick-lru@npm:^4.0.1":
   version: 4.0.1
   resolution: "quick-lru@npm:4.0.1"
@@ -14176,7 +14196,7 @@ __metadata:
     gulp-sass: ^5.1.0
     gulp-sass-lint: ^1.4.0
     gulp-uglify: ^3.0.2
-    image-size: ^0.8.3
+    image-size: ^1.1.0
     jstransformer-uglify-js: ^1.2.0
     node-sass: ^7.0.3
     typogr: ^0.6.8
