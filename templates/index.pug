@@ -1,6 +1,9 @@
 
 extends layout
 
+block prepend head
+  link(rel='canonical', href=locals.url + '/')
+
 block content
   p.h-card
     | You've reached the personal website of #[a(class="p-name u-url" rel="me" href="https://michael.mior.ca/") Michael Mior]. 

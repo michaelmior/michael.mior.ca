@@ -7,6 +7,9 @@ block append vars
 block title
   | #{page.title}
 
+block prepend head
+  link(rel='canonical', href=locals.url + page.url.substring(0, page.url.lastIndexOf('.')) + '/')
+
 block header
   h1= page.title
 
