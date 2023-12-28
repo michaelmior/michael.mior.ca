@@ -39,7 +39,7 @@
     "vinyl-fs": "^3.0.3"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "packageManager": "yarn@3.2.4"
 }
