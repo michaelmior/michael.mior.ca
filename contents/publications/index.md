@@ -10,6 +10,18 @@ When possible, slides from public talks are posted on [Speaker Deck](https://spe
 <hr/>
 
 <div class="acmdlitem">
+  <a href="https://www.sciencedirect.com/science/article/pii/S0164121223001383" title="CoDEvo: Column family database evolution using model transformations">
+    CoDEvo: Column family database evolution using model transformations
+  </a>
+  <div style="margin-left:25px">
+    Pablo Suárez-Otero, Michael J. Mior, Maria José Suárez-Cabal, Javier Tuya<br>
+    Journal of Systems and Software
+  </div>
+</div>
+
+<hr/>
+
+<div class="acmdlitem">
   <a href="https://ieeexplore.ieee.org/document/9378228" title="Maintaining NoSQL Database Quality During Conceptual Model Evolution">
     Maintaining NoSQL Database Quality During Conceptual Model Evolution
   </a>

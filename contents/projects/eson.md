@@ -22,6 +22,18 @@ Appropriate algorithms for constructing a normalized schema from NoSQL databases
 <!--lint disable no-html-->
 
 <div class="acmdlitem">
+  <a href="https://www.sciencedirect.com/science/article/pii/S0164121223001383" title="CoDEvo: Column family database evolution using model transformations">
+    CoDEvo: Column family database evolution using model transformations
+  </a>
+  <div style="margin-left:25px">
+    Pablo Suárez-Otero, Michael J. Mior, Maria José Suárez-Cabal, Javier Tuya<br>
+    Journal of Systems and Software
+  </div>
+</div>
+
+<hr/>
+
+<div class="acmdlitem">
   <a href="https://ieeexplore.ieee.org/document/9378228" title="Maintaining NoSQL Database Quality During Conceptual Model Evolution">
     Maintaining NoSQL Database Quality During Conceptual Model Evolution
   </a>
@@ -30,6 +42,8 @@ Appropriate algorithms for constructing a normalized schema from NoSQL databases
     6th International Workshop on Methods to Improve Big Data Science Projects
   </div>
 </div>
+
+<hr/>
 
 <div class="acmdlitem">
   <a href="https://www.researchgate.net/publication/327878732_Renormalization_of_NoSQL_Database_Schemas_37th_International_Conference_ER_2018_Xi'an_China_October_22-25_2018_Proceedings" title="Renormalization of NoSQL Database Systems">
