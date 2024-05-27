@@ -2066,6 +2066,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/expect@npm:^1.20.4":
+  version: 1.20.4
+  resolution: "@types/expect@npm:1.20.4"
+  checksum: c09a9abec2c1776dd8948920dc3bad87b1206c843509d3d3002040983b1769b2e3914202a6c20b72e5c3fb5738a1ab87cb7be9d3fe9efabf2a324173b222a224
+  languageName: node
+  linkType: hard
+
 "@types/glob@npm:^7.1.1":
   version: 7.1.3
   resolution: "@types/glob@npm:7.1.3"
@@ -2147,6 +2154,16 @@ __metadata:
   version: 2.0.6
   resolution: "@types/unist@npm:2.0.6"
   checksum: 25cb860ff10dde48b54622d58b23e66214211a61c84c0f15f88d38b61aa1b53d4d46e42b557924a93178c501c166aa37e28d7f6d994aba13d24685326272d5db
+  languageName: node
+  linkType: hard
+
+"@types/vinyl@npm:^2.0.7, @types/vinyl@npm:^2.0.9":
+  version: 2.0.12
+  resolution: "@types/vinyl@npm:2.0.12"
+  dependencies:
+    "@types/expect": ^1.20.4
+    "@types/node": "*"
+  checksum: 885b7813676eed755b94d42501a56bf36c8d93d8ef6cc4d495bb5779fc5c81ffbcee7d0defe77515a90bf46209968da84b559471611efa0d2900ec75fa1a84de
   languageName: node
   linkType: hard
 
@@ -3200,6 +3217,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bare-events@npm:^2.2.0":
+  version: 2.2.2
+  resolution: "bare-events@npm:2.2.2"
+  checksum: 154d3fc044cc171d3b85a89b768e626417b60c050123ac2ac10fc002152b4bdeb359ed1453ad54c0f1d05a7786f780d3b976af68e55c09fe4579d8466d3ff256
+  languageName: node
+  linkType: hard
+
 "base64-js@npm:^1.0.2":
   version: 1.3.1
   resolution: "base64-js@npm:1.3.1"
@@ -3935,6 +3959,13 @@ __metadata:
     ansi-styles: ^4.1.0
     supports-color: ^7.1.0
   checksum: fe75c9d5c76a7a98d45495b91b2172fa3b7a09e0cc9370e5c8feb1c567b85c4288e2b3fded7cfdd7359ac28d6b3844feb8b82b8686842e93d23c827c417e83fc
+  languageName: node
+  linkType: hard
+
+"chalk@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "chalk@npm:5.3.0"
+  checksum: 623922e077b7d1e9dedaea6f8b9e9352921f8ae3afe739132e0e00c275971bdd331268183b2628cf4ab1727c45ea1f28d7e24ac23ce1db1eb653c414ca8a5a80
   languageName: node
   linkType: hard
 
@@ -5484,6 +5515,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"easy-transform-stream@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "easy-transform-stream@npm:1.0.1"
+  checksum: 3d783ad3ffa21690c9e84ee54a9993a882f07e86416f15fe8dfcfb2c93ea28ce79f10775c2e56d846bba6a9e85e64f9f867c085d5906031c06c97c5a5234be46
+  languageName: node
+  linkType: hard
+
 "ecc-jsbn@npm:~0.1.1":
   version: 0.1.1
   resolution: "ecc-jsbn@npm:0.1.1"
@@ -6259,6 +6297,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-fifo@npm:^1.1.0":
+  version: 1.3.2
+  resolution: "fast-fifo@npm:1.3.2"
+  checksum: 6bfcba3e4df5af7be3332703b69a7898a8ed7020837ec4395bb341bd96cc3a6d86c3f6071dd98da289618cf2234c70d84b2a6f09a33dd6f988b1ff60d8e54275
+  languageName: node
+  linkType: hard
+
 "fast-glob@npm:^3.0.3":
   version: 3.3.2
   resolution: "fast-glob@npm:3.3.2"
@@ -6585,12 +6630,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"first-chunk-stream@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "first-chunk-stream@npm:2.0.0"
-  dependencies:
-    readable-stream: ^2.0.2
-  checksum: 2fa86f93a455eac09a9dd1339464f06510183fb4f1062b936d10605bce5728ec5c564a268318efd7f2b55a1ce3ff4dc795585a99fe5dd1940caf28afeb284b47
+"first-chunk-stream@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "first-chunk-stream@npm:5.0.0"
+  checksum: 78454db2f34ecea32b36216b758cfec8163b8c887ed1b708aed15c857bbe1ed7cf41a166ed064ab1a4fff54496b22f8eda2ad9b9ba90f09d289f8f514d452758
   languageName: node
   linkType: hard
 
@@ -7644,6 +7687,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gulp-plugin-extras@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "gulp-plugin-extras@npm:0.3.0"
+  dependencies:
+    "@types/vinyl": ^2.0.9
+    chalk: ^5.3.0
+    easy-transform-stream: ^1.0.1
+  checksum: 4252ff696529df643ddc4b2482e58ef0e4a865bba95a23d02ff82d6a4f7ec2c17619a52404a4cec88d0cc906ab6eb0773dd0088b235b9c93a52cbacff9336c21
+  languageName: node
+  linkType: hard
+
 "gulp-plumber@npm:^1.2.1":
   version: 1.2.1
   resolution: "gulp-plumber@npm:1.2.1"
@@ -7669,19 +7723,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gulp-rev@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "gulp-rev@npm:9.0.0"
+"gulp-rev@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "gulp-rev@npm:11.0.0"
   dependencies:
-    modify-filename: ^1.1.0
-    plugin-error: ^1.0.1
-    rev-hash: ^2.0.0
-    rev-path: ^2.0.0
-    sort-keys: ^2.0.0
-    through2: ^2.0.0
-    vinyl: ^2.1.0
-    vinyl-file: ^3.0.0
-  checksum: 8c83808214302952181ddf41ae4707bf5b455ea08f975439323a808865b005a0218d4e8b12a17524c76b384fbd21e6d071b6ac53ea1451d7c40d20f1715ccfd4
+    gulp-plugin-extras: ^0.3.0
+    modify-filename: ^2.0.0
+    rev-hash: ^4.1.0
+    rev-path: ^3.0.0
+    sort-keys: ^5.0.0
+    vinyl: ^3.0.0
+    vinyl-file: ^5.0.0
+  peerDependencies:
+    gulp: ">=4"
+  peerDependenciesMeta:
+    gulp:
+      optional: true
+  checksum: 82722de60a17cc158c121465b86eeb41e83590442053251f24b2322bae67128e3a8b5eaf40e787cda40d4bf18dbcafbef980dbdeed284ce196fc7f6e77e7201e
   languageName: node
   linkType: hard
 
@@ -9077,6 +9135,13 @@ __metadata:
   version: 1.1.0
   resolution: "is-plain-obj@npm:1.1.0"
   checksum: 0ee04807797aad50859652a7467481816cbb57e5cc97d813a7dcd8915da8195dc68c436010bf39d195226cde6a2d352f4b815f16f26b7bf486a5754290629931
+  languageName: node
+  linkType: hard
+
+"is-plain-obj@npm:^4.0.0":
+  version: 4.1.0
+  resolution: "is-plain-obj@npm:4.1.0"
+  checksum: 6dc45da70d04a81f35c9310971e78a6a3c7a63547ef782e3a07ee3674695081b6ca4e977fbb8efc48dae3375e0b34558d2bcd722aec9bddfa2d7db5b041be8ce
   languageName: node
   linkType: hard
 
@@ -11168,10 +11233,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"modify-filename@npm:^1.0.0, modify-filename@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "modify-filename@npm:1.1.0"
-  checksum: a1d104cf99ade063c05c79e4db47ef6263a116386568d7661ae4a00a390da72d5944070a64dba09867231a8eb6cbab57498ada99cb4b5ae0fded10831995079b
+"modify-filename@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "modify-filename@npm:2.0.0"
+  checksum: 867f5774b450da797a86e2b839272233d5163a9215fb7bd7fd3bd30e5f2c4beff9363dd01e2c5564887cbd9e06a533bc36b482f8acaa648a45e09b195cb178d3
   languageName: node
   linkType: hard
 
@@ -13324,6 +13389,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"queue-tick@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "queue-tick@npm:1.0.1"
+  checksum: 57c3292814b297f87f792fbeb99ce982813e4e54d7a8bdff65cf53d5c084113913289d4a48ec8bbc964927a74b847554f9f4579df43c969a6c8e0f026457ad01
+  languageName: node
+  linkType: hard
+
 "queue@npm:6.0.1":
   version: 6.0.1
   resolution: "queue@npm:6.0.1"
@@ -14166,19 +14238,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rev-hash@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "rev-hash@npm:2.0.0"
-  checksum: 1e0a455725742dcc715eb77b36acb741e4ad90080cc14488eaa403c80eecd1d9e69057795e06882f9ebb37f87785b1970d9ba1d3030b48cc2573c460502b9208
+"rev-hash@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "rev-hash@npm:4.1.0"
+  checksum: 3deb2525ba9356627325eaa1b75f725a065462a988ae05e2045487a8ca3cfaa5af5f494f1a4c2f82198c36a94ed9df2bfb9eddb6d443083ba4b94a3fba84bf07
   languageName: node
   linkType: hard
 
-"rev-path@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "rev-path@npm:2.0.0"
+"rev-path@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "rev-path@npm:3.0.0"
   dependencies:
-    modify-filename: ^1.0.0
-  checksum: 7f39deab5390a3222a25dbfad11bb2d5d663c433fb1b19858bbbbcff1c718e1b2fe503fdb4967ca3cf42ce5751992287e3cd087811d8eafb48950cef7f57afeb
+    modify-filename: ^2.0.0
+  checksum: 0c72f1d77a62fb67ef8704f4b95e3aacd0e436f29dccbb3a1d573265dbb3f118f510e2d57509e0ee7eef1685d33d9916d38a7876978acb2ec995b010c4277685
   languageName: node
   linkType: hard
 
@@ -14233,7 +14305,7 @@ __metadata:
     gulp-imgsizefix: ^1.3.1
     gulp-plumber: ^1.2.1
     gulp-remark-lint-dko: ^1.0.2
-    gulp-rev: ^9.0.0
+    gulp-rev: ^11.0.0
     gulp-rimraf: ^1.0.0
     gulp-sass: ^5.1.0
     gulp-sass-lint: ^1.4.0
@@ -14811,6 +14883,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sort-keys@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "sort-keys@npm:5.0.0"
+  dependencies:
+    is-plain-obj: ^4.0.0
+  checksum: 9c0b7a468312075be03770b260b2cc0e5d55149025e564edaed41c9ff619199698aad6712a6fe4bbc75c541efb081276ac6bbd4cf2723d742f272f7a8fe354f5
+  languageName: node
+  linkType: hard
+
 "sorted-object@npm:~2.0.1":
   version: 2.0.1
   resolution: "sorted-object@npm:2.0.1"
@@ -15144,6 +15225,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"streamx@npm:^2.12.5":
+  version: 2.16.1
+  resolution: "streamx@npm:2.16.1"
+  dependencies:
+    bare-events: ^2.2.0
+    fast-fifo: ^1.1.0
+    queue-tick: ^1.0.1
+  dependenciesMeta:
+    bare-events:
+      optional: true
+  checksum: 6bbb4c38c0ab6ddbe0857d55e72f71288f308f2a9f4413b7b07391cdf9f94232ffc2bbe40a1212d2e09634ecdbd5052b444c73cc8d67ae1c97e2b7e553dad559
+  languageName: node
+  linkType: hard
+
 "strict-uri-encode@npm:^1.0.0":
   version: 1.1.0
   resolution: "strict-uri-encode@npm:1.1.0"
@@ -15324,22 +15419,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strip-bom-buf@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "strip-bom-buf@npm:1.0.0"
+"strip-bom-buf@npm:^3.0.0, strip-bom-buf@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "strip-bom-buf@npm:3.0.1"
   dependencies:
     is-utf8: ^0.2.1
-  checksum: 246665fa1c50eb0852ed174fdbd7da34edb444165e7dda2cd58e66b49a2900707d9f8d3f94bcc8542fe1f46ae7b4274a3411b8ab9e43cd1dcf1b77416e324cfb
+  checksum: eeee3d7bfdeec5ad901b61675145d3f0b3c5df95dfb50c3cffd0e38afa897ded90ccbd61949cf66507ec4b56d747d90cd10874b39b63affe61310c48d4f47ebf
   languageName: node
   linkType: hard
 
-"strip-bom-stream@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "strip-bom-stream@npm:2.0.0"
+"strip-bom-stream@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "strip-bom-stream@npm:5.0.0"
   dependencies:
-    first-chunk-stream: ^2.0.0
-    strip-bom: ^2.0.0
-  checksum: 3e2ff494d9181537ceee35c7bb662fee9dfcebba0779f004e7c1455278f2616c0915b66d8d5432a6cb7e23c792c199717b4661a12e8fa2728a18961dd0203a2e
+    first-chunk-stream: ^5.0.0
+    strip-bom-buf: ^3.0.0
+  checksum: ce0099e832ab1587a6dc21bac15a8aa8da612d5565e496e8e2b86d134b3a05dec5c5480ad3d17dd78eaab58417d4c3b4bf611e07121f829377b793f119a69e5b
   languageName: node
   linkType: hard
 
@@ -15589,6 +15684,15 @@ __metadata:
     mkdirp: ^1.0.3
     yallist: ^4.0.0
   checksum: db4d9fe74a2082c3a5016630092c54c8375ff3b280186938cfd104f2e089c4fd9bad58688ef6be9cf186a889671bf355c7cda38f09bbf60604b281715ca57f5c
+  languageName: node
+  linkType: hard
+
+"teex@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "teex@npm:1.0.1"
+  dependencies:
+    streamx: ^2.12.5
+  checksum: 36bf7ce8bb5eb428ad7b14b695ee7fb0a02f09c1a9d8181cc42531208543a920b299d711bf78dad4ff9bcf36ac437ae8e138053734746076e3e0e7d6d76eef64
   languageName: node
   linkType: hard
 
@@ -16656,16 +16760,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vinyl-file@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "vinyl-file@npm:3.0.0"
+"vinyl-file@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "vinyl-file@npm:5.0.0"
   dependencies:
-    graceful-fs: ^4.1.2
-    pify: ^2.3.0
-    strip-bom-buf: ^1.0.0
-    strip-bom-stream: ^2.0.0
-    vinyl: ^2.0.1
-  checksum: e187a74d41f45d22e8faa17b5552a795aca7c4084034dd9683086ace3752651f164c42aee1961081005f8299388b0a62ad1e3eea991a8d3747db58502f900ff4
+    "@types/vinyl": ^2.0.7
+    strip-bom-buf: ^3.0.1
+    strip-bom-stream: ^5.0.0
+    vinyl: ^3.0.0
+  checksum: 4ab2014041ebeba1f202b564223b839432c7d91755cf4213682c415541ec45d1360456badc2b7d373aa29a7d1d0fa6b9cd0d39864b3b4c7f2d28a4bddfefadae
   languageName: node
   linkType: hard
 
@@ -16729,7 +16832,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vinyl@npm:^2.0.0, vinyl@npm:^2.0.1, vinyl@npm:^2.1.0":
+"vinyl@npm:^2.0.0":
   version: 2.2.0
   resolution: "vinyl@npm:2.2.0"
   dependencies:
@@ -16754,6 +16857,19 @@ __metadata:
     remove-trailing-separator: ^1.0.1
     replace-ext: ^1.0.0
   checksum: 1f663973f1362f2d074b554f79ff7673187667082373b3d3e628beb1fc2a7ff33024f10b492fbd8db421a09ea3b7b22c3d3de4a0f0e73ead7b4685af570b906f
+  languageName: node
+  linkType: hard
+
+"vinyl@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "vinyl@npm:3.0.0"
+  dependencies:
+    clone: ^2.1.2
+    clone-stats: ^1.0.0
+    remove-trailing-separator: ^1.1.0
+    replace-ext: ^2.0.0
+    teex: ^1.0.1
+  checksum: 29c563d6a027d49ec216bc8259b494bd048d1f9df39103aea6877e02af1d0a6956b11ad977206b5a807b331ef5431bed9f6b8890de5e55188389d31cf7af7fbe
   languageName: node
   linkType: hard
 
