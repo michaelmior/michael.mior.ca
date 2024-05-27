@@ -33,3 +33,6 @@ jobs:
 
       - name: Lint
         run: bunx @biomejs/biome lint Gulpfile.js
+
+      - name: Build
+        run: yarn gulp build
