@@ -9,6 +9,7 @@ html(lang='en')
       meta(name='theme-color', content='#4080c0')
       meta(property='fb:admins', content='227200130')
       | @@include('./build/favicons/index.html')
+      link(rel='icon', type='image/svg+xml', href=contents['favicon.svg'].url)
       | !{ livereloadScript }
       link(rel='me' href='https://hachyderm.io/@michaelmior')
       title
