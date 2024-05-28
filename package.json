@@ -9,7 +9,6 @@
   "devDependencies": {
     "@babel/core": "^7.23.6",
     "@babel/preset-env": "^7.24.6",
-    "babel-core": "^6.26.3",
     "check-pages": "^0.10.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
