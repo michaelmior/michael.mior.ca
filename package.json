@@ -27,7 +27,7 @@
     "gulp-uglify": "^3.0.2",
     "image-size": "^1.1.0",
     "jstransformer-uglify-js": "^1.2.0",
-    "node-sass": "^7.0.3",
+    "node-sass": "^9.0.0",
     "vinylsmith": "^1.0.0",
     "wintersmith-contents": "^1.0.0",
     "wintersmith-livereload": "^1.0.1",
