@@ -8319,14 +8319,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"image-size@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "image-size@npm:1.1.0"
+"image-size@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "image-size@npm:1.1.1"
   dependencies:
     queue: 6.0.2
   bin:
     image-size: bin/image-size.js
-  checksum: 988290629f8e07b12d3a4647aa0e1f43b12c79a32c1d49f570dbd94177cae4391dfec9bffa32d082ab54c0b27b02d989ba622c3e047999d8878860f3e72cad35
+  checksum: 23b3a515dded89e7f967d52b885b430d6a5a903da954fce703130bfb6069d738d80e6588efd29acfaf5b6933424a56535aa7bf06867e4ebd0250c2ee51f19a4a
   languageName: node
   linkType: hard
 
@@ -14222,7 +14222,7 @@ __metadata:
     gulp-sass: ^5.1.0
     gulp-sass-lint: ^1.4.0
     gulp-uglify: ^3.0.2
-    image-size: ^1.1.0
+    image-size: ^1.1.1
     jstransformer-uglify-js: ^1.2.0
     node-sass: ^9.0.0
     typogr: ^0.6.8
