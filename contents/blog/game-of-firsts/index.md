@@ -49,12 +49,12 @@ I ended up using [OpenTTS](https://github.com/synesthesiam/opentts) to generate 
 One unexpected problem is that coqui-tts, the actually speech system used, seems to have a real problem pronouncing letters when just written out as single letters.
 For example, here's what I got when I tried to have it say "The letters are E and A."
 
-<audio controls src="ae.wav"></audio>
+<audio controls src="ae.mp3"></audio>
 
 To solve this, I wrote out phonetic spellings of each letter, tweaking until each one sounded right.
 If I instead generate audio for "The letters are Eeh and Ae," I get the following much more reasonable output.
 
-<audio controls src="ae2.wav"></audio>
+<audio controls src="ae2.mp3"></audio>
 
 I first started with requiring the user to specify which letters to generate.
 When switching to randomly picking letters, a uniform distribution doesn't really work well.
@@ -66,4 +66,4 @@ Finally, here's an example of a complete puzzle.
 The code is available [on GitHub](https://github.com/michaelmior/game-of-firsts).
 Not sure if I'll keep working on this project further, but it's pretty impressive what you can quickly accomplish these days with a bit of use of AI.
 
-<audio controls src="puzzle.wav"></audio>
+<audio controls src="puzzle.mp3"></audio>
