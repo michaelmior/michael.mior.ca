@@ -8,6 +8,9 @@ module.exports = (env, callback) ->
     getTemplate: ->
       'amp.pug'
 
+    getHtml: (base) ->
+      super(base).replace(/<audio[^>]*src="([^"]*)"><\/audio>/g, '<amp-audio src="$1"></amp-audio>')
+
   env.registerGenerator 'amp', (contents, callback) ->
     articles = env.helpers.getArticles contents
     pages = articles.map (article) ->
