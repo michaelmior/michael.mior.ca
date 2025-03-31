@@ -8319,14 +8319,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"image-size@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "image-size@npm:1.1.1"
-  dependencies:
-    queue: 6.0.2
+"image-size@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "image-size@npm:2.0.1"
   bin:
     image-size: bin/image-size.js
-  checksum: 23b3a515dded89e7f967d52b885b430d6a5a903da954fce703130bfb6069d738d80e6588efd29acfaf5b6933424a56535aa7bf06867e4ebd0250c2ee51f19a4a
+  checksum: 1057c58f5b17fddb17c4b1d43e28a9574dfc231411c42b9eca2dcb2b96fa2c19e3ef933b281ce9b549cac42f6fc1ea356481e939bf63655fd9d757781456c1ef
   languageName: node
   linkType: hard
 
@@ -13318,15 +13316,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"queue@npm:6.0.2":
-  version: 6.0.2
-  resolution: "queue@npm:6.0.2"
-  dependencies:
-    inherits: ~2.0.3
-  checksum: ebc23639248e4fe40a789f713c20548e513e053b3dc4924b6cb0ad741e3f264dcff948225c8737834dd4f9ec286dbc06a1a7c13858ea382d9379f4303bcc0916
-  languageName: node
-  linkType: hard
-
 "quick-lru@npm:^4.0.1":
   version: 4.0.1
   resolution: "quick-lru@npm:4.0.1"
@@ -14222,7 +14211,7 @@ __metadata:
     gulp-sass: ^5.1.0
     gulp-sass-lint: ^1.4.0
     gulp-uglify: ^3.0.2
-    image-size: ^1.1.1
+    image-size: ^2.0.1
     jstransformer-uglify-js: ^1.2.0
     node-sass: ^9.0.0
     typogr: ^0.6.8
