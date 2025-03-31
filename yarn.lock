@@ -7766,9 +7766,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gulp-sass@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "gulp-sass@npm:5.1.0"
+"gulp-sass@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "gulp-sass@npm:6.0.1"
   dependencies:
     lodash.clonedeep: ^4.5.0
     picocolors: ^1.0.0
@@ -7776,7 +7776,7 @@ __metadata:
     replace-ext: ^2.0.0
     strip-ansi: ^6.0.1
     vinyl-sourcemaps-apply: ^0.2.1
-  checksum: 9aba052c76e808321f9ecf70885806a389e73b87005c3c4f47beba7050ef280d06402f1ac19105b32407170b6fdef5c9e26ed0560074dd5a949197b50e82604d
+  checksum: 7b309c1daaafb60ec18a33286383edbabd209661262575d632fc8a7b460c48a9a1b1ae6b45765b23e3483959bccc5b4cecae7bdb1f0a9fe1c2246499337bd1be
   languageName: node
   linkType: hard
 
@@ -14219,7 +14219,7 @@ __metadata:
     gulp-remark-lint-dko: ^1.0.2
     gulp-rev: ^9.0.0
     gulp-rimraf: ^1.0.0
-    gulp-sass: ^5.1.0
+    gulp-sass: ^6.0.1
     gulp-sass-lint: ^1.4.0
     gulp-uglify: ^3.0.2
     image-size: ^1.1.1
