@@ -7,7 +7,7 @@
     "underscore": "^1.13.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.6",
+    "@babel/core": "^7.26.10",
     "@babel/preset-env": "^7.24.6",
     "check-pages": "^0.10.0",
     "gulp": "^4.0.2",
