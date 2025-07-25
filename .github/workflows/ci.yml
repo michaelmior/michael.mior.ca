@@ -32,7 +32,7 @@ jobs:
       - uses: oven-sh/setup-bun@v2
 
       - name: Lint
-        run: bunx @biomejs/biome lint Gulpfile.js
+        run: bunx @biomejs/biome@1.4.1 lint Gulpfile.js
 
   build:
     name: Build
