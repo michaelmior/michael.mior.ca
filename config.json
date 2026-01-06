@@ -7,9 +7,9 @@
     "sitemap": "sitemap.xml"
   },
   "plugins": [
-    "./plugins/amp.coffee",
-    "./plugins/michaelmior.coffee",
-    "./plugins/paginator.coffee",
+    "./plugins/amp.js",
+    "./plugins/michaelmior.js",
+    "./plugins/paginator.js",
     "wintersmith-livereload",
     "wintersmith-contents",
     "wintersmith-sitemap"
