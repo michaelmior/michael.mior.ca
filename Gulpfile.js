@@ -12,7 +12,6 @@ const path = require("node:path");
 const rimraf = require("gulp-rimraf");
 const sassLint = require("gulp-sass-lint");
 const sizeOf = require("image-size");
-const url = require("node:url");
 const wintersmith = require("wintersmith");
 
 const locals = JSON.parse(fs.readFileSync("config.json")).locals;

@@ -3,12 +3,12 @@ const vinylsmith = require('vinylsmith');
 const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
 const imageSize = require('image-size');
-const path = require('path');
+const path = require('node:path');
 const rev = require('gulp-rev');
 const sass = require('gulp-sass')(require('node-sass'));
 const uglify = require('gulp-uglify');
 
-module.exports = function(env, callback) {
+module.exports = (env, callback) => {
   env.registerContentPlugin('styles', '**/*.scss',
     vinylsmith(env)
       .pipe(sass)
@@ -32,12 +32,12 @@ module.exports = function(env, callback) {
       .pipe(imagemin, { progressive: true })
   );
 
-  const blogImageObject = function(page) {
-    const url = path.dirname(page.filepath.relative) + '/' + page.metadata.image;
-    const image = path.dirname(page.filepath.full) + '/' + page.metadata.image;
+  const blogImageObject = (page) => {
+    const url = `${path.dirname(page.filepath.relative)}/${page.metadata.image}`;
+    const image = `${path.dirname(page.filepath.full)}/${page.metadata.image}`;
     const size = imageSize(image);
     return {
-      url: env.locals.url + '/' + url,
+      url: `${env.locals.url}/${url}`,
       height: size.height,
       width: size.width
     };

@@ -1,4 +1,4 @@
-module.exports = function(env, callback) {
+module.exports = (env, callback) => {
   class AmpPage extends env.plugins.MarkdownPage {
     constructor(article, filepath, metadata, markdown) {
       super(filepath, metadata, markdown);
@@ -6,7 +6,7 @@ module.exports = function(env, callback) {
     }
 
     getFilename() {
-      return 'amp/' + super.getFilename();
+      return `amp/${super.getFilename()}`;
     }
 
     getTemplate() {
@@ -18,9 +18,9 @@ module.exports = function(env, callback) {
     }
   }
 
-  env.registerGenerator('amp', function(contents, cb) {
+  env.registerGenerator('amp', (contents, cb) => {
     const articles = env.helpers.getArticles(contents);
-    const pages = articles.map(function(article) {
+    const pages = articles.map((article) => {
       return new AmpPage(article, article.filepath, article.metadata, article.markdown);
     });
     cb(null, pages);

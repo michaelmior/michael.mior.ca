@@ -1,7 +1,7 @@
 /* Paginator plugin. Defaults can be overridden in config.json
  * e.g. "paginator": {"perPage": 10}
  */
-module.exports = function(env, callback) {
+module.exports = (env, callback) => {
   const defaults = {
     template: 'index.pug', // template that renders pages
     articles: 'blog', // directory containing contents to paginate
@@ -19,7 +19,7 @@ module.exports = function(env, callback) {
     }
   }
 
-  const getArticles = function(contents) {
+  const getArticles = (contents) => {
     // helper that returns a list of articles found in *contents*
     // note that each article is assumed to have its own directory in the articles directory
     let articles = contents[options.articles]._.directories.map(item => item.index);
@@ -50,8 +50,7 @@ module.exports = function(env, callback) {
     getView() {
       // simple view to pass articles and pagenum to the paginator template
       // note that this function returns a funciton
-      const page = this;
-      return function(env, locals, contents, templates, callback) {
+      return (env, locals, _contents, templates, callback) => {
         // get the pagination template
         const template = templates[options.template];
         if (template == null) {
@@ -60,10 +59,10 @@ module.exports = function(env, callback) {
 
         // setup the template context
         const ctx = {
-          articles: page.articles,
-          pageNum: page.pageNum,
-          prevPage: page.prevPage,
-          nextPage: page.nextPage
+          articles: this.articles,
+          pageNum: this.pageNum,
+          prevPage: this.prevPage,
+          nextPage: this.nextPage
         };
 
         // extend the template context with the enviroment locals
@@ -77,7 +76,7 @@ module.exports = function(env, callback) {
 
   // register a generator, 'paginator' here is the content group generated content will belong to
   // i.e. contents._.paginator
-  env.registerGenerator('paginator', function(contents, callback) {
+  env.registerGenerator('paginator', (contents, callback) => {
     // find all articles
     const articles = getArticles(contents);
 
