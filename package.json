@@ -24,7 +24,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sass-lint": "^1.4.0",
     "gulp-uglify": "^3.0.2",
-    "image-size": "^1.1.1",
+    "image-size": "^2.0.2",
     "jstransformer-uglify-js": "^1.2.0",
     "node-sass": "^9.0.0",
     "vinylsmith": "^1.0.0",
